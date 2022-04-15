@@ -1,13 +1,15 @@
 """
-Zien Yang
-zy2236
-N17995064
+Group 4 - Maximizing the Score for Detecting ARG1 on Partitives
+
+Zien Yang, zy2236, N17995064
+Jingwei Ye, jy3555, N10236604
+Zeyu Chen, zc2078, N10456612
 """
 
 import sys
 from nltk.stem import *
 
-class HW6:
+class Feature:
     def __init__(self, training_corpus : str, development_corpus: str) -> None:
         self.training_corpus = training_corpus
         self.development_corpus = development_corpus
@@ -118,9 +120,9 @@ def main():
         input_file = sys.argv[1]
         test_file = sys.argv[2]
 
-    hw6 = HW6(input_file, test_file)
-    hw6.generate_file(file_type="train")
-    hw6.generate_file(file_type="test")
+    feat = Feature(input_file, test_file)
+    feat.generate_file(file_type="train")
+    feat.generate_file(file_type="test")
 
 if __name__ == "__main__":
     main()
