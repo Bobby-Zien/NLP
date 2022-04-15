@@ -113,8 +113,8 @@ class Feature:
         w.close()
 
 def main():
-    input_file = "part-training"
-    test_file = "part-dev"
+    input_file = "input_files/part-training"
+    test_file = "input_files/part-dev"
 
     if len(sys.argv) > 2:
         input_file = sys.argv[1]
