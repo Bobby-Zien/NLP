@@ -122,7 +122,7 @@ def generateAns(ansfileName):
 def main(args):
 	# key_file = args[1]
 	# response_file = args[2]
-	# generateAns("part-dev")
+	generateAns("part-test")
 	key_file="anskey.txt"
 	response_file="output.txt"
 	score(key_file,response_file)
