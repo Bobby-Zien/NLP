@@ -94,7 +94,7 @@ def test(systemout,ans):
 
 def generateAns(ansfileName):
 	ansfile = open("input_files/"+ansfileName, 'r')
-	anskeyfile= open("anskey.txt", 'w')
+	anskeyfile= open("answerkeys/anskey_dev.txt", 'w')
 
 	Lines = ansfile.readlines()
 	for line in Lines:
@@ -120,11 +120,11 @@ def generateAns(ansfileName):
 
 
 def main(args):
-	# key_file = args[1]
-	# response_file = args[2]
-	generateAns("part-test")
-	key_file="anskey.txt"
-	response_file="output.txt"
+	key_file = args[1]
+	response_file = args[2]
+	# generateAns("part-dev")
+	# key_file= "answerkeys/anskey.txt"
+	# response_file="output.txt"
 	score(key_file,response_file)
 
 if __name__ == '__main__': sys.exit(main(sys.argv))
