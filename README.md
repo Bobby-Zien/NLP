@@ -20,3 +20,10 @@ Precision contains only ARG1 values
   1. javac -cp maxent-3.0.0.jar:trove.jar *.java ### compiling
   2. java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtrain training.feature model.chunk ### creating the model of the training data
   3. java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtag test.feature model.chunk response.chunk ### creating the system output
+
+
+## Statistics
+1. Fundamental feature selection with Java MaxEnt
+  - Precision: 49.27
+  - Recall: 25.23
+  - F measure: 3.34
