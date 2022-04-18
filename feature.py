@@ -10,11 +10,13 @@ import sys
 from nltk.stem import *
 
 class Feature:
-    def __init__(self, training_corpus : str, development_corpus: str) -> None:
+    def __init__(self, training_corpus : str, development_corpus : str, test_corpus : str) -> None:
         self.training_corpus = training_corpus
         self.development_corpus = development_corpus
+        self.test_corpus = test_corpus
 
         self.training_file = "training.feature"
+        self.dev_file = "dev.feature"
         self.test_file = "test.feature"
 
     def generate_file(self, file_type : str):
@@ -25,9 +27,14 @@ class Feature:
             r = open(self.training_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
+        elif file_type == "dev":
+            w = open(self.dev_file, "w")
+            r = open(self.development_corpus, 'r', encoding='utf8')
+            lines = r.read().splitlines()
+            r.close()
         elif file_type == "test":
             w = open(self.test_file, "w")
-            r = open(self.development_corpus, 'r', encoding='utf8')
+            r = open(self.test_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
 
@@ -99,10 +106,10 @@ class Feature:
                 l += "\tnext_POS2={}\tnext_word2={}".format(next_POS2, next_word2)
 
             # add ARG to the training file
-            if file_type != "test":
+            if file_type == "train":
                 l += "\t{}\n".format(ARG)
             
-            # do not add BIO to the dev and test
+            # do not add ARG to the dev and test
             else:
                 l += "\n"
             
@@ -114,14 +121,17 @@ class Feature:
 
 def main():
     input_file = "input_files/part-training"
-    test_file = "input_files/part-dev"
+    dev_file = "input_files/part-dev"
+    test_file = "input_files/part-test"
 
-    if len(sys.argv) > 2:
+    if len(sys.argv) > 3:
         input_file = sys.argv[1]
-        test_file = sys.argv[2]
+        dev_file = sys.argv[2]
+        test_file = sys.argv[3]
 
-    feat = Feature(input_file, test_file)
+    feat = Feature(input_file, dev_file, test_file)
     feat.generate_file(file_type="train")
+    feat.generate_file(file_type="dev")
     feat.generate_file(file_type="test")
 
 if __name__ == "__main__":

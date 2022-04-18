@@ -12,6 +12,9 @@ contains all the feature selection methods
 contains all the machine learning algorithms
 
 ## score.py
+run "python score.chunk.py [answerkeysfile] [responsefile]"
+Accuracy contains NONE values
+Precision contains only ARG1 values
 
 ## How to run java maxent?
   1. javac -cp maxent-3.0.0.jar:trove.jar *.java ### compiling

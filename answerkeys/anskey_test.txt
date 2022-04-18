@@ -7,7 +7,7 @@ COMMA	NONE
 the	NONE
 Dow	NONE
 Jones	NONE
-industrials	NONE
+industrials	ARG1
 in	NONE
 barely	NONE
 an	NONE
@@ -22,7 +22,7 @@ gains	NONE
 this	NONE
 year	NONE
 COMMA	NONE
-chalking	NONE
+chalking	SUPPORT
 up	NONE
 a	NONE
 190.58-point	NONE
@@ -31,7 +31,7 @@ or	NONE
 6.9	NONE
 %	PRED
 COMMA	NONE
-loss	NONE
+loss	SUPPORT
 on	NONE
 the	NONE
 day	NONE
@@ -60,8 +60,8 @@ the	NONE
 sharpest	NONE
 since	NONE
 the	NONE
-market	NONE
-fell	NONE
+market	ARG1
+fell	SUPPORT
 156.83	NONE
 COMMA	NONE
 or	NONE
@@ -76,10 +76,10 @@ Monday	NONE
 .	NONE
 
 The	NONE
-Dow	NONE
-fell	NONE
+Dow	ARG1
+fell	SUPPORT
 22.6	NONE
-%	NONE
+%	PRED
 on	NONE
 Black	NONE
 Monday	NONE
@@ -101,7 +101,7 @@ representing	NONE
 %	PRED
 of	NONE
 the	NONE
-value	NONE
+value	ARG1
 of	NONE
 all	NONE
 Hooker	NONE
@@ -152,7 +152,7 @@ said	NONE
 The	NONE
 week	NONE
 's	NONE
-total	NONE
+total	ARG1
 was	NONE
 up	NONE
 6.2	NONE
@@ -167,7 +167,7 @@ earlier	NONE
 
 The	NONE
 year-to-date	NONE
-total	NONE
+total	ARG1
 was	NONE
 12COMMA006COMMA883	NONE
 tons	NONE
@@ -193,7 +193,7 @@ held	NONE
 10.2	NONE
 %	PRED
 of	NONE
-assets	NONE
+assets	ARG1
 in	NONE
 cash	NONE
 as	NONE
@@ -227,7 +227,7 @@ of	NONE
 the	NONE
 total	NONE
 cash	NONE
-position	NONE
+position	ARG1
 of	NONE
 about	NONE
 $	NONE
@@ -255,14 +255,14 @@ she	NONE
 expects	NONE
 the	NONE
 stock	NONE
-market	NONE
+market	ARG1
 wo	NONE
 n't	NONE
 decline	SUPPORT
 more	NONE
 than	NONE
 10	NONE
-%	NONE
+%	PRED
 to	NONE
 15	NONE
 %	NONE
@@ -286,7 +286,7 @@ she	NONE
 expects	NONE
 the	NONE
 stock	NONE
-market	NONE
+market	ARG1
 wo	NONE
 n't	NONE
 decline	SUPPORT
@@ -296,7 +296,7 @@ than	NONE
 %	NONE
 to	NONE
 15	NONE
-%	NONE
+%	PRED
 from	NONE
 recent	NONE
 highs	NONE
@@ -318,7 +318,7 @@ of	NONE
 a	NONE
 10	NONE
 %	PRED
-wage	NONE
+wage	ARG1
 increase	SUPPORT
 over	NONE
 the	NONE
@@ -378,7 +378,7 @@ only	NONE
 %	PRED
 of	NONE
 the	NONE
-capital	NONE
+capital	ARG1
 COMMA	NONE
 although	NONE
 it	NONE
@@ -407,7 +407,7 @@ for	NONE
 %	NONE
 to	NONE
 25	NONE
-%	PRED
+%	NONE
 of	NONE
 Quantum	NONE
 's	NONE
@@ -416,6 +416,30 @@ production	NONE
 and	NONE
 50	NONE
 %	PRED
+of	NONE
+its	NONE
+ethylene	NONE
+production	ARG1
+.	NONE
+
+The	NONE
+plant	NONE
+usually	NONE
+accounts	NONE
+for	NONE
+20	NONE
+%	PRED
+to	NONE
+25	NONE
+%	NONE
+of	NONE
+Quantum	NONE
+'s	NONE
+polyethylene	NONE
+production	ARG1
+and	NONE
+50	NONE
+%	NONE
 of	NONE
 its	NONE
 ethylene	NONE
@@ -436,34 +460,10 @@ of	NONE
 Quantum	NONE
 's	NONE
 polyethylene	NONE
-production	NONE
+production	ARG1
 and	NONE
 50	NONE
-%	PRED
-of	NONE
-its	NONE
-ethylene	NONE
-production	NONE
-.	NONE
-
-The	NONE
-plant	NONE
-usually	NONE
-accounts	NONE
-for	NONE
-20	NONE
 %	NONE
-to	NONE
-25	NONE
-%	PRED
-of	NONE
-Quantum	NONE
-'s	NONE
-polyethylene	NONE
-production	NONE
-and	NONE
-50	NONE
-%	PRED
 of	NONE
 its	NONE
 ethylene	NONE
@@ -491,7 +491,7 @@ COMMA	NONE
 virtually	NONE
 doubled	NONE
 its	NONE
-quota	PRED
+quota	NONE
 to	NONE
 0.95	NONE
 %	PRED
@@ -499,7 +499,7 @@ of	NONE
 the	NONE
 U.S.	NONE
 steel	NONE
-market	NONE
+market	ARG1
 from	NONE
 0.48	NONE
 %	NONE
@@ -521,7 +521,7 @@ than	NONE
 of	NONE
 the	NONE
 U.S.	NONE
-market	NONE
+market	ARG1
 if	NONE
 a	NONE
 joint	NONE
@@ -555,7 +555,7 @@ about	NONE
 of	NONE
 the	NONE
 U.S.	NONE
-market	NONE
+market	ARG1
 compared	NONE
 with	NONE
 recent	NONE
@@ -563,7 +563,7 @@ quotas	NONE
 of	NONE
 about	NONE
 6.7	NONE
-%	PRED
+%	NONE
 .	NONE
 
 Japan	NONE
@@ -579,11 +579,11 @@ about	NONE
 of	NONE
 the	NONE
 U.S.	NONE
-market	NONE
+market	ARG1
 compared	NONE
 with	NONE
 a	NONE
-quota	PRED
+quota	NONE
 of	NONE
 5.9	NONE
 %	NONE
@@ -597,7 +597,7 @@ COMMA	NONE
 the	NONE
 EC	NONE
 had	NONE
-its	ARG0
+its	NONE
 quota	NONE
 increased	NONE
 about	NONE
@@ -610,7 +610,7 @@ to	NONE
 of	NONE
 the	NONE
 U.S.	NONE
-market	NONE
+market	ARG1
 from	NONE
 6.7	NONE
 %	NONE
@@ -635,7 +635,7 @@ about	NONE
 %	PRED
 of	NONE
 the	NONE
-steel	NONE
+steel	ARG1
 imported	NONE
 to	NONE
 the	NONE
@@ -658,7 +658,7 @@ of	NONE
 the	NONE
 domestic	NONE
 steel	NONE
-market	NONE
+market	ARG1
 to	NONE
 give	NONE
 to	NONE
@@ -678,13 +678,13 @@ up	NONE
 of	NONE
 a	NONE
 1	NONE
-%	NONE
-increase	NONE
+%	PRED
+increase	SUPPORT
 in	NONE
 the	NONE
 overall	NONE
 quota	NONE
-program	NONE
+program	ARG1
 and	NONE
 1	NONE
 %	NONE
@@ -700,8 +700,8 @@ from	NONE
 the	NONE
 White	NONE
 House	NONE
-trade	ARG1
-office	PRED
+trade	NONE
+office	NONE
 will	NONE
 repeat	NONE
 these	NONE
@@ -720,7 +720,7 @@ of	NONE
 the	NONE
 U.S.	NONE
 steel	NONE
-market	NONE
+market	ARG1
 to	NONE
 allocate	NONE
 .	NONE
@@ -740,9 +740,9 @@ of	NONE
 the	NONE
 100	NONE
 million	NONE
-tons	NONE
+tons	ARG1
 of	NONE
-steel	ARG1
+steel	NONE
 used	NONE
 annually	NONE
 by	NONE
@@ -755,9 +755,9 @@ Britain	NONE
 retail	NONE
 price	NONE
 index	ARG1
-rose	SUPPORT
+rose	NONE
 0.7	NONE
-%	PRED
+%	NONE
 in	NONE
 September	NONE
 from	NONE
@@ -766,7 +766,7 @@ and	NONE
 was	NONE
 up	NONE
 7.6	NONE
-%	NONE
+%	PRED
 for	NONE
 the	NONE
 year	NONE
@@ -829,10 +829,10 @@ than	NONE
 %	PRED
 of	NONE
 the	NONE
-company	ARG1
+company	NONE
 's	NONE
 common	NONE
-stock	PRED
+stock	ARG1
 or	NONE
 announces	NONE
 a	NONE
@@ -853,7 +853,7 @@ easy	NONE
 time	NONE
 taking	NONE
 U.S.	NONE
-market	ARG1
+market	NONE
 share	NONE
 away	NONE
 from	NONE
@@ -898,16 +898,16 @@ won	NONE
 a	NONE
 30	NONE
 %	PRED
-stake	PRED
+stake	SUPPORT
 in	NONE
 the	NONE
 Japanese	NONE
-markets	NONE
+markets	ARG1
 .	NONE
 
 The	NONE
 U.S.	NONE
-share	PRED
+share	ARG1
 of	NONE
 the	NONE
 Japanese	NONE
@@ -915,9 +915,9 @@ market	NONE
 has	NONE
 been	NONE
 stuck	SUPPORT
-around	NONE
+around	SUPPORT
 10	NONE
-%	NONE
+%	PRED
 for	NONE
 years	NONE
 .	NONE
@@ -930,16 +930,16 @@ quarter	NONE
 COMMA	NONE
 natural	NONE
 gas	NONE
-prices	NONE
+prices	ARG1
 are	NONE
 anywhere	NONE
 from	NONE
 8	NONE
-%	NONE
+%	PRED
 to	NONE
 17	NONE
 %	NONE
-lower	NONE
+lower	SUPPORT
 than	NONE
 a	NONE
 year	NONE
@@ -954,7 +954,7 @@ quarter	NONE
 COMMA	NONE
 natural	NONE
 gas	NONE
-prices	NONE
+prices	ARG1
 are	NONE
 anywhere	NONE
 from	NONE
@@ -962,8 +962,8 @@ from	NONE
 %	NONE
 to	NONE
 17	NONE
-%	NONE
-lower	NONE
+%	PRED
+lower	SUPPORT
 than	NONE
 a	NONE
 year	NONE
@@ -974,7 +974,7 @@ For	NONE
 instance	NONE
 COMMA	NONE
 natural	NONE
-gas	NONE
+gas	ARG1
 currently	NONE
 produced	NONE
 along	NONE
@@ -1011,7 +1011,7 @@ year	NONE
 ago	NONE
 .	NONE
 
-It	NONE
+It	ARG1
 has	NONE
 plunged	SUPPORT
 13	NONE
@@ -1051,11 +1051,11 @@ to	NONE
 purchase	NONE
 a	NONE
 51	NONE
-%	ARG2
-stake	PRED
+%	PRED
+stake	SUPPORT
 in	NONE
 the	NONE
-thrift	NONE
+thrift	ARG1
 for	NONE
 about	NONE
 $	NONE
@@ -1090,11 +1090,11 @@ to	NONE
 acquire	NONE
 the	NONE
 51	NONE
-%	ARG2
-stake	PRED
+%	PRED
+stake	SUPPORT
 in	NONE
 the	NONE
-company	NONE
+company	ARG1
 .	NONE
 
 Ideal	NONE
@@ -1121,7 +1121,7 @@ its	NONE
 North	NONE
 American	NONE
 cement	NONE
-holdings	ARG1
+holdings	NONE
 with	NONE
 Ideal	NONE
 in	NONE
@@ -1168,13 +1168,13 @@ stake	SUPPORT
 in	NONE
 St.	NONE
 Lawrence	NONE
-Cement	NONE
+Cement	ARG1
 Inc.	NONE
 and	NONE
 its	NONE
 60	NONE
-%	ARG2
-stake	PRED
+%	NONE
+stake	NONE
 in	NONE
 Dundee	NONE
 Cement	NONE
@@ -1182,8 +1182,8 @@ Co.	NONE
 with	NONE
 its	NONE
 67	NONE
-%	ARG2
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 Ideal	NONE
 .	NONE
@@ -1208,8 +1208,8 @@ proposed	NONE
 combining	NONE
 its	NONE
 100	NONE
-%	PRED
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 St.	NONE
 Lawrence	NONE
@@ -1218,17 +1218,17 @@ Inc.	NONE
 and	NONE
 its	NONE
 60	NONE
-%	ARG2
-stake	PRED
+%	PRED
+stake	SUPPORT
 in	NONE
 Dundee	NONE
-Cement	NONE
+Cement	ARG1
 Co.	NONE
 with	NONE
 its	NONE
 67	NONE
-%	ARG2
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 Ideal	NONE
 .	NONE
@@ -1253,8 +1253,8 @@ proposed	NONE
 combining	NONE
 its	NONE
 100	NONE
-%	PRED
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 St.	NONE
 Lawrence	NONE
@@ -1263,8 +1263,8 @@ Inc.	NONE
 and	NONE
 its	NONE
 60	NONE
-%	ARG2
-stake	PRED
+%	NONE
+stake	NONE
 in	NONE
 Dundee	NONE
 Cement	NONE
@@ -1272,10 +1272,10 @@ Co.	NONE
 with	NONE
 its	NONE
 67	NONE
-%	ARG2
+%	PRED
 stake	SUPPORT
 in	NONE
-Ideal	NONE
+Ideal	ARG1
 .	NONE
 
 But	NONE
@@ -1338,12 +1338,12 @@ Oklahoma	NONE
 panhandle	NONE
 COMMA	NONE
 40	NONE
-%	NONE
+%	PRED
 or	NONE
 more	NONE
 of	NONE
 the	NONE
-topsoil	NONE
+topsoil	ARG1
 is	NONE
 short	NONE
 of	NONE
@@ -1351,7 +1351,7 @@ moisture	NONE
 .	NONE
 
 Bozell	NONE
-Cheil	NONE
+Cheil	ARG1
 Corp.	NONE
 COMMA	NONE
 as	NONE
@@ -1371,7 +1371,7 @@ and	NONE
 is	NONE
 70	NONE
 %	PRED
-owned	NONE
+owned	SUPPORT
 by	NONE
 Samsung	NONE
 and	NONE
@@ -1383,7 +1383,7 @@ Bozell	NONE
 .	NONE
 
 Bozell	NONE
-Cheil	NONE
+Cheil	ARG1
 Corp.	NONE
 COMMA	NONE
 as	NONE
@@ -1402,14 +1402,14 @@ Seoul	NONE
 and	NONE
 is	NONE
 70	NONE
-%	PRED
+%	NONE
 owned	NONE
 by	NONE
 Samsung	NONE
 and	NONE
 30	NONE
-%	NONE
-owned	NONE
+%	PRED
+owned	SUPPORT
 by	NONE
 Bozell	NONE
 .	NONE
@@ -1427,10 +1427,10 @@ which	NONE
 has	NONE
 an	NONE
 86	NONE
-%	ARG2
-stake	PRED
+%	PRED
+stake	SUPPORT
 in	NONE
-PCS	NONE
+PCS	ARG1
 .	NONE
 
 A	NONE
@@ -1449,10 +1449,10 @@ MedChem	NONE
 sales	NONE
 and	NONE
 10	NONE
-%	NONE
+%	PRED
 to	NONE
 20	NONE
-%	PRED
+%	NONE
 of	NONE
 its	NONE
 earnings	ARG1
@@ -1488,7 +1488,7 @@ USA	NONE
 Today	NONE
 COMMA	NONE
 ad	NONE
-pages	PRED
+pages	ARG1
 totaled	NONE
 785	NONE
 for	NONE
@@ -1497,7 +1497,7 @@ quarter	NONE
 COMMA	NONE
 down	NONE
 9.2	NONE
-%	NONE
+%	PRED
 from	NONE
 the	NONE
 1988	NONE
@@ -1593,13 +1593,13 @@ ad	NONE
 revenue	ARG1
 increased	SUPPORT
 8	NONE
-%	PRED
+%	NONE
 in	NONE
 the	NONE
 quarter	NONE
 and	NONE
 13	NONE
-%	NONE
+%	PRED
 in	NONE
 the	NONE
 nine	NONE
@@ -1673,7 +1673,7 @@ period	NONE
 .	NONE
 
 Ad	NONE
-linage	NONE
+linage	ARG1
 at	NONE
 the	NONE
 Journal	NONE
@@ -1691,7 +1691,7 @@ a	NONE
 supply	NONE
 crunch	NONE
 caused	NONE
-prices	NONE
+prices	ARG1
 to	NONE
 rise	SUPPORT
 14	NONE
@@ -1719,7 +1719,7 @@ price	NONE
 increase	NONE
 for	NONE
 the	NONE
-rest	PRED
+rest	NONE
 of	NONE
 this	NONE
 year	NONE
@@ -1734,7 +1734,7 @@ posted	NONE
 an	NONE
 11	NONE
 %	PRED
-gain	NONE
+gain	SUPPORT
 in	NONE
 net	NONE
 income	ARG1
@@ -1742,7 +1742,7 @@ COMMA	NONE
 as	NONE
 total	NONE
 ad	NONE
-pages	ARG1
+pages	NONE
 dropped	NONE
 at	NONE
 USA	NONE
@@ -1750,7 +1750,7 @@ Today	NONE
 COMMA	NONE
 but	NONE
 advertising	NONE
-revenue	ARG1
+revenue	NONE
 rose	NONE
 because	NONE
 of	NONE
@@ -1776,12 +1776,12 @@ reported	NONE
 a	NONE
 3	NONE
 %	PRED
-increase	NONE
+increase	SUPPORT
 in	NONE
 advertising	NONE
 and	NONE
 circulation	NONE
-revenue	NONE
+revenue	ARG1
 .	NONE
 
 The	NONE
@@ -1791,7 +1791,7 @@ currently	NONE
 using	NONE
 about	NONE
 80	NONE
-%	PRED
+%	NONE
 of	NONE
 its	NONE
 North	NONE
@@ -1826,7 +1826,7 @@ its	NONE
 North	NONE
 American	NONE
 vehicle	NONE
-capacity	NONE
+capacity	ARG1
 COMMA	NONE
 has	NONE
 vowed	NONE
@@ -1835,9 +1835,9 @@ will	NONE
 run	NONE
 at	NONE
 100	NONE
-%	PRED
+%	NONE
 of	NONE
-capacity	ARG1
+capacity	NONE
 by	NONE
 1992	NONE
 .	NONE
@@ -1850,7 +1850,7 @@ holds	NONE
 51	NONE
 %	PRED
 of	NONE
-Merieux	NONE
+Merieux	ARG1
 .	NONE
 
 Mr.	NONE
@@ -1861,14 +1861,14 @@ estimated	NONE
 that	NONE
 Lilly	NONE
 's	NONE
-earnings	NONE
+earnings	ARG1
 for	NONE
 the	NONE
 quarter	NONE
-jumped	NONE
+jumped	SUPPORT
 about	NONE
 20	NONE
-%	NONE
+%	PRED
 COMMA	NONE
 largely	NONE
 because	NONE
@@ -1889,11 +1889,11 @@ they	NONE
 expected	NONE
 Warner-Lambert	NONE
 's	NONE
-profit	NONE
+profit	ARG1
 also	NONE
 to	NONE
-increase	NONE
-by	NONE
+increase	SUPPORT
+by	SUPPORT
 more	NONE
 than	NONE
 20	NONE
@@ -1945,10 +1945,10 @@ a	NONE
 analysts	NONE
 that	NONE
 third-quarter	NONE
-earnings	NONE
+earnings	ARG1
 per	NONE
 share	NONE
-rose	NONE
+rose	SUPPORT
 by	SUPPORT
 about	NONE
 19	NONE
@@ -1970,7 +1970,7 @@ the	NONE
 increase	SUPPORT
 in	NONE
 full-year	NONE
-earnings	NONE
+earnings	ARG1
 per	NONE
 share	NONE
 COMMA	NONE
@@ -1992,8 +1992,8 @@ analysts	NONE
 said	NONE
 Pfizer	NONE
 's	NONE
-recent	ARGM
-string	PRED
+recent	NONE
+string	NONE
 of	NONE
 lackluster	NONE
 quarterly	NONE
@@ -2001,18 +2001,18 @@ performances	NONE
 continued	NONE
 COMMA	NONE
 as	NONE
-earnings	NONE
+earnings	ARG1
 in	NONE
 the	NONE
 quarter	NONE
 were	NONE
 expected	NONE
 to	NONE
-decline	NONE
-by	NONE
+decline	SUPPORT
+by	SUPPORT
 about	NONE
 5	NONE
-%	NONE
+%	PRED
 .	NONE
 
 Analysts	NONE
@@ -2021,17 +2021,17 @@ they	NONE
 expected	NONE
 Upjohn	NONE
 's	NONE
-profit	NONE
+profit	ARG1
 to	NONE
 be	NONE
 flat	NONE
 or	NONE
-rise	NONE
-by	NONE
+rise	SUPPORT
+by	SUPPORT
 only	NONE
 about	NONE
 2	NONE
-%	NONE
+%	PRED
 to	NONE
 4	NONE
 %	NONE
@@ -2061,20 +2061,20 @@ they	NONE
 expected	NONE
 Upjohn	NONE
 's	NONE
-profit	NONE
+profit	ARG1
 to	NONE
 be	NONE
 flat	NONE
 or	NONE
-rise	NONE
-by	NONE
+rise	SUPPORT
+by	SUPPORT
 only	NONE
 about	NONE
 2	NONE
 %	NONE
 to	NONE
 4	NONE
-%	NONE
+%	PRED
 as	NONE
 compared	NONE
 with	NONE
@@ -2100,7 +2100,7 @@ said	NONE
 profit	ARG1
 for	NONE
 the	NONE
-dozen	PRED
+dozen	NONE
 or	NONE
 so	NONE
 big	NONE
@@ -2115,10 +2115,10 @@ is	NONE
 estimated	NONE
 to	NONE
 have	NONE
-climbed	NONE
+climbed	SUPPORT
 between	NONE
 11	NONE
-%	NONE
+%	PRED
 and	NONE
 14	NONE
 %	NONE
@@ -2129,7 +2129,7 @@ said	NONE
 profit	ARG1
 for	NONE
 the	NONE
-dozen	PRED
+dozen	NONE
 or	NONE
 so	NONE
 big	NONE
@@ -2144,13 +2144,13 @@ is	NONE
 estimated	NONE
 to	NONE
 have	NONE
-climbed	NONE
+climbed	SUPPORT
 between	NONE
 11	NONE
 %	NONE
 and	NONE
 14	NONE
-%	NONE
+%	PRED
 .	NONE
 
 Mr.	NONE
@@ -2163,11 +2163,11 @@ profit	ARG1
 for	NONE
 the	NONE
 quarter	NONE
-rose	NONE
-by	NONE
+rose	SUPPORT
+by	SUPPORT
 about	NONE
 22	NONE
-%	NONE
+%	PRED
 COMMA	NONE
 propelled	NONE
 by	NONE
@@ -2210,22 +2210,22 @@ medication	NONE
 
 Amid	NONE
 a	NONE
-crowd	PRED
+crowd	NONE
 of	NONE
-crashing	ARG1
+crashing	NONE
 stocks	NONE
 COMMA	NONE
 Relational	NONE
 Technology	NONE
 Inc.	NONE
 's	NONE
-stock	PRED
+stock	ARG1
 fell	NONE
 particularly	NONE
 hard	NONE
 Friday	NONE
 COMMA	NONE
-dropping	NONE
+dropping	SUPPORT
 23	NONE
 %	PRED
 because	NONE
@@ -2243,7 +2243,7 @@ for	NONE
 its	NONE
 fiscal	NONE
 first	NONE
-quarter	PRED
+quarter	NONE
 .	NONE
 
 But	NONE
@@ -2252,11 +2252,11 @@ average	NONE
 COMMA	NONE
 Manhattan	NONE
 retail	NONE
-rents	NONE
+rents	ARG1
 have	NONE
 dropped	SUPPORT
 10	NONE
-%	NONE
+%	PRED
 to	NONE
 15	NONE
 %	NONE
@@ -2277,14 +2277,14 @@ average	NONE
 COMMA	NONE
 Manhattan	NONE
 retail	NONE
-rents	NONE
+rents	ARG1
 have	NONE
 dropped	SUPPORT
 10	NONE
 %	NONE
 to	NONE
 15	NONE
-%	NONE
+%	PRED
 in	NONE
 the	NONE
 past	NONE
@@ -2300,7 +2300,7 @@ And	NONE
 Time	NONE
 's	NONE
 paid	NONE
-circulation	NONE
+circulation	ARG1
 COMMA	NONE
 according	NONE
 to	NONE
@@ -2309,7 +2309,7 @@ Bureau	NONE
 of	NONE
 Circulations	NONE
 COMMA	NONE
-dropped	NONE
+dropped	SUPPORT
 7.3	NONE
 %	PRED
 to	NONE
@@ -2331,7 +2331,7 @@ But	NONE
 of	NONE
 the	NONE
 cable-television-equipped	NONE
-households	NONE
+households	ARG1
 that	NONE
 watch	NONE
 news	NONE
@@ -2395,11 +2395,11 @@ which	NONE
 holds	NONE
 a	NONE
 2	NONE
-%	ARG2
-stake	NONE
+%	PRED
+stake	SUPPORT
 in	NONE
 Turner	NONE
-Broadcasting	NONE
+Broadcasting	ARG1
 .	NONE
 
 After	NONE
@@ -2416,7 +2416,7 @@ index	ARG1
 for	NONE
 finished	NONE
 goods	NONE
-shot	NONE
+shot	SUPPORT
 up	NONE
 0.9	NONE
 %	PRED
@@ -2456,15 +2456,15 @@ month	NONE
 COMMA	NONE
 when	NONE
 energy	NONE
-prices	NONE
-zoomed	NONE
+prices	ARG1
+zoomed	SUPPORT
 up	NONE
 6.5	NONE
 %	PRED
 after	NONE
 plunging	NONE
 7.3	NONE
-%	PRED
+%	NONE
 in	NONE
 August	NONE
 .	NONE
@@ -2485,13 +2485,13 @@ month	NONE
 COMMA	NONE
 when	NONE
 energy	NONE
-prices	NONE
+prices	ARG1
 zoomed	NONE
 up	NONE
 6.5	NONE
-%	PRED
+%	NONE
 after	NONE
-plunging	NONE
+plunging	SUPPORT
 7.3	NONE
 %	PRED
 in	NONE
@@ -2501,9 +2501,9 @@ August	NONE
 Passenger	NONE
 car	NONE
 prices	ARG1
-jumped	SUPPORT
+jumped	NONE
 3.8	NONE
-%	PRED
+%	NONE
 in	NONE
 September	NONE
 COMMA	NONE
@@ -2533,9 +2533,9 @@ in	NONE
 September	NONE
 COMMA	NONE
 after	NONE
-climbing	SUPPORT
+climbing	NONE
 0.5	NONE
-%	PRED
+%	NONE
 in	NONE
 August	NONE
 and	NONE
@@ -2556,12 +2556,12 @@ rose	NONE
 a	NONE
 hefty	NONE
 1.1	NONE
-%	PRED
+%	NONE
 in	NONE
 September	NONE
 COMMA	NONE
 while	NONE
-prices	NONE
+prices	ARG1
 for	NONE
 home	NONE
 electronic	NONE
@@ -2571,11 +2571,11 @@ fell	SUPPORT
 %	PRED
 .	NONE
 
-Prices	NONE
+Prices	ARG1
 for	NONE
 capital	NONE
 equipment	NONE
-rose	NONE
+rose	SUPPORT
 a	NONE
 hefty	NONE
 1.1	NONE
@@ -2589,16 +2589,16 @@ for	NONE
 home	NONE
 electronic	NONE
 equipment	NONE
-fell	SUPPORT
+fell	NONE
 1.1	NONE
-%	PRED
+%	NONE
 .	NONE
 
 Food	NONE
 prices	ARG1
-declined	SUPPORT
+declined	NONE
 0.6	NONE
-%	PRED
+%	NONE
 COMMA	NONE
 after	NONE
 climbing	SUPPORT
@@ -2615,9 +2615,9 @@ declined	SUPPORT
 %	PRED
 COMMA	NONE
 after	NONE
-climbing	SUPPORT
+climbing	NONE
 0.3	NONE
-%	PRED
+%	NONE
 in	NONE
 August	NONE
 .	NONE
@@ -2647,14 +2647,14 @@ Sales	ARG1
 at	NONE
 general	NONE
 merchandise	NONE
-stores	ARG1
-rose	SUPPORT
+stores	NONE
+rose	NONE
 1.7	NONE
-%	PRED
+%	NONE
 after	NONE
 declining	SUPPORT
 0.6	NONE
-%	NONE
+%	PRED
 in	NONE
 August	NONE
 COMMA	NONE
@@ -2662,10 +2662,68 @@ while	NONE
 sales	NONE
 of	NONE
 building	NONE
-materials	ARG1
+materials	NONE
+fell	NONE
+1.8	NONE
+%	NONE
+after	NONE
+rising	NONE
+1.7	NONE
+%	NONE
+.	NONE
+
+Sales	NONE
+at	NONE
+general	NONE
+merchandise	NONE
+stores	NONE
+rose	NONE
+1.7	NONE
+%	NONE
+after	NONE
+declining	NONE
+0.6	NONE
+%	NONE
+in	NONE
+August	NONE
+COMMA	NONE
+while	NONE
+sales	ARG1
+of	NONE
+building	NONE
+materials	NONE
 fell	SUPPORT
 1.8	NONE
 %	PRED
+after	NONE
+rising	NONE
+1.7	NONE
+%	NONE
+.	NONE
+
+Sales	NONE
+at	NONE
+general	NONE
+merchandise	NONE
+stores	NONE
+rose	NONE
+1.7	NONE
+%	NONE
+after	NONE
+declining	NONE
+0.6	NONE
+%	NONE
+in	NONE
+August	NONE
+COMMA	NONE
+while	NONE
+sales	ARG1
+of	NONE
+building	NONE
+materials	NONE
+fell	NONE
+1.8	NONE
+%	NONE
 after	NONE
 rising	SUPPORT
 1.7	NONE
@@ -2676,12 +2734,12 @@ Sales	ARG1
 at	NONE
 general	NONE
 merchandise	NONE
-stores	ARG1
+stores	NONE
 rose	SUPPORT
 1.7	NONE
 %	PRED
 after	NONE
-declining	SUPPORT
+declining	NONE
 0.6	NONE
 %	NONE
 in	NONE
@@ -2691,76 +2749,18 @@ while	NONE
 sales	NONE
 of	NONE
 building	NONE
-materials	ARG1
-fell	SUPPORT
+materials	NONE
+fell	NONE
 1.8	NONE
-%	PRED
-after	NONE
-rising	SUPPORT
-1.7	NONE
-%	PRED
-.	NONE
-
-Sales	ARG1
-at	NONE
-general	NONE
-merchandise	NONE
-stores	ARG1
-rose	SUPPORT
-1.7	NONE
-%	PRED
-after	NONE
-declining	SUPPORT
-0.6	NONE
 %	NONE
-in	NONE
-August	NONE
-COMMA	NONE
-while	NONE
-sales	NONE
-of	NONE
-building	NONE
-materials	ARG1
-fell	SUPPORT
-1.8	NONE
-%	PRED
 after	NONE
-rising	SUPPORT
+rising	NONE
 1.7	NONE
-%	PRED
-.	NONE
-
-Sales	ARG1
-at	NONE
-general	NONE
-merchandise	NONE
-stores	ARG1
-rose	SUPPORT
-1.7	NONE
-%	PRED
-after	NONE
-declining	SUPPORT
-0.6	NONE
 %	NONE
-in	NONE
-August	NONE
-COMMA	NONE
-while	NONE
-sales	NONE
-of	NONE
-building	NONE
-materials	ARG1
-fell	SUPPORT
-1.8	NONE
-%	PRED
-after	NONE
-rising	SUPPORT
-1.7	NONE
-%	PRED
 .	NONE
 
 Producer	NONE
-prices	NONE
+prices	ARG1
 for	NONE
 intermediate	NONE
 goods	NONE
@@ -2778,18 +2778,18 @@ consecutive	NONE
 months	NONE
 .	NONE
 
-Prices	NONE
+Prices	ARG1
 for	NONE
 crude	NONE
 goods	NONE
 COMMA	NONE
 an	NONE
-array	PRED
+array	NONE
 of	NONE
 raw	NONE
 materials	NONE
 COMMA	NONE
-jumped	NONE
+jumped	SUPPORT
 1.1	NONE
 %	PRED
 after	NONE
@@ -2802,54 +2802,54 @@ and	NONE
 edging	NONE
 up	NONE
 0.2	NONE
-%	PRED
+%	NONE
 in	NONE
 July	NONE
 .	NONE
 
-Prices	NONE
+Prices	ARG1
 for	NONE
 crude	NONE
 goods	NONE
 COMMA	NONE
 an	NONE
-array	PRED
+array	NONE
 of	NONE
 raw	NONE
 materials	NONE
 COMMA	NONE
 jumped	NONE
 1.1	NONE
-%	PRED
-after	NONE
-declining	NONE
-1.9	NONE
 %	NONE
+after	NONE
+declining	SUPPORT
+1.9	NONE
+%	PRED
 in	NONE
 August	NONE
 and	NONE
 edging	NONE
 up	NONE
 0.2	NONE
-%	PRED
+%	NONE
 in	NONE
 July	NONE
 .	NONE
 
-Prices	NONE
+Prices	ARG1
 for	NONE
 crude	NONE
 goods	NONE
 COMMA	NONE
 an	NONE
-array	PRED
+array	NONE
 of	NONE
 raw	NONE
 materials	NONE
 COMMA	NONE
 jumped	NONE
 1.1	NONE
-%	PRED
+%	NONE
 after	NONE
 declining	NONE
 1.9	NONE
@@ -2857,7 +2857,7 @@ declining	NONE
 in	NONE
 August	NONE
 and	NONE
-edging	NONE
+edging	SUPPORT
 up	NONE
 0.2	NONE
 %	PRED
@@ -2930,9 +2930,9 @@ COMMA	NONE
 the	NONE
 producer	NONE
 price	NONE
-index	NONE
+index	ARG1
 still	NONE
-increased	NONE
+increased	SUPPORT
 by	SUPPORT
 0.7	NONE
 %	PRED
@@ -2949,7 +2949,7 @@ the	NONE
 National	NONE
 Association	NONE
 of	NONE
-Manufacturers	ARG1
+Manufacturers	NONE
 .	NONE
 
 Approximately	NONE
@@ -2957,7 +2957,7 @@ Approximately	NONE
 %	PRED
 of	NONE
 the	NONE
-total	NONE
+total	ARG1
 consisted	NONE
 of	NONE
 nonperforming	NONE
@@ -2987,7 +2987,7 @@ about	NONE
 1.2	NONE
 %	PRED
 of	NONE
-assets	NONE
+assets	ARG1
 COMMA	NONE
 from	NONE
 a	NONE
@@ -3050,7 +3050,7 @@ as	NONE
 of	NONE
 West	NONE
 German	NONE
-households	NONE
+households	ARG1
 .	NONE
 
 The	NONE
@@ -3060,7 +3060,7 @@ opposition	NONE
 to	NONE
 American	NONE
 TV	NONE
-imports	ARG1
+imports	NONE
 has	NONE
 come	NONE
 from	NONE
@@ -3084,7 +3084,7 @@ of	NONE
 Europe	NONE
 's	NONE
 TV	NONE
-shows	NONE
+shows	ARG1
 be	NONE
 produced	NONE
 in	NONE
@@ -3109,12 +3109,12 @@ COMMA	NONE
 or	NONE
 about	NONE
 9.1	NONE
-%	NONE
+%	PRED
 of	NONE
 net	NONE
 U.S.	NONE
 crude	NONE
-imports	NONE
+imports	ARG1
 COMMA	NONE
 said	NONE
 John	NONE
@@ -3134,7 +3134,7 @@ Foundation	NONE
 Mr.	NONE
 Watkins	NONE
 said	NONE
-volume	NONE
+volume	ARG1
 on	NONE
 Interprovincial	NONE
 's	NONE
@@ -3163,8 +3163,8 @@ mid-1990s	NONE
 .	NONE
 
 The	NONE
-number	NONE
-of	ARG1
+number	ARG1
+of	NONE
 active	NONE
 drilling	NONE
 rigs	NONE
@@ -3181,7 +3181,7 @@ ago	NONE
 COMMA	NONE
 and	NONE
 the	NONE
-number	PRED
+number	NONE
 of	NONE
 completed	NONE
 oil	NONE
@@ -3210,7 +3210,7 @@ COMMA	NONE
 manager	NONE
 of	NONE
 crude	NONE
-oil	ARG1
+oil	NONE
 with	NONE
 Calgary	NONE
 's	NONE
@@ -3222,14 +3222,14 @@ Canada	NONE
 COMMA	NONE
 an	NONE
 industry	NONE
-group	PRED
+group	NONE
 .	NONE
 
 Interprovincial	NONE
 transports	NONE
 about	NONE
 75	NONE
-%	PRED
+%	NONE
 of	NONE
 all	NONE
 crude	NONE
@@ -3250,7 +3250,7 @@ volume	ARG1
 consists	NONE
 of	NONE
 light	NONE
-crude	ARG1
+crude	NONE
 .	NONE
 
 Interprovincial	NONE
@@ -3260,7 +3260,7 @@ about	NONE
 %	PRED
 of	NONE
 all	NONE
-crude	NONE
+crude	ARG1
 produced	NONE
 in	NONE
 western	NONE
@@ -3269,16 +3269,16 @@ COMMA	NONE
 and	NONE
 almost	NONE
 60	NONE
-%	PRED
+%	NONE
 of	NONE
 Interprovincial	NONE
 's	NONE
 total	NONE
-volume	ARG1
+volume	NONE
 consists	NONE
 of	NONE
 light	NONE
-crude	ARG1
+crude	NONE
 .	NONE
 
 Inland	NONE
@@ -3295,7 +3295,7 @@ dropped	SUPPORT
 more	NONE
 than	NONE
 50	NONE
-%	NONE
+%	PRED
 from	NONE
 the	NONE
 previous	NONE
@@ -3319,7 +3319,7 @@ Microsoft	NONE
 said	NONE
 it	NONE
 expects	NONE
-revenue	NONE
+revenue	ARG1
 for	NONE
 its	NONE
 first	NONE
@@ -3374,7 +3374,7 @@ that	NONE
 64	NONE
 %	PRED
 of	NONE
-people	NONE
+people	ARG1
 aged	NONE
 65	NONE
 to	NONE
@@ -3401,7 +3401,7 @@ COMMA	NONE
 10	NONE
 %	PRED
 of	NONE
-those	NONE
+those	ARG1
 aged	NONE
 65	NONE
 to	NONE
@@ -3425,7 +3425,7 @@ Only	NONE
 17	NONE
 %	PRED
 of	NONE
-those	NONE
+those	ARG1
 aged	NONE
 75	NONE
 and	NONE
@@ -3460,10 +3460,10 @@ COMMA	NONE
 they	NONE
 control	NONE
 nearly	NONE
-one-third	PRED
+one-third	NONE
 of	NONE
 discretionary	NONE
-income	ARG1
+income	NONE
 .	NONE
 
 Despite	NONE
@@ -3511,14 +3511,14 @@ up	NONE
 47	NONE
 %	PRED
 of	NONE
-officials	NONE
+officials	ARG1
 and	NONE
-managers	NONE
+managers	ARG1
 in	NONE
 the	NONE
 top	NONE
 50	NONE
-banks	ARG1
+banks	NONE
 COMMA	NONE
 up	NONE
 from	NONE
@@ -3529,7 +3529,7 @@ in	NONE
 .	NONE
 
 The	NONE
-amount	NONE
+amount	ARG1
 of	NONE
 income	NONE
 divvied	NONE
@@ -3564,15 +3564,15 @@ instance	NONE
 COMMA	NONE
 saw	NONE
 its	NONE
-population	NONE
+population	ARG1
 grow	SUPPORT
-by	NONE
+by	SUPPORT
 11COMMA000	NONE
 people	NONE
 COMMA	NONE
 or	NONE
 0.4	NONE
-%	NONE
+%	PRED
 COMMA	NONE
 between	NONE
 1987	NONE
@@ -3645,7 +3645,7 @@ of	NONE
 the	NONE
 employer	NONE
 's	NONE
-stock	PRED
+stock	ARG1
 .	NONE
 
 ``	NONE
@@ -3657,12 +3657,12 @@ to	NONE
 four	NONE
 weeks	NONE
 and	NONE
-took	NONE
+took	SUPPORT
 the	NONE
-market	NONE
+market	ARG1
 10%-12	NONE
-%	NONE
-down	NONE
+%	PRED
+down	SUPPORT
 COMMA	NONE
 ''	NONE
 she	NONE
@@ -3671,7 +3671,7 @@ says	NONE
 
 ``	NONE
 The	NONE
-market	NONE
+market	ARG1
 was	NONE
 up	NONE
 35	NONE
@@ -3703,12 +3703,12 @@ COMMA	NONE
 the	NONE
 Nasdaq	NONE
 Composite	NONE
-Index	NONE
+Index	ARG1
 suffered	NONE
 its	NONE
 biggest	NONE
 point	NONE
-decline	SUPPORT
+decline	NONE
 of	NONE
 the	NONE
 year	NONE
@@ -3732,7 +3732,7 @@ to	NONE
 The	NONE
 Nasdaq	NONE
 100	NONE
-Index	NONE
+Index	ARG1
 of	NONE
 the	NONE
 largest	NONE
@@ -3760,14 +3760,14 @@ to	NONE
 The	NONE
 Nasdaq	NONE
 Financial	NONE
-Index	NONE
+Index	ARG1
 of	NONE
 giant	NONE
 insurance	NONE
 and	NONE
 banking	NONE
 stocks	NONE
-dropped	NONE
+dropped	SUPPORT
 2	NONE
 %	PRED
 COMMA	NONE
@@ -3778,10 +3778,10 @@ to	NONE
 462.98	NONE
 .	NONE
 
-McCaw	NONE
-lost	NONE
+McCaw	ARG1
+lost	SUPPORT
 8	NONE
-%	NONE
+%	PRED
 COMMA	NONE
 or	NONE
 3	NONE
@@ -3792,9 +3792,9 @@ to	NONE
 .	NONE
 
 LIN	NONE
-Broadcasting	NONE
+Broadcasting	ARG1
 COMMA	NONE
-dropped	NONE
+dropped	SUPPORT
 5	NONE
 1/2	NONE
 COMMA	NONE
@@ -3818,17 +3818,17 @@ Exchange	NONE
 Composite	ARG1
 tumbled	SUPPORT
 5.8	NONE
-%	NONE
+%	PRED
 Friday	NONE
 and	NONE
 the	NONE
 American	NONE
 Stock	NONE
 Exchange	NONE
-Composite	ARG1
+Composite	NONE
 fell	NONE
 4	NONE
-%	PRED
+%	NONE
 .	NONE
 
 By	NONE
@@ -3839,8 +3839,8 @@ New	NONE
 York	NONE
 Stock	NONE
 Exchange	NONE
-Composite	ARG1
-tumbled	SUPPORT
+Composite	NONE
+tumbled	NONE
 5.8	NONE
 %	NONE
 Friday	NONE
@@ -3850,7 +3850,7 @@ American	NONE
 Stock	NONE
 Exchange	NONE
 Composite	ARG1
-fell	NONE
+fell	SUPPORT
 4	NONE
 %	PRED
 .	NONE
@@ -3864,7 +3864,7 @@ COMMA	NONE
 the	NONE
 Nasdaq	NONE
 Composite	ARG1
-fell	NONE
+fell	SUPPORT
 16.18	NONE
 points	NONE
 COMMA	NONE
@@ -3896,32 +3896,32 @@ COMMA	NONE
 COMMA	NONE
 the	NONE
 Nasdaq	NONE
-Composite	ARG1
+Composite	NONE
 fell	NONE
 16.18	NONE
 points	NONE
 COMMA	NONE
 or	NONE
 3.8	NONE
-%	PRED
+%	NONE
 COMMA	NONE
 followed	NONE
 by	NONE
-its	NONE
+its	ARG1
 devastating	NONE
 46.12-point	NONE
 COMMA	NONE
 or	NONE
 11	NONE
-%	NONE
-slide	NONE
+%	PRED
+slide	SUPPORT
 COMMA	NONE
 three	NONE
 days	NONE
 later	NONE
 .	NONE
 
-Stocks	NONE
+Stocks	ARG1
 COMMA	NONE
 as	NONE
 measured	NONE
@@ -3943,7 +3943,7 @@ year	NONE
 COMMA	NONE
 rising	SUPPORT
 27.97	NONE
-%	NONE
+%	PRED
 before	NONE
 Friday	NONE
 's	NONE
@@ -3972,7 +3972,7 @@ $	NONE
 220	NONE
 million	NONE
 investment	NONE
-pool	NONE
+pool	ARG1
 to	NONE
 cash	NONE
 in	NONE
@@ -4020,13 +4020,13 @@ May	NONE
 that	NONE
 its	NONE
 short	NONE
-positions	PRED
+positions	ARG1
 had	NONE
-shown	NONE
-losses	NONE
-of	NONE
+shown	SUPPORT
+losses	SUPPORT
+of	SUPPORT
 10	NONE
-%	NONE
+%	PRED
 for	NONE
 the	NONE
 year	NONE
@@ -4046,13 +4046,13 @@ ASKO	NONE
 also	NONE
 disclosed	NONE
 it	NONE
-holds	SUPPORT
+holds	NONE
 a	NONE
 15	NONE
-%	ARG2
-stake	PRED
+%	PRED
+stake	SUPPORT
 in	NONE
-Ahold	NONE
+Ahold	ARG1
 .	NONE
 
 Consider	NONE
@@ -4070,7 +4070,7 @@ of	NONE
 all	NONE
 personal	NONE
 computer	NONE
-sales	NONE
+sales	ARG1
 .	NONE
 
 Compaq	NONE
@@ -4085,14 +4085,14 @@ COMMA	NONE
 which	NONE
 last	NONE
 year	NONE
-had	SUPPORT
+had	NONE
 28	NONE
 %	PRED
 of	NONE
 the	NONE
 U.S.	NONE
 laptop	NONE
-market	NONE
+market	ARG1
 but	NONE
 recently	NONE
 agreed	NONE
@@ -4130,7 +4130,7 @@ consumer	NONE
 price	NONE
 index	ARG1
 to	NONE
-shoot	NONE
+shoot	SUPPORT
 up	NONE
 1.1	NONE
 %	PRED
@@ -4147,7 +4147,7 @@ of	NONE
 inflation	NONE
 to	NONE
 6.8	NONE
-%	PRED
+%	NONE
 COMMA	NONE
 the	NONE
 National	NONE
@@ -4207,9 +4207,9 @@ wholesale	NONE
 prices	ARG1
 in	NONE
 September	NONE
-rose	SUPPORT
+rose	NONE
 3.3	NONE
-%	PRED
+%	NONE
 from	NONE
 a	NONE
 year	NONE
@@ -4249,7 +4249,7 @@ and	NONE
 were	NONE
 up	NONE
 0.4	NONE
-%	PRED
+%	NONE
 from	NONE
 the	NONE
 previous	NONE
@@ -4273,7 +4273,7 @@ acquired	NONE
 %	PRED
 of	NONE
 the	NONE
-shares	NONE
+shares	ARG1
 in	NONE
 Jaguar	NONE
 PLC	NONE
@@ -4305,8 +4305,8 @@ as	NONE
 15	NONE
 %	PRED
 of	NONE
-Jaguar	ARG1
-shares	PRED
+Jaguar	NONE
+shares	ARG1
 .	NONE
 
 Typically	NONE
@@ -4324,11 +4324,11 @@ stock	NONE
 falls	NONE
 below	NONE
 75	NONE
-%	NONE
+%	PRED
 of	NONE
 its	NONE
 original	NONE
-value	NONE
+value	ARG1
 .	NONE
 
 ``	NONE
@@ -4338,13 +4338,13 @@ be	NONE
 disappointed	NONE
 if	NONE
 the	NONE
-company	NONE
+company	ARG1
 grew	SUPPORT
-by	NONE
+by	SUPPORT
 less	NONE
 than	NONE
 20	NONE
-%	NONE
+%	PRED
 next	NONE
 year	NONE
 COMMA	NONE
@@ -4369,14 +4369,14 @@ among	NONE
 economists	NONE
 is	NONE
 that	NONE
-it	NONE
-grew	NONE
+it	ARG1
+grew	SUPPORT
 a	NONE
 much	NONE
 more	NONE
 sluggish	NONE
 2.3	NONE
-%	NONE
+%	PRED
 in	NONE
 the	NONE
 third	NONE
@@ -4423,7 +4423,7 @@ of	NONE
 of	NONE
 the	NONE
 PSA	NONE
-model	NONE
+model	ARG1
 .	NONE
 
 Meanwhile	NONE
@@ -4449,12 +4449,12 @@ minor	NONE
 increase	NONE
 to	NONE
 the	NONE
-steel	NONE
-allotment	NONE
+steel	ARG1
+allotment	PRED
 for	NONE
 the	NONE
 European	NONE
-Community	NONE
+Community	ARG0
 .	NONE
 
 Unseasonably	NONE
@@ -4464,19 +4464,19 @@ dry	NONE
 weather	NONE
 across	NONE
 large	NONE
-portions	PRED
+portions	NONE
 of	NONE
 the	NONE
 Great	NONE
 Plains	NONE
 and	NONE
 in	NONE
-wheat-growing	NONE
+wheat-growing	ARG2
 areas	PRED
 in	NONE
-Washington	NONE
+Washington	ARG1
 and	NONE
-Oregon	NONE
+Oregon	ARG1
 is	NONE
 threatening	NONE
 to	NONE
@@ -4488,8 +4488,8 @@ this	NONE
 season	NONE
 's	NONE
 winter	NONE
-wheat	ARG1
-crop	PRED
+wheat	NONE
+crop	NONE
 COMMA	NONE
 said	NONE
 Conrad	NONE
@@ -4519,9 +4519,9 @@ many	NONE
 of	NONE
 the	NONE
 Great	NONE
-Plains	NONE
+Plains	ARG1
 '	NONE
-wheat-growing	NONE
+wheat-growing	ARG2
 areas	PRED
 COMMA	NONE
 yields	NONE
@@ -4558,7 +4558,7 @@ cable	NONE
 revenue	NONE
 and	NONE
 publishing	NONE
-revenue	ARG1
+revenue	NONE
 helped	NONE
 by	NONE
 an	NONE
@@ -4572,8 +4572,8 @@ area	PRED
 .	NONE
 
 The	NONE
-21-square-mile	NONE
-area	NONE
+21-square-mile	ARG1
+area	PRED
 is	NONE
 contaminated	NONE
 with	NONE
@@ -4594,11 +4594,11 @@ an	NONE
 array	PRED
 of	NONE
 raw	NONE
-materials	NONE
+materials	ARG1
 COMMA	NONE
 jumped	NONE
 1.1	NONE
-%	PRED
+%	NONE
 after	NONE
 declining	NONE
 1.9	NONE
@@ -4609,19 +4609,19 @@ and	NONE
 edging	NONE
 up	NONE
 0.2	NONE
-%	PRED
+%	NONE
 in	NONE
 July	NONE
 .	NONE
 
 A	NONE
-group	PRED
+group	NONE
 of	NONE
 Arby	NONE
 's	NONE
-franchisees	ARG1
+franchisees	NONE
 said	NONE
-they	ARG2
+they	ARG1
 formed	SUPPORT
 an	NONE
 association	PRED
@@ -4629,15 +4629,15 @@ to	NONE
 oppose	NONE
 Miami	NONE
 Beach	NONE
-financier	ARG2
+financier	NONE
 Victor	NONE
 Posner	NONE
 's	NONE
 control	NONE
 of	NONE
 the	NONE
-restaurant	ARG1
-chain	PRED
+restaurant	NONE
+chain	NONE
 .	NONE
 
 In	NONE
@@ -4651,10 +4651,10 @@ thrived	NONE
 on	NONE
 a	NONE
 firm	NONE
-base	NONE
+base	PRED
 of	NONE
 small-investor	NONE
-participation	NONE
+participation	ARG1
 .	NONE
 
 More	NONE
@@ -4673,10 +4673,10 @@ could	NONE
 permanently	NONE
 erode	NONE
 the	NONE
-base	NONE
+base	PRED
 of	NONE
 small-investor	NONE
-support	NONE
+support	ARG1
 the	NONE
 OTC	NONE
 market	NONE
@@ -4773,7 +4773,7 @@ relaxation	NONE
 of	NONE
 controls	NONE
 on	NONE
-exports	ARG1
+exports	NONE
 to	NONE
 the	NONE
 Soviet	ARG1
@@ -4880,7 +4880,7 @@ chemical	NONE
 building	NONE
 block	PRED
 of	NONE
-polyethylene	NONE
+polyethylene	ARG1
 COMMA	NONE
 has	NONE
 n't	NONE
@@ -4901,7 +4901,7 @@ generally	NONE
 ranged	NONE
 from	NONE
 20COMMA000	NONE
-shares	PRED
+shares	NONE
 to	NONE
 50COMMA000	NONE
 shares	NONE
@@ -4910,10 +4910,10 @@ compared	NONE
 with	NONE
 blocks	PRED
 of	NONE
-500COMMA000	ARG1
-shares	NONE
+500COMMA000	NONE
+shares	ARG1
 or	NONE
-more	NONE
+more	ARG1
 two	NONE
 years	NONE
 ago	NONE
@@ -4944,7 +4944,7 @@ Saatchi	NONE
 and	NONE
 becomes	NONE
 a	NONE
-member	PRED
+member	NONE
 of	NONE
 its	ARG2
 board	PRED
@@ -4975,7 +4975,7 @@ and	NONE
 whose	NONE
 strategic	NONE
 guiding	NONE
-force	PRED
+force	NONE
 is	NONE
 believed	NONE
 to	NONE
@@ -4997,8 +4997,8 @@ be	NONE
 enough	NONE
 to	NONE
 avoid	NONE
-permanent	NONE
-across-the-board	NONE
+permanent	ARGM
+across-the-board	PRED
 cuts	NONE
 COMMA	NONE
 but	NONE
@@ -5029,9 +5029,9 @@ pointed	NONE
 out	NONE
 in	NONE
 a	NONE
-number	PRED
+number	NONE
 of	NONE
-articles	ARG1
+articles	NONE
 COMMA	NONE
 is	NONE
 not	NONE
@@ -5063,7 +5063,7 @@ enhance	NONE
 itself	NONE
 into	NONE
 a	NONE
-quasi-parliamentary/judicial	NONE
+quasi-parliamentary/judicial	ARG1
 body	PRED
 .	NONE
 
@@ -5076,7 +5076,7 @@ the	NONE
 bottom	PRED
 of	NONE
 the	NONE
-heap	NONE
+heap	ARG1
 .	NONE
 ''	NONE
 
@@ -5132,7 +5132,7 @@ to	NONE
 sell	NONE
 63	NONE
 of	NONE
-its	NONE
+its	ARG1
 71	NONE
 branches	PRED
 to	NONE
@@ -5141,7 +5141,7 @@ Western	NONE
 Bank	NONE
 COMMA	NONE
 a	NONE
-unit	PRED
+unit	NONE
 of	NONE
 Great	NONE
 Western	NONE
@@ -5210,12 +5210,12 @@ focused	NONE
 on	NONE
 building	NONE
 up	NONE
-its	NONE
-news	ARG1
+its	ARG1
+news	ARG2
 bureaus	PRED
 around	NONE
 the	NONE
-world	NONE
+world	ARGM
 COMMA	NONE
 so	NONE
 as	NONE
@@ -5248,7 +5248,7 @@ A.	NONE
 to	NONE
 liquidate	NONE
 futures	NONE
-positions	PRED
+positions	NONE
 equal	NONE
 to	NONE
 about	NONE
@@ -5264,10 +5264,10 @@ next	NONE
 May	NONE
 31	NONE
 COMMA	NONE
-stocks	PRED
+stocks	ARG1
 of	NONE
 U.S.	NONE
-wheat	ARG1
+wheat	NONE
 to	NONE
 be	NONE
 carried	NONE
@@ -5290,11 +5290,11 @@ harvested	NONE
 are	NONE
 projected	NONE
 to	NONE
-drop	NONE
-to	NONE
+drop	SUPPORT
+to	SUPPORT
 443	NONE
 million	NONE
-bushels	NONE
+bushels	PRED
 .	NONE
 
 That	NONE
@@ -5310,8 +5310,8 @@ thought	NONE
 police	NONE
 COMMA	NONE
 on	NONE
-college	NONE
-campuses	NONE
+college	ARG1
+campuses	PRED
 and	NONE
 elsewhere	NONE
 COMMA	NONE
@@ -5328,9 +5328,9 @@ It	NONE
 would	NONE
 open	NONE
 a	NONE
-can	NONE
+can	PRED
 of	NONE
-worms	NONE
+worms	ARG1
 .	NONE
 ''	NONE
 
@@ -5339,7 +5339,7 @@ is	NONE
 no	NONE
 stranger	NONE
 to	NONE
-cans	NONE
+cans	PRED
 of	NONE
 worms	ARG1
 COMMA	NONE
@@ -5396,15 +5396,15 @@ COMMA	NONE
 as	NONE
 well	NONE
 as	NONE
-majority	ARG2
-positions	PRED
+majority	NONE
+positions	NONE
 in	NONE
 Merksamer	NONE
 Jewelers	NONE
 COMMA	NONE
 a	NONE
-Sacramento	NONE
-chain	NONE
+Sacramento	ARGM
+chain	PRED
 ;	NONE
 Sakowitz	NONE
 Inc.	NONE
@@ -5418,9 +5418,9 @@ Parisian	NONE
 Inc.	NONE
 COMMA	NONE
 the	NONE
-Southeast	ARGM
-department-store	ARG1
-chain	PRED
+Southeast	NONE
+department-store	NONE
+chain	NONE
 .	NONE
 
 Mr.	NONE
@@ -5452,8 +5452,8 @@ COMMA	NONE
 as	NONE
 well	NONE
 as	NONE
-majority	ARG2
-positions	PRED
+majority	NONE
+positions	NONE
 in	NONE
 Merksamer	NONE
 Jewelers	NONE
@@ -5490,7 +5490,7 @@ executive	NONE
 of	NONE
 the	NONE
 Sakowitz	ARG1
-chain	NONE
+chain	PRED
 COMMA	NONE
 is	NONE
 seeking	NONE
@@ -5558,13 +5558,13 @@ protection	NONE
 from	NONE
 creditors	NONE
 under	NONE
-Chapter	PRED
+Chapter	NONE
 11	NONE
 of	NONE
 the	NONE
 federal	NONE
 Bankruptcy	NONE
-Code	ARG1
+Code	NONE
 COMMA	NONE
 while	NONE
 the	NONE
@@ -5598,7 +5598,7 @@ because	NONE
 of	NONE
 the	NONE
 shifting	NONE
-ownership	PRED
+ownership	NONE
 of	NONE
 the	NONE
 retail	ARG1
@@ -5606,21 +5606,21 @@ chains	PRED
 .	NONE
 
 A	NONE
-group	PRED
+group	NONE
 of	NONE
 Arby	NONE
 's	NONE
-franchisees	ARG1
+franchisees	NONE
 said	NONE
-they	ARG2
-formed	SUPPORT
+they	NONE
+formed	NONE
 an	NONE
-association	PRED
+association	NONE
 to	NONE
 oppose	NONE
 Miami	NONE
 Beach	NONE
-financier	ARG2
+financier	NONE
 Victor	NONE
 Posner	NONE
 's	NONE
@@ -5644,8 +5644,8 @@ going	NONE
 rate	NONE
 in	NONE
 other	NONE
-U.S.	NONE
-cities	NONE
+U.S.	ARG1
+cities	PRED
 .	NONE
 
 Nearly	NONE
@@ -5675,10 +5675,10 @@ from	NONE
 Edmonton	NONE
 to	NONE
 major	NONE
-U.S.	NONE
+U.S.	ARG1
 and	NONE
-Canadian	NONE
-cities	NONE
+Canadian	ARG1
+cities	PRED
 in	NONE
 the	NONE
 Great	NONE
@@ -5735,9 +5735,9 @@ emergency	NONE
 meetings	NONE
 of	NONE
 the	NONE
-investors	NONE
+investors	ARG1
 '	NONE
-clubs	NONE
+clubs	PRED
 are	NONE
 planned	NONE
 .	NONE
@@ -5757,8 +5757,8 @@ year	NONE
 to	NONE
 swamp	NONE
 the	NONE
-Texas-Louisiana	NONE
-coast	NONE
+Texas-Louisiana	ARG1
+coast	PRED
 .	NONE
 
 Sanford	NONE
@@ -5804,9 +5804,9 @@ committee	PRED
 3	NONE
 .	NONE
 That	NONE
-his	NONE
+his	ARG2
 ``	NONE
-committee	NONE
+committee	PRED
 does	NONE
 not	NONE
 deal	NONE
@@ -5880,10 +5880,10 @@ surprising	NONE
 given	NONE
 that	NONE
 some	NONE
-communities	NONE
+communities	PRED
 in	NONE
 New	NONE
-York	NONE
+York	ARGM
 are	NONE
 bemoaning	NONE
 the	NONE
@@ -5924,8 +5924,8 @@ are	NONE
 especially	NONE
 sensitive	NONE
 in	NONE
-retirement	NONE
-communities	NONE
+retirement	ARG1
+communities	PRED
 .	NONE
 
 ``	NONE
@@ -5936,7 +5936,7 @@ latest	NONE
 manifestation	NONE
 of	NONE
 the	NONE
-capacity	ARG1
+capacity	NONE
 of	NONE
 the	NONE
 financial	ARG1
@@ -5974,7 +5974,7 @@ Thirties	NONE
 much	NONE
 as	NONE
 the	NONE
-financial	NONE
+financial	ARG1
 community	PRED
 and	NONE
 the	NONE
@@ -6030,7 +6030,7 @@ A	NONE
 consortium	PRED
 of	NONE
 private	NONE
-investors	NONE
+investors	ARG1
 operating	NONE
 as	NONE
 LJH	NONE
@@ -6060,11 +6060,11 @@ holdings	NONE
 .	NONE
 
 The	NONE
-consortium	NONE
+consortium	PRED
 was	NONE
-put	NONE
+put	SUPPORT
 together	NONE
-by	NONE
+by	ARG2
 Hoare	NONE
 Govett	NONE
 COMMA	NONE
@@ -6076,10 +6076,10 @@ company	NONE
 that	NONE
 is	NONE
 a	NONE
-subsidiary	PRED
+subsidiary	NONE
 of	NONE
 Security	NONE
-Pacific	ARG1
+Pacific	NONE
 Corp	NONE
 .	NONE
 
@@ -6090,11 +6090,11 @@ Friday	NONE
 came	NONE
 from	NONE
 all	NONE
-corners	NONE
+corners	PRED
 of	NONE
 the	NONE
 OTC	NONE
-market	NONE
+market	ARG1
 --	NONE
 big	NONE
 and	NONE
@@ -6114,11 +6114,11 @@ makers	NONE
 
 But	NONE
 a	NONE
-majority	PRED
+majority	NONE
 of	NONE
 the	NONE
-Addison	ARG1
-council	NONE
+Addison	ARG2
+council	PRED
 did	NONE
 n't	NONE
 buy	NONE
@@ -6130,7 +6130,7 @@ Now	NONE
 kindred	NONE
 spirits	NONE
 on	NONE
-Addison	NONE
+Addison	ARG2
 's	NONE
 town	ARG1
 council	PRED
@@ -6170,7 +6170,7 @@ where	NONE
 villagers	NONE
 from	NONE
 assorted	NONE
-European	NONE
+European	ARG1
 countries	PRED
 make	NONE
 fools	NONE
@@ -6236,7 +6236,7 @@ dry	NONE
 weather	NONE
 across	NONE
 large	NONE
-portions	PRED
+portions	NONE
 of	NONE
 the	NONE
 Great	NONE
@@ -6244,7 +6244,7 @@ Plains	NONE
 and	NONE
 in	NONE
 wheat-growing	NONE
-areas	PRED
+areas	NONE
 in	NONE
 Washington	NONE
 and	NONE
@@ -6257,10 +6257,10 @@ the	NONE
 yield	NONE
 from	NONE
 this	NONE
-season	NONE
+season	ARGM
 's	NONE
-winter	NONE
-wheat	ARG1
+winter	ARG1
+wheat	NONE
 crop	PRED
 COMMA	NONE
 said	NONE
@@ -6305,10 +6305,10 @@ Agriculture	NONE
 estimate	NONE
 of	NONE
 the	NONE
-1989-90	NONE
-Florida	NONE
-orange	NONE
-crop	NONE
+1989-90	ARGM
+Florida	ARG0
+orange	ARG1
+crop	PRED
 .	NONE
 
 Brazilian	NONE
@@ -6324,9 +6324,9 @@ at	NONE
 the	NONE
 start	NONE
 of	NONE
-its	ARG1
-crop	NONE
-season	NONE
+its	ARG0
+crop	PRED
+season	SUPPORT
 COMMA	NONE
 is	NONE
 beginning	NONE
@@ -6344,12 +6344,12 @@ The	NONE
 cream	NONE
 of	NONE
 the	NONE
-British	ARGM
-crop	NONE
+British	ARG0
+crop	PRED
 COMMA	NONE
 the	NONE
 literary	NONE
-dramas	ARG1
+dramas	NONE
 that	NONE
 are	NONE
 shown	NONE
@@ -6368,7 +6368,7 @@ up	NONE
 a	NONE
 relatively	NONE
 small	NONE
-part	PRED
+part	NONE
 of	NONE
 British	NONE
 air	NONE
@@ -6379,14 +6379,14 @@ Amid	NONE
 a	NONE
 crowd	PRED
 of	NONE
-crashing	ARG1
-stocks	NONE
+crashing	NONE
+stocks	ARG1
 COMMA	NONE
 Relational	NONE
 Technology	NONE
 Inc.	NONE
 's	NONE
-stock	PRED
+stock	NONE
 fell	NONE
 particularly	NONE
 hard	NONE
@@ -6394,7 +6394,7 @@ Friday	NONE
 COMMA	NONE
 dropping	NONE
 23	NONE
-%	PRED
+%	NONE
 because	NONE
 its	NONE
 problems	NONE
@@ -6410,7 +6410,7 @@ for	NONE
 its	NONE
 fiscal	NONE
 first	NONE
-quarter	PRED
+quarter	NONE
 .	NONE
 
 With	NONE
@@ -6451,7 +6451,7 @@ takes	NONE
 a	NONE
 cup	PRED
 of	NONE
-powder	NONE
+powder	ARG1
 to	NONE
 really	NONE
 clean	NONE
@@ -6476,10 +6476,10 @@ became	NONE
 head	NONE
 of	NONE
 the	NONE
-union	NONE
+union	ARG1
 's	NONE
 GM	NONE
-department	NONE
+department	PRED
 COMMA	NONE
 issued	NONE
 a	NONE
@@ -6494,7 +6494,7 @@ insensitivity	NONE
 ''	NONE
 toward	NONE
 union	NONE
-members	ARG2
+members	NONE
 .	NONE
 
 A	NONE
@@ -6510,8 +6510,8 @@ twists	NONE
 of	NONE
 the	NONE
 European	NONE
-television	NONE
-dial	NONE
+television	ARG1
+dial	PRED
 suggest	NONE
 one	NONE
 reason	NONE
@@ -6523,14 +6523,14 @@ Nabisco	NONE
 Inc.	NONE
 is	NONE
 disbanding	NONE
-its	ARG0
+its	ARG1
 division	PRED
 responsible	NONE
 for	NONE
 buying	NONE
 network	NONE
 advertising	NONE
-time	ARG1
+time	NONE
 COMMA	NONE
 just	NONE
 a	NONE
@@ -6540,7 +6540,7 @@ moving	NONE
 11	NONE
 of	NONE
 the	NONE
-group	ARG1
+group	NONE
 's	NONE
 14	NONE
 employees	NONE
@@ -6561,16 +6561,16 @@ more	NONE
 profitable	NONE
 than	NONE
 the	NONE
-news	NONE
+news	ARG2
 divisions	PRED
 of	NONE
-any	NONE
+any	ARG1
 of	NONE
 the	NONE
 three	NONE
 major	NONE
-broadcast	ARG1
-networks	PRED
+broadcast	NONE
+networks	NONE
 .	NONE
 
 British	NONE
@@ -6589,8 +6589,8 @@ an	NONE
 agreement	NONE
 to	NONE
 merge	NONE
-their	NONE
-guided-missile	NONE
+their	ARG1
+guided-missile	ARG2
 divisions	PRED
 COMMA	NONE
 greatly	NONE
@@ -6621,12 +6621,12 @@ division	PRED
 of	NONE
 North	NONE
 American	NONE
-Philips	NONE
+Philips	ARG1
 Corp.	NONE
 COMMA	NONE
 itself	NONE
 a	NONE
-subsidiary	PRED
+subsidiary	NONE
 of	NONE
 N.V	NONE
 .	NONE
@@ -6644,11 +6644,11 @@ are	NONE
 caught	NONE
 on	NONE
 the	NONE
-downside	NONE
+downside	PRED
 of	NONE
 a	NONE
 pricing	NONE
-cycle	NONE
+cycle	ARG1
 .	NONE
 
 Lawyers	NONE
@@ -6656,10 +6656,10 @@ for	NONE
 dozens	PRED
 of	NONE
 insolvent	NONE
-savings	NONE
+savings	ARG1
 and	NONE
 loan	NONE
-associations	PRED
+associations	ARG1
 are	NONE
 trying	NONE
 a	NONE
@@ -6706,13 +6706,13 @@ to	NONE
 wear	NONE
 them	NONE
 behind	NONE
-her	NONE
+her	ARG1
 left	NONE
 COMMA	NONE
 not	NONE
 right	NONE
 COMMA	NONE
-ear	NONE
+ear	PRED
 .	NONE
 
 Crude	NONE
@@ -6728,9 +6728,9 @@ most	NONE
 surprising	NONE
 element	PRED
 of	NONE
-companies	ARG1
+companies	NONE
 '	NONE
-earnings	NONE
+earnings	ARG1
 this	NONE
 year	NONE
 .	NONE
@@ -6741,14 +6741,14 @@ Communist	NONE
 leadership	NONE
 voted	NONE
 to	NONE
-purge	NONE
+purge	SUPPORT
 the	NONE
-party	PRED
-of	NONE
+party	ARG2
+of	SUPPORT
 ``	NONE
-hostile	NONE
+hostile	ARG1
 and	NONE
-anti-party	NONE
+anti-party	ARG1
 elements	PRED
 ''	NONE
 and	NONE
@@ -6772,8 +6772,8 @@ million	NONE
 Army	NONE
 contract	NONE
 for	NONE
-helicopter	NONE
-engines	NONE
+helicopter	ARG1
+engines	PRED
 .	NONE
 
 The	NONE
@@ -6796,7 +6796,7 @@ boys	NONE
 and	NONE
 less	NONE
 with	NONE
-her	NONE
+her	ARG2
 delightfully	NONE
 weird	NONE
 family	PRED
@@ -6804,7 +6804,7 @@ family	PRED
 
 Two-thirds	NONE
 of	NONE
-respondents	ARG1
+respondents	NONE
 said	NONE
 they	NONE
 strongly	NONE
@@ -6850,7 +6850,7 @@ fleet	PRED
 of	NONE
 Boeing	NONE
 Co.	NONE
-707s	NONE
+707s	ARG1
 because	NONE
 of	NONE
 increasing	NONE
@@ -6899,7 +6899,7 @@ floor	PRED
 of	NONE
 the	NONE
 Big	NONE
-Board	NONE
+Board	ARG1
 COMMA	NONE
 where	NONE
 he	NONE
@@ -6935,7 +6935,7 @@ the	NONE
 New	NONE
 York	NONE
 Stock	NONE
-Exchange	NONE
+Exchange	ARG1
 COMMA	NONE
 ''	NONE
 said	NONE
@@ -6961,9 +6961,9 @@ of	NONE
 2.016	NONE
 million	NONE
 cubic	NONE
-feet	NONE
+feet	PRED
 of	NONE
-gas	NONE
+gas	ARG1
 a	NONE
 day	NONE
 through	NONE
@@ -6990,8 +6990,8 @@ be	NONE
 led	NONE
 by	NONE
 the	NONE
-current	ARGM
-board	PRED
+current	NONE
+board	NONE
 COMMA	NONE
 whose	NONE
 chairman	NONE
@@ -6999,7 +6999,7 @@ is	NONE
 Maurice	NONE
 Saatchi	NONE
 and	NONE
-whose	NONE
+whose	ARG2
 strategic	NONE
 guiding	NONE
 force	PRED
@@ -7023,7 +7023,7 @@ reduce	NONE
 capacity	NONE
 and	NONE
 the	NONE
-work	NONE
+work	ARG1
 force	PRED
 in	NONE
 place	NONE
@@ -7053,13 +7053,13 @@ rather	NONE
 than	NONE
 as	NONE
 a	NONE
-force	NONE
+force	PRED
 in	NONE
 the	NONE
 high	NONE
 court	NONE
 's	NONE
-majority	PRED
+majority	ARG2
 .	NONE
 
 The	NONE
@@ -7078,7 +7078,7 @@ resulting	NONE
 in	NONE
 a	NONE
 less-experienced	NONE
-work	NONE
+work	ARG1
 force	PRED
 .	NONE
 
@@ -7092,12 +7092,12 @@ for	NONE
 the	NONE
 reduction	NONE
 of	NONE
-U.S.	NONE
+U.S.	ARG2
 military	ARG1
 forces	PRED
 in	NONE
 South	NONE
-Korea	NONE
+Korea	ARGM
 COMMA	NONE
 is	NONE
 to	NONE
@@ -7153,7 +7153,7 @@ strengthen	NONE
 the	NONE
 rapidly	NONE
 growing	NONE
-ties	PRED
+ties	NONE
 between	NONE
 the	NONE
 two	NONE
@@ -7169,12 +7169,12 @@ force	PRED
 in	NONE
 European	NONE
 defense	NONE
-contracting	NONE
+contracting	ARG1
 .	NONE
 
-Shares	PRED
+Shares	NONE
 of	NONE
-UAL	ARG1
+UAL	NONE
 COMMA	NONE
 the	NONE
 parent	NONE
@@ -7206,7 +7206,7 @@ the	NONE
 airline	NONE
 by	NONE
 an	NONE
-employee-management	NONE
+employee-management	ARG1
 group	PRED
 .	NONE
 
@@ -7234,10 +7234,10 @@ bid	NONE
 .	NONE
 
 The	NONE
-group	NONE
+group	PRED
 is	NONE
-led	NONE
-by	NONE
+led	SUPPORT
+by	ARG2
 Jay	NONE
 Shidler	NONE
 COMMA	NONE
@@ -7267,8 +7267,8 @@ Inc	NONE
 .	NONE
 
 Major	NONE
-mutual-fund	NONE
-groups	NONE
+mutual-fund	ARG1
+groups	PRED
 said	NONE
 phone	NONE
 calls	NONE
@@ -7343,9 +7343,9 @@ to	NONE
 a	NONE
 group	PRED
 of	NONE
-hundreds	NONE
+hundreds	ARG1
 of	NONE
-lawyers	ARG1
+lawyers	NONE
 in	NONE
 Chicago	NONE
 .	NONE
@@ -7364,11 +7364,11 @@ group	PRED
 of	NONE
 channel-zapping	NONE
 ``	NONE
-grazers	NONE
+grazers	ARG1
 ''	NONE
 and	NONE
 news	NONE
-junkies	NONE
+junkies	ARG1
 COMMA	NONE
 who	NONE
 spend	NONE
@@ -7396,28 +7396,28 @@ Arby	NONE
 's	NONE
 franchisees	ARG1
 said	NONE
-they	ARG2
-formed	SUPPORT
+they	NONE
+formed	NONE
 an	NONE
-association	PRED
+association	NONE
 to	NONE
 oppose	NONE
 Miami	NONE
 Beach	NONE
-financier	ARG2
+financier	NONE
 Victor	NONE
 Posner	NONE
 's	NONE
 control	NONE
 of	NONE
 the	NONE
-restaurant	ARG1
-chain	PRED
+restaurant	NONE
+chain	NONE
 .	NONE
 
 The	NONE
 number	NONE
-of	ARG1
+of	NONE
 active	NONE
 drilling	NONE
 rigs	NONE
@@ -7426,7 +7426,7 @@ Canada	NONE
 is	NONE
 down	NONE
 30	NONE
-%	PRED
+%	NONE
 from	NONE
 a	NONE
 year	NONE
@@ -7434,7 +7434,7 @@ ago	NONE
 COMMA	NONE
 and	NONE
 the	NONE
-number	PRED
+number	NONE
 of	NONE
 completed	NONE
 oil	NONE
@@ -7463,7 +7463,7 @@ COMMA	NONE
 manager	NONE
 of	NONE
 crude	NONE
-oil	ARG1
+oil	NONE
 with	NONE
 Calgary	NONE
 's	NONE
@@ -7474,7 +7474,7 @@ of	NONE
 Canada	NONE
 COMMA	NONE
 an	NONE
-industry	NONE
+industry	ARG1
 group	PRED
 .	NONE
 
@@ -7486,11 +7486,11 @@ learn	NONE
 about	NONE
 one	NONE
 of	NONE
-today	NONE
+today	ARGM
 's	NONE
 fastest-growing	NONE
 income	ARG1
-groups	NONE
+groups	PRED
 COMMA	NONE
 the	NONE
 upper-middle	NONE
@@ -7522,8 +7522,8 @@ bonds	NONE
 COMMA	NONE
 via	NONE
 a	NONE
-Prudential-Bache	NONE
-group	NONE
+Prudential-Bache	ARG2
+group	PRED
 .	NONE
 
 $	NONE
@@ -7565,8 +7565,8 @@ Poquet	NONE
 also	NONE
 encountered	NONE
 in	NONE
-focus	NONE
-groups	NONE
+focus	ARG1
+groups	PRED
 COMMA	NONE
 admits	NONE
 Gerry	NONE
@@ -7578,9 +7578,9 @@ marketing	NONE
 .	NONE
 
 ``	NONE
-Half	NONE
+Half	PRED
 of	NONE
-them	NONE
+them	ARG1
 are	NONE
 really	NONE
 scared	NONE
@@ -7620,11 +7620,11 @@ plants	NONE
 cover	NONE
 only	NONE
 about	NONE
-half	NONE
+half	PRED
 of	NONE
-its	ARG1
+its	NONE
 ethylene	NONE
-needs	NONE
+needs	ARG1
 .	NONE
 
 But	NONE
@@ -7650,12 +7650,12 @@ second	NONE
 half	PRED
 of	NONE
 next	NONE
-year	NONE
+year	ARG1
 .	NONE
 
 Canadian	NONE
 crude	NONE
-production	ARG1
+production	NONE
 averaged	NONE
 about	NONE
 1.69	NONE
@@ -7664,10 +7664,10 @@ barrels	NONE
 a	NONE
 day	NONE
 during	NONE
-1989	NONE
+1989	ARG1
 's	NONE
 first	NONE
-half	NONE
+half	PRED
 COMMA	NONE
 about	NONE
 1	NONE
@@ -7693,7 +7693,7 @@ firms	ARG1
 he	NONE
 follows	NONE
 COMMA	NONE
-half	NONE
+half	PRED
 will	NONE
 report	NONE
 for	NONE
@@ -7728,7 +7728,7 @@ first	NONE
 half	PRED
 of	NONE
 the	NONE
-year	NONE
+year	ARG1
 COMMA	NONE
 but	NONE
 Monsanto	NONE
@@ -7751,8 +7751,8 @@ Individuals	NONE
 can	NONE
 always	NONE
 have	NONE
-their	NONE
-hands	NONE
+their	ARG1
+hands	PRED
 slapped	NONE
 .	NONE
 
@@ -7782,8 +7782,8 @@ of	NONE
 a	NONE
 handful	PRED
 of	NONE
-blue-chip	ARG1
-stocks	NONE
+blue-chip	NONE
+stocks	ARG1
 on	NONE
 the	NONE
 Hong	NONE
@@ -7800,7 +7800,7 @@ handful	PRED
 of	NONE
 hot	NONE
 retail	NONE
-locations	NONE
+locations	ARG1
 COMMA	NONE
 such	NONE
 as	NONE
@@ -7866,7 +7866,7 @@ the	NONE
 heads	PRED
 of	NONE
 disliked	NONE
-relatives	NONE
+relatives	ARG1
 from	NONE
 the	NONE
 family	NONE
@@ -7906,10 +7906,10 @@ maker	NONE
 of	NONE
 magnetic	NONE
 recording	NONE
-heads	NONE
+heads	PRED
 for	NONE
 disk	NONE
-drives	NONE
+drives	ARG1
 .	NONE
 
 The	NONE
@@ -7921,7 +7921,7 @@ a	NONE
 host	PRED
 of	NONE
 smaller	NONE
-exporters	NONE
+exporters	ARG1
 COMMA	NONE
 such	NONE
 as	NONE
@@ -7944,9 +7944,9 @@ impassioned	NONE
 speech	NONE
 to	NONE
 a	NONE
-group	PRED
+group	NONE
 of	NONE
-hundreds	NONE
+hundreds	PRED
 of	NONE
 lawyers	ARG1
 in	NONE
@@ -7976,7 +7976,7 @@ had	NONE
 been	NONE
 stripped	NONE
 of	NONE
-hundreds	NONE
+hundreds	PRED
 of	NONE
 provisions	ARG1
 that	NONE
@@ -8007,14 +8007,14 @@ COMMA	NONE
 in	NONE
 its	NONE
 first	NONE
-wave	PRED
+wave	NONE
 of	NONE
-sales	ARG1
+sales	NONE
 of	NONE
 big	NONE
 COMMA	NONE
 sick	NONE
-thrifts	ARG1
+thrifts	NONE
 COMMA	NONE
 but	NONE
 low	NONE
@@ -8050,8 +8050,8 @@ federal	NONE
 legislation	NONE
 requiring	NONE
 that	NONE
-savings	NONE
-institutions	NONE
+savings	ARG1
+institutions	PRED
 divest	NONE
 themselves	NONE
 of	NONE
@@ -8094,11 +8094,11 @@ Corp.	NONE
 has	NONE
 sold	NONE
 its	ARG0
-interest	NONE
+interest	PRED
 in	NONE
 the	NONE
 Parisian	NONE
-chain	PRED
+chain	ARG1
 back	NONE
 to	NONE
 Parisian	NONE
@@ -8115,7 +8115,7 @@ B.	NONE
 Altman	NONE
 &	NONE
 Co.	NONE
-chain	PRED
+chain	NONE
 .	NONE
 
 In	NONE
@@ -8128,7 +8128,7 @@ chief	NONE
 executive	NONE
 of	NONE
 the	NONE
-Sakowitz	ARG1
+Sakowitz	NONE
 chain	NONE
 COMMA	NONE
 is	NONE
@@ -8138,32 +8138,32 @@ to	NONE
 buy	NONE
 out	NONE
 the	NONE
-Hooker	NONE
-interest	NONE
+Hooker	ARG0
+interest	PRED
 in	NONE
 his	NONE
-company	NONE
+company	ARG1
 .	NONE
 
 Diamond	NONE
 Shamrock	NONE
 is	NONE
 the	NONE
-operator	NONE
+operator	ARG0
 COMMA	NONE
 with	NONE
 a	NONE
 100	NONE
-%	NONE
-interest	NONE
+%	ARG2
+interest	PRED
 in	NONE
 the	NONE
-well	NONE
+well	ARG1
 .	NONE
 
 But	NONE
 its	NONE
-competitors	NONE
+competitors	ARG0
 --	NONE
 including	NONE
 Dow	NONE
@@ -8178,7 +8178,7 @@ several	NONE
 oil	NONE
 giants	NONE
 --	NONE
-have	NONE
+have	SUPPORT
 much	NONE
 broader	NONE
 business	NONE
@@ -8200,15 +8200,15 @@ Spielvogel	NONE
 Bates	NONE
 and	NONE
 Ogilvy	NONE
-Group	ARG1
+Group	NONE
 as	NONE
 U.S.	NONE
 agencies	ARG0
 with	NONE
-interests	NONE
+interests	PRED
 in	NONE
 Korean	NONE
-agencies	NONE
+agencies	ARG1
 .	NONE
 
 GM	NONE
@@ -8237,7 +8237,7 @@ acquisition	NONE
 of	NONE
 Connaught	NONE
 by	NONE
-foreign	NONE
+foreign	ARG1
 interests	PRED
 COMMA	NONE
 citing	NONE
@@ -8257,14 +8257,14 @@ Canada	NONE
 
 But	NONE
 those	NONE
-machines	NONE
+machines	ARG1
 are	NONE
 still	NONE
 considered	NONE
 novelties	NONE
 COMMA	NONE
 with	NONE
-keyboards	NONE
+keyboards	PRED
 only	NONE
 a	NONE
 munchkin	NONE
@@ -8310,7 +8310,7 @@ the	NONE
 lips	PRED
 of	NONE
 Miss	NONE
-America	NONE
+America	ARG1
 .	NONE
 
 He	NONE
@@ -8322,10 +8322,10 @@ constitutional	NONE
 meat	NONE
 between	NONE
 large	NONE
-loaves	NONE
+loaves	PRED
 of	NONE
 bilious	NONE
-commentary	NONE
+commentary	ARG1
 .	NONE
 
 The	NONE
@@ -8350,8 +8350,8 @@ COMMA	NONE
 for	NONE
 use	NONE
 in	NONE
-hotel	NONE
-lobbies	NONE
+hotel	ARG1
+lobbies	PRED
 COMMA	NONE
 office	NONE
 lobbies	NONE
@@ -8388,8 +8388,8 @@ in	NONE
 hotel	NONE
 lobbies	NONE
 COMMA	NONE
-office	NONE
-lobbies	NONE
+office	ARG1
+lobbies	PRED
 COMMA	NONE
 hospitality	NONE
 lounges	NONE
@@ -8411,7 +8411,7 @@ in	NONE
 drab	NONE
 COMMA	NONE
 Soviet-style	NONE
-buildings	NONE
+buildings	ARG1
 ``	NONE
 glamorized	NONE
 ''	NONE
@@ -8429,7 +8429,7 @@ Morris	NONE
 Snezak	NONE
 )	NONE
 COMMA	NONE
-whose	NONE
+whose	ARG1
 lobbies	PRED
 and	NONE
 hallways	NONE
@@ -8514,7 +8514,7 @@ to	NONE
 last	NONE
 a	NONE
 whole	NONE
-lot	NONE
+lot	PRED
 longer	ARG1
 than	NONE
 anybody	NONE
@@ -8532,7 +8532,7 @@ a	NONE
 lot	PRED
 of	NONE
 that	NONE
-nonsense	NONE
+nonsense	ARG1
 COMMA	NONE
 it	NONE
 will	NONE
@@ -8557,7 +8557,7 @@ a	NONE
 lot	PRED
 of	NONE
 insecure	NONE
-securities	NONE
+securities	ARG1
 in	NONE
 the	NONE
 hands	NONE
@@ -8628,7 +8628,7 @@ that	NONE
 makes	NONE
 markets	NONE
 in	NONE
-thousands	PRED
+thousands	NONE
 of	NONE
 OTC	NONE
 issues	NONE
@@ -8729,7 +8729,7 @@ A	NONE
 lot	PRED
 of	NONE
 pent-up	NONE
-demand	NONE
+demand	ARG1
 is	NONE
 gone	NONE
 .	NONE
@@ -8744,10 +8744,10 @@ until	NONE
 COMMA	NONE
 when	NONE
 a	NONE
-majority	NONE
-position	NONE
+majority	PRED
+position	SUPPORT
 in	NONE
-Hooker	NONE
+Hooker	ARG1
 Corp.	NONE
 was	NONE
 acquired	NONE
@@ -8792,17 +8792,17 @@ COMMA	NONE
 as	NONE
 well	NONE
 as	NONE
-majority	ARG2
-positions	PRED
+majority	PRED
+positions	SUPPORT
 in	NONE
 Merksamer	NONE
-Jewelers	NONE
+Jewelers	ARG1
 COMMA	NONE
 a	NONE
 Sacramento	NONE
 chain	NONE
 ;	NONE
-Sakowitz	NONE
+Sakowitz	ARG1
 Inc.	NONE
 COMMA	NONE
 the	NONE
@@ -8810,13 +8810,13 @@ Houston-based	NONE
 retailer	NONE
 COMMA	NONE
 and	NONE
-Parisian	NONE
+Parisian	ARG1
 Inc.	NONE
 COMMA	NONE
 the	NONE
-Southeast	ARGM
-department-store	ARG1
-chain	PRED
+Southeast	NONE
+department-store	NONE
+chain	NONE
 .	NONE
 
 For	NONE
@@ -8843,7 +8843,7 @@ force	NONE
 in	NONE
 the	NONE
 high	NONE
-court	NONE
+court	ARG1
 's	NONE
 majority	PRED
 .	NONE
@@ -8854,12 +8854,12 @@ however	NONE
 COMMA	NONE
 as	NONE
 the	NONE
-court	NONE
+court	ARG1
 's	NONE
 new	NONE
-five-member	ARG1
+five-member	NONE
 conservative	NONE
-majority	NONE
+majority	PRED
 continues	NONE
 to	NONE
 solidify	NONE
@@ -8877,8 +8877,8 @@ a	NONE
 majority	PRED
 of	NONE
 the	NONE
-Addison	ARG1
-council	NONE
+Addison	NONE
+council	ARG1
 did	NONE
 n't	NONE
 buy	NONE
@@ -8925,11 +8925,11 @@ Most	NONE
 of	NONE
 the	NONE
 Western	NONE
-European	ARG1
+European	NONE
 members	PRED
 of	NONE
 Coordinating	NONE
-Committee	NONE
+Committee	ARG1
 on	NONE
 Multilateral	NONE
 Export	NONE
@@ -9029,8 +9029,8 @@ becomes	NONE
 a	NONE
 member	PRED
 of	NONE
-its	ARG2
-board	PRED
+its	NONE
+board	ARG1
 on	NONE
 Jan.	NONE
 1	NONE
@@ -9058,12 +9058,12 @@ systems	NONE
 and	NONE
 services	NONE
 COMMA	NONE
-increasing	NONE
+increasing	SUPPORT
 the	NONE
-board	PRED
-to	NONE
+board	ARG1
+to	SUPPORT
 eight	NONE
-members	NONE
+members	PRED
 .	NONE
 
 Against	NONE
@@ -9100,13 +9100,13 @@ flagrant	NONE
 insensitivity	NONE
 ''	NONE
 toward	NONE
-union	NONE
-members	ARG2
+union	ARG1
+members	PRED
 .	NONE
 
 Dissident	NONE
-UAW	NONE
-members	NONE
+UAW	ARG1
+members	PRED
 have	NONE
 used	NONE
 the	NONE
@@ -9130,7 +9130,7 @@ two	NONE
 members	PRED
 of	NONE
 the	NONE
-council	NONE
+council	ARG1
 said	NONE
 they	NONE
 were	NONE
@@ -9143,7 +9143,7 @@ that	NONE
 would	NONE
 permit	NONE
 pool	NONE
-halls	PRED
+halls	NONE
 along	NONE
 Addison	NONE
 's	NONE
@@ -9172,7 +9172,7 @@ a	NONE
 member	PRED
 of	NONE
 the	NONE
-Nation	NONE
+Nation	ARG1
 of	NONE
 Islam	NONE
 .	NONE
@@ -9216,7 +9216,7 @@ COMMA	NONE
 some	NONE
 of	NONE
 the	NONE
-association	NONE
+association	ARG1
 's	NONE
 members	PRED
 --	NONE
@@ -9254,7 +9254,7 @@ Los	NONE
 Angeles	NONE
 investors	NONE
 '	NONE
-club	PRED
+club	ARG1
 .	NONE
 
 It	NONE
@@ -9279,7 +9279,7 @@ stores	NONE
 COMMA	NONE
 which	NONE
 anchor	NONE
-retail	NONE
+retail	ARG1
 neighborhoods	PRED
 COMMA	NONE
 are	NONE
@@ -9310,7 +9310,7 @@ Compaq	NONE
 to	NONE
 unveil	NONE
 a	NONE
-family	PRED
+family	NONE
 of	NONE
 high-end	NONE
 personal	NONE
@@ -9334,7 +9334,7 @@ large	NONE
 networks	PRED
 of	NONE
 desk-top	NONE
-machines	NONE
+machines	ARG1
 .	NONE
 
 Tandem	NONE
@@ -9355,10 +9355,10 @@ run	NONE
 stock	NONE
 exchanges	NONE
 COMMA	NONE
-networks	NONE
+networks	PRED
 of	NONE
 automatic	NONE
-tellers	NONE
+tellers	ARG1
 and	NONE
 other	NONE
 complex	NONE
@@ -9366,7 +9366,7 @@ computer	NONE
 systems	NONE
 .	NONE
 
-Its	ARG1
+Its	ARG0
 niche	PRED
 as	NONE
 the	NONE
@@ -9379,7 +9379,7 @@ during	NONE
 major	NONE
 crises	NONE
 draws	NONE
-elite	ARG1
+elite	NONE
 audiences	NONE
 around	NONE
 the	NONE
@@ -9395,9 +9395,9 @@ total	NONE
 of	NONE
 nine	NONE
 the	NONE
-number	NONE
+number	PRED
 of	NONE
-planes	NONE
+planes	ARG1
 the	NONE
 travel	NONE
 company	NONE
@@ -9406,7 +9406,7 @@ sold	NONE
 this	NONE
 year	NONE
 as	NONE
-part	PRED
+part	NONE
 of	NONE
 a	NONE
 restructuring	NONE
@@ -9427,7 +9427,7 @@ a	NONE
 number	PRED
 of	NONE
 financing	NONE
-alternatives	NONE
+alternatives	ARG1
 COMMA	NONE
 including	NONE
 seeking	NONE
@@ -9467,7 +9467,7 @@ number	PRED
 of	NONE
 U.S.	NONE
 computer	NONE
-companies	NONE
+companies	ARG1
 .	NONE
 
 In	NONE
@@ -9490,7 +9490,7 @@ number	PRED
 ''	NONE
 of	NONE
 the	NONE
-bonds	NONE
+bonds	ARG1
 it	NONE
 purchased	NONE
 in	NONE
@@ -9523,7 +9523,7 @@ increase	NONE
 the	NONE
 number	PRED
 of	NONE
-acres	NONE
+acres	ARG1
 farmers	NONE
 can	NONE
 plant	NONE
@@ -9552,18 +9552,18 @@ an	NONE
 undetermined	NONE
 number	PRED
 of	NONE
-common	ARG1
-shares	PRED
+common	NONE
+shares	ARG1
 in	NONE
 exchange	NONE
 for	NONE
 the	NONE
 585COMMA000	NONE
-shares	PRED
+shares	NONE
 of	NONE
-its	ARG1
+its	NONE
 preferred	NONE
-stock	PRED
+stock	NONE
 outstanding	NONE
 .	NONE
 
@@ -9649,7 +9649,7 @@ in	NONE
 a	NONE
 number	PRED
 of	NONE
-steps	NONE
+steps	ARG1
 the	NONE
 network	NONE
 is	NONE
@@ -9687,7 +9687,7 @@ for	NONE
 a	NONE
 number	PRED
 of	NONE
-things	NONE
+things	ARG1
 he	NONE
 can	NONE
 grant	NONE
@@ -9707,7 +9707,7 @@ says	NONE
 Hundreds	NONE
 of	NONE
 East	NONE
-Germans	ARG1
+Germans	NONE
 flocked	NONE
 to	NONE
 Bonn	NONE
@@ -9737,7 +9737,7 @@ today	NONE
 
 The	NONE
 number	NONE
-of	ARG1
+of	NONE
 active	NONE
 drilling	NONE
 rigs	NONE
@@ -9746,7 +9746,7 @@ Canada	NONE
 is	NONE
 down	NONE
 30	NONE
-%	PRED
+%	NONE
 from	NONE
 a	NONE
 year	NONE
@@ -9758,7 +9758,7 @@ number	PRED
 of	NONE
 completed	NONE
 oil	NONE
-wells	NONE
+wells	ARG1
 is	NONE
 ``	NONE
 down	NONE
@@ -9783,7 +9783,7 @@ COMMA	NONE
 manager	NONE
 of	NONE
 crude	NONE
-oil	ARG1
+oil	NONE
 with	NONE
 Calgary	NONE
 's	NONE
@@ -9795,21 +9795,21 @@ Canada	NONE
 COMMA	NONE
 an	NONE
 industry	NONE
-group	PRED
+group	NONE
 .	NONE
 
 The	NONE
-number	NONE
-of	ARG1
+number	PRED
+of	NONE
 active	NONE
 drilling	NONE
-rigs	NONE
+rigs	ARG1
 in	NONE
 Canada	NONE
 is	NONE
 down	NONE
 30	NONE
-%	PRED
+%	NONE
 from	NONE
 a	NONE
 year	NONE
@@ -9817,7 +9817,7 @@ ago	NONE
 COMMA	NONE
 and	NONE
 the	NONE
-number	PRED
+number	NONE
 of	NONE
 completed	NONE
 oil	NONE
@@ -9846,7 +9846,7 @@ COMMA	NONE
 manager	NONE
 of	NONE
 crude	NONE
-oil	ARG1
+oil	NONE
 with	NONE
 Calgary	NONE
 's	NONE
@@ -9858,15 +9858,15 @@ Canada	NONE
 COMMA	NONE
 an	NONE
 industry	NONE
-group	PRED
+group	NONE
 .	NONE
 
 THE	NONE
 NUMBER	PRED
 of	NONE
-women	NONE
+women	ARG1
 and	NONE
-minorities	NONE
+minorities	ARG1
 who	NONE
 hold	NONE
 jobs	NONE
@@ -9879,7 +9879,7 @@ nation	NONE
 's	NONE
 largest	NONE
 banks	NONE
-has	SUPPORT
+has	NONE
 more	NONE
 than	NONE
 doubled	NONE
@@ -9903,7 +9903,7 @@ provisions	NONE
 COMMA	NONE
 a	NONE
 number	PRED
-of	NONE
+of	ARG1
 which	NONE
 are	NONE
 included	NONE
@@ -9927,11 +9927,11 @@ the	NONE
 average	NONE
 number	PRED
 of	NONE
-months	NONE
+months	ARG1
 in	NONE
 a	NONE
 job	NONE
-search	ARG1
+search	NONE
 as	NONE
 ``	NONE
 Time	NONE
@@ -9986,7 +9986,7 @@ itself	NONE
 into	NONE
 a	NONE
 quasi-parliamentary/judicial	NONE
-body	PRED
+body	NONE
 .	NONE
 
 Marc	NONE
@@ -10012,7 +10012,7 @@ a	NONE
 tremendous	NONE
 number	PRED
 of	NONE
-signs	NONE
+signs	ARG1
 that	NONE
 the	NONE
 leveraged	NONE
@@ -10037,10 +10037,10 @@ microprocessors	NONE
 found	NONE
 in	NONE
 increasing	NONE
-numbers	NONE
+numbers	PRED
 of	NONE
 desktop	NONE
-machines	NONE
+machines	ARG1
 .	NONE
 
 Royal	NONE
@@ -10053,7 +10053,7 @@ its	NONE
 relationship	NONE
 with	NONE
 the	NONE
-Boston	NONE
+Boston	ARGM
 office	PRED
 of	NONE
 Hill	NONE
@@ -10062,7 +10062,7 @@ Holliday	NONE
 COMMA	NONE
 Connors	NONE
 COMMA	NONE
-Cosmopulos	NONE
+Cosmopulos	ARG2
 .	NONE
 
 A	NONE
@@ -10113,7 +10113,7 @@ institution	NONE
 is	NONE
 just	NONE
 brain	NONE
-dead	PRED
+dead	NONE
 COMMA	NONE
 ''	NONE
 says	NONE
@@ -10129,7 +10129,7 @@ office	PRED
 of	NONE
 Andrews	NONE
 &	NONE
-Kurth	NONE
+Kurth	ARG2
 COMMA	NONE
 a	NONE
 Houston	NONE
@@ -10138,16 +10138,16 @@ firm	NONE
 .	NONE
 
 City	NONE
-Federal	NONE
-operates	NONE
+Federal	ARG2
+operates	SUPPORT
 105	NONE
-banking	NONE
+banking	ARG1
 offices	PRED
 in	NONE
 New	NONE
-Jersey	NONE
+Jersey	ARGM
 and	NONE
-Florida	NONE
+Florida	ARGM
 .	NONE
 
 Food	NONE
@@ -10179,7 +10179,7 @@ Attorney	ARG2
 's	NONE
 office	PRED
 in	NONE
-Baltimore	NONE
+Baltimore	ARGM
 .	NONE
 
 Bolar	NONE
@@ -10196,16 +10196,16 @@ FDA	NONE
 and	NONE
 the	NONE
 Inspector	NONE
-General	NONE
+General	ARG2
 's	NONE
 office	PRED
 of	NONE
 the	NONE
-Health	NONE
+Health	ARG1
 and	NONE
 Human	NONE
 Services	NONE
-Department	NONE
+Department	ARG1
 COMMA	NONE
 only	NONE
 agreed	NONE
@@ -10246,10 +10246,10 @@ COMMA	NONE
 which	NONE
 was	NONE
 a	NONE
-part-owner	NONE
+part-owner	PRED
 of	NONE
 the	NONE
-smelter	NONE
+smelter	ARG1
 COMMA	NONE
 that	NONE
 it	NONE
@@ -10306,12 +10306,12 @@ the	NONE
 cable-TV	NONE
 operators	NONE
 --	NONE
-CNN	NONE
+CNN	ARG1
 's	NONE
 distributors	NONE
 and	NONE
-part	ARGM
-owners	ARG1
+part	ARG2
+owners	PRED
 --	NONE
 like	NONE
 things	NONE
@@ -10325,11 +10325,11 @@ are	NONE
 The	NONE
 franchisees	NONE
 COMMA	NONE
-owners	NONE
+owners	PRED
 or	NONE
 operators	NONE
 of	NONE
-1COMMA000	NONE
+1COMMA000	ARG1
 of	NONE
 the	NONE
 1COMMA900	NONE
@@ -10374,7 +10374,7 @@ to	NONE
 the	NONE
 Arby	NONE
 's	NONE
-system	ARG1
+system	NONE
 .	NONE
 
 The	NONE
@@ -10398,7 +10398,7 @@ for	NONE
 owners	PRED
 of	NONE
 low-end	NONE
-printers	NONE
+printers	ARG1
 sold	NONE
 by	NONE
 Apple	NONE
@@ -10415,17 +10415,17 @@ COMMA	NONE
 because	NONE
 of	NONE
 the	NONE
-shifting	NONE
+shifting	ARGM
 ownership	PRED
 of	NONE
 the	NONE
-retail	ARG1
-chains	PRED
+retail	NONE
+chains	ARG1
 .	NONE
 
 To	NONE
 justify	NONE
-50-50	NONE
+50-50	ARG2
 ownership	PRED
 of	NONE
 the	NONE
@@ -10449,8 +10449,8 @@ a	NONE
 loophole	NONE
 regarding	NONE
 employee	ARG0
-stock	PRED
-ownership	SUPPORT
+stock	ARG1
+ownership	PRED
 plans	NONE
 COMMA	NONE
 effective	NONE
@@ -10475,7 +10475,7 @@ At	NONE
 USA	NONE
 Today	NONE
 COMMA	NONE
-ad	NONE
+ad	ARG2
 pages	PRED
 totaled	NONE
 785	NONE
@@ -10506,12 +10506,12 @@ Olympics	NONE
 
 While	NONE
 USA	NONE
-Today	NONE
+Today	ARG1
 's	NONE
 total	NONE
 paid	NONE
-ad	NONE
-pages	NONE
+ad	ARG2
+pages	PRED
 for	NONE
 the	NONE
 year	NONE
@@ -10533,10 +10533,10 @@ the	NONE
 paper	NONE
 's	NONE
 ad	NONE
-revenue	ARG1
-increased	SUPPORT
+revenue	NONE
+increased	NONE
 8	NONE
-%	PRED
+%	NONE
 in	NONE
 the	NONE
 quarter	NONE
@@ -10557,16 +10557,16 @@ Co.	NONE
 posted	NONE
 an	NONE
 11	NONE
-%	PRED
+%	NONE
 gain	NONE
 in	NONE
 net	NONE
-income	ARG1
+income	NONE
 COMMA	NONE
 as	NONE
 total	NONE
-ad	NONE
-pages	ARG1
+ad	ARG2
+pages	PRED
 dropped	NONE
 at	NONE
 USA	NONE
@@ -10574,7 +10574,7 @@ Today	NONE
 COMMA	NONE
 but	NONE
 advertising	NONE
-revenue	ARG1
+revenue	NONE
 rose	NONE
 because	NONE
 of	NONE
@@ -10611,7 +10611,7 @@ n't	NONE
 increase	NONE
 its	NONE
 advertising	NONE
-rates	ARG1
+rates	NONE
 in	NONE
 1990	NONE
 ;	NONE
@@ -10622,7 +10622,7 @@ four-color	NONE
 page	PRED
 in	NONE
 the	NONE
-magazine	NONE
+magazine	ARG1
 costs	NONE
 about	NONE
 $	NONE
@@ -10652,19 +10652,19 @@ as	NONE
 part	PRED
 of	NONE
 a	NONE
-restructuring	NONE
+restructuring	ARG1
 .	NONE
 
 The	NONE
-maker	ARG1
+maker	NONE
 of	NONE
 scientific	NONE
 instruments	NONE
 and	NONE
-laser	NONE
-parts	NONE
+laser	ARG1
+parts	PRED
 said	NONE
-orders	ARG1
+orders	NONE
 fell	NONE
 below	NONE
 expectations	NONE
@@ -10697,7 +10697,7 @@ other	NONE
 parts	PRED
 of	NONE
 the	NONE
-economy	NONE
+economy	ARG1
 .	NONE
 
 C.S.	NONE
@@ -10717,14 +10717,14 @@ its	NONE
 Canadian	NONE
 Utilities	NONE
 Ltd.	NONE
-unit	PRED
+unit	NONE
 is	NONE
 reviewing	NONE
 cogeneration	NONE
-projects	ARG1
+projects	NONE
 in	NONE
 eastern	NONE
-Canada	ARGM
+Canada	NONE
 COMMA	NONE
 and	NONE
 conventional	NONE
@@ -10753,11 +10753,11 @@ from	NONE
 private-sector	NONE
 suppliers	NONE
 as	NONE
-part	NONE
+part	PRED
 of	NONE
 its	NONE
 privatization	NONE
-program	NONE
+program	ARG1
 .	NONE
 
 The	NONE
@@ -10788,7 +10788,7 @@ Kaufman	NONE
 &	NONE
 Broad	NONE
 's	NONE
-job	NONE
+job	ARG1
 will	NONE
 be	NONE
 to	NONE
@@ -10829,10 +10829,10 @@ be	NONE
 used	NONE
 to	NONE
 build	NONE
-parts	NONE
+parts	PRED
 for	NONE
 combat	NONE
-aircraft	NONE
+aircraft	ARG1
 .	NONE
 
 Mr.	NONE
@@ -10842,7 +10842,7 @@ n't	NONE
 part	PRED
 of	NONE
 the	NONE
-board	NONE
+board	ARG1
 COMMA	NONE
 nor	NONE
 are	NONE
@@ -10850,9 +10850,9 @@ any	NONE
 of	NONE
 the	NONE
 other	NONE
-heads	PRED
+heads	NONE
 of	NONE
-Saatchi	ARG1
+Saatchi	NONE
 's	NONE
 big	NONE
 U.S.-based	NONE
@@ -10866,11 +10866,11 @@ said	NONE
 that	NONE
 it	NONE
 filed	NONE
-part	NONE
+part	PRED
 of	NONE
 its	NONE
 10-K	NONE
-report	NONE
+report	ARG1
 with	NONE
 the	NONE
 Securities	NONE
@@ -10908,7 +10908,7 @@ of	NONE
 a	NONE
 ``	NONE
 first-phase	NONE
-trial	NONE
+trial	ARG1
 ''	NONE
 in	NONE
 the	NONE
@@ -10943,7 +10943,7 @@ as	NONE
 part	PRED
 of	NONE
 an	NONE
-accord	NONE
+accord	ARG1
 with	NONE
 the	NONE
 Environmental	NONE
@@ -10952,7 +10952,7 @@ Agency	NONE
 regarding	NONE
 an	NONE
 environmental	NONE
-cleanup	PRED
+cleanup	NONE
 of	NONE
 a	NONE
 defunct	NONE
@@ -10973,7 +10973,7 @@ as	NONE
 part	PRED
 of	NONE
 its	NONE
-agreement	NONE
+agreement	ARG1
 with	NONE
 the	NONE
 EPA	NONE
@@ -11007,7 +11007,7 @@ the	NONE
 more	NONE
 cost-conscious	NONE
 Time	NONE
-Warner	NONE
+Warner	ARG1
 COMMA	NONE
 wants	NONE
 to	NONE
@@ -11055,7 +11055,7 @@ which	NONE
 is	NONE
 part	PRED
 of	NONE
-DWG	NONE
+DWG	ARG1
 Corp	NONE
 .	NONE
 
@@ -11065,7 +11065,7 @@ least	NONE
 part	PRED
 of	NONE
 the	NONE
-increase	NONE
+increase	ARG1
 could	NONE
 have	NONE
 come	NONE
@@ -11096,7 +11096,7 @@ of	NONE
 the	NONE
 current	NONE
 annual	NONE
-examination	NONE
+examination	ARG1
 of	NONE
 City	NONE
 Federal	NONE
@@ -11106,7 +11106,7 @@ COMMA	NONE
 CityFed	NONE
 's	NONE
 primary	NONE
-subsidiary	PRED
+subsidiary	NONE
 COMMA	NONE
 based	NONE
 in	NONE
@@ -11119,12 +11119,12 @@ The	NONE
 cream	NONE
 of	NONE
 the	NONE
-British	ARGM
+British	NONE
 crop	NONE
 COMMA	NONE
 the	NONE
 literary	NONE
-dramas	ARG1
+dramas	NONE
 that	NONE
 are	NONE
 shown	NONE
@@ -11147,7 +11147,7 @@ part	PRED
 of	NONE
 British	NONE
 air	NONE
-time	NONE
+time	ARG1
 .	NONE
 
 Yesterday	NONE
@@ -11172,7 +11172,7 @@ part	PRED
 of	NONE
 a	NONE
 possible	NONE
-consortium	NONE
+consortium	ARG1
 that	NONE
 would	NONE
 bid	NONE
@@ -11186,7 +11186,7 @@ Thomson-CSF	NONE
 Part	PRED
 of	NONE
 the	NONE
-problem	NONE
+problem	ARG1
 is	NONE
 the	NONE
 tendency	NONE
@@ -11230,7 +11230,7 @@ of	NONE
 April	NONE
 's	NONE
 budget	NONE
-accord	NONE
+accord	ARG1
 and	NONE
 his	NONE
 insistence	NONE
@@ -11251,7 +11251,7 @@ could	NONE
 have	NONE
 sold	NONE
 X	NONE
-percent	PRED
+percent	NONE
 of	NONE
 this	NONE
 product	NONE
@@ -11259,7 +11259,7 @@ and	NONE
 Y	NONE
 percent	PRED
 of	NONE
-that	NONE
+that	ARG1
 COMMA	NONE
 ''	NONE
 recalls	NONE
@@ -11278,7 +11278,7 @@ through	NONE
 this	NONE
 exercise	NONE
 during	NONE
-his	ARG1
+his	NONE
 former	NONE
 career	NONE
 as	NONE
@@ -11312,14 +11312,14 @@ Merck	NONE
 's	NONE
 sales	ARG1
 were	NONE
-reduced	NONE
-by	NONE
+reduced	SUPPORT
+by	SUPPORT
 ``	NONE
 one	NONE
 to	NONE
 three	NONE
-percentage	NONE
-points	NONE
+percentage	PRED
+points	SUPPORT
 ''	NONE
 as	NONE
 a	NONE
@@ -11352,7 +11352,7 @@ piece	PRED
 of	NONE
 the	NONE
 mainframe	NONE
-business	NONE
+business	ARG1
 COMMA	NONE
 said	NONE
 it	NONE
@@ -11379,8 +11379,8 @@ the	NONE
 ability	NONE
 of	NONE
 real	NONE
-estate	ARG1
-owners	PRED
+estate	NONE
+owners	NONE
 to	NONE
 escape	NONE
 taxes	NONE
@@ -11424,7 +11424,7 @@ of	NONE
 the	NONE
 $	NONE
 32	NONE
-million	NONE
+million	ARG1
 realized	NONE
 from	NONE
 the	NONE
@@ -11455,16 +11455,16 @@ COMMA	NONE
 dry	NONE
 weather	NONE
 across	NONE
-large	NONE
+large	ARG2
 portions	PRED
 of	NONE
 the	NONE
 Great	NONE
-Plains	NONE
+Plains	ARG1
 and	NONE
 in	NONE
 wheat-growing	NONE
-areas	PRED
+areas	NONE
 in	NONE
 Washington	NONE
 and	NONE
@@ -11480,8 +11480,8 @@ this	NONE
 season	NONE
 's	NONE
 winter	NONE
-wheat	ARG1
-crop	PRED
+wheat	NONE
+crop	NONE
 COMMA	NONE
 said	NONE
 Conrad	NONE
@@ -11505,12 +11505,12 @@ climbs	NONE
 to	NONE
 about	NONE
 47	NONE
-%	PRED
+%	NONE
 in	NONE
-wheat-growing	NONE
+wheat-growing	ARG0
 portions	PRED
 of	NONE
-Kansas	NONE
+Kansas	ARG1
 COMMA	NONE
 he	NONE
 said	NONE
@@ -11528,12 +11528,12 @@ audience	NONE
 COMMA	NONE
 and	NONE
 often	NONE
-only	NONE
+only	ARGM
 a	NONE
-small	NONE
+small	ARG2
 portion	PRED
 of	NONE
-that	NONE
+that	ARG1
 .	NONE
 
 The	NONE
@@ -11545,14 +11545,14 @@ until	NONE
 COMMA	NONE
 when	NONE
 a	NONE
-majority	NONE
-position	NONE
+majority	ARG2
+position	PRED
 in	NONE
-Hooker	NONE
+Hooker	ARG1
 Corp.	NONE
 was	NONE
-acquired	NONE
-by	NONE
+acquired	SUPPORT
+by	ARG0
 Australian	NONE
 developer	NONE
 George	NONE
@@ -11597,13 +11597,13 @@ majority	ARG2
 positions	PRED
 in	NONE
 Merksamer	NONE
-Jewelers	NONE
+Jewelers	ARG1
 COMMA	NONE
 a	NONE
 Sacramento	NONE
 chain	NONE
 ;	NONE
-Sakowitz	NONE
+Sakowitz	ARG1
 Inc.	NONE
 COMMA	NONE
 the	NONE
@@ -11611,33 +11611,33 @@ Houston-based	NONE
 retailer	NONE
 COMMA	NONE
 and	NONE
-Parisian	NONE
+Parisian	ARG1
 Inc.	NONE
 COMMA	NONE
 the	NONE
-Southeast	ARGM
-department-store	ARG1
-chain	PRED
+Southeast	NONE
+department-store	NONE
+chain	NONE
 .	NONE
 
 Mario	NONE
-Gabelli	NONE
+Gabelli	ARG0
 COMMA	NONE
 for	NONE
 instance	NONE
 COMMA	NONE
-holds	NONE
+holds	SUPPORT
 cash	NONE
 positions	PRED
 well	NONE
 above	NONE
 20	NONE
-%	PRED
+%	ARG2
 in	NONE
-several	NONE
+several	ARG1
 of	NONE
 his	NONE
-funds	ARG1
+funds	NONE
 .	NONE
 
 Vincent	NONE
@@ -11654,17 +11654,17 @@ Fund	NONE
 COMMA	NONE
 added	NONE
 to	NONE
-his	NONE
+his	ARG0
 positions	PRED
 in	NONE
 Bristol-Myers	NONE
-Squibb	NONE
+Squibb	ARG1
 COMMA	NONE
-Woolworth	NONE
+Woolworth	ARG1
 and	NONE
 Dun	NONE
 &	NONE
-Bradstreet	NONE
+Bradstreet	ARG1
 Friday	NONE
 .	NONE
 
@@ -11679,22 +11679,22 @@ represented	NONE
 less	NONE
 than	NONE
 15	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 total	NONE
 cash	NONE
-position	NONE
+position	PRED
 of	NONE
 about	NONE
 $	NONE
 2	NONE
-billion	NONE
+billion	ARG2
 of	NONE
 Fidelity	NONE
 's	NONE
 stock	NONE
-funds	NONE
+funds	ARG1
 .	NONE
 
 Salomon	NONE
@@ -11707,7 +11707,7 @@ warrants	NONE
 by	NONE
 buying	NONE
 sufficient	NONE
-shares	PRED
+shares	NONE
 COMMA	NONE
 or	NONE
 options	NONE
@@ -11719,7 +11719,7 @@ to	NONE
 cover	NONE
 its	ARG0
 entire	NONE
-position	NONE
+position	PRED
 .	NONE
 
 In	NONE
@@ -11735,16 +11735,16 @@ S.p	NONE
 A.	NONE
 to	NONE
 liquidate	NONE
-futures	NONE
+futures	ARG1
 positions	PRED
-equal	NONE
+equal	ARG2
 to	NONE
 about	NONE
 23	NONE
 million	NONE
-bushels	PRED
+bushels	NONE
 of	NONE
-soybeans	ARG1
+soybeans	NONE
 .	NONE
 
 The	NONE
@@ -11767,8 +11767,8 @@ said	NONE
 last	NONE
 May	NONE
 that	NONE
-its	NONE
-short	NONE
+its	ARG0
+short	ARG2
 positions	PRED
 had	NONE
 shown	NONE
@@ -11789,7 +11789,7 @@ When	NONE
 she	NONE
 met	NONE
 the	NONE
-local	NONE
+local	ARG2
 press	PRED
 for	NONE
 the	NONE
@@ -11843,8 +11843,8 @@ nearly	NONE
 a	NONE
 quarter	PRED
 of	NONE
-its	ARG1
-value	NONE
+its	NONE
+value	ARG1
 since	NONE
 Sept.	NONE
 1	NONE
@@ -11878,10 +11878,10 @@ good	NONE
 in	NONE
 the	NONE
 third	NONE
-quarter	NONE
+quarter	PRED
 of	NONE
 last	NONE
-year	NONE
+year	ARG1
 and	NONE
 generally	NONE
 not	NONE
@@ -11934,7 +11934,7 @@ of	NONE
 1988	ARG1
 's	NONE
 fourth	NONE
-quarter	NONE
+quarter	PRED
 .	NONE
 
 The	NONE
@@ -11974,17 +11974,17 @@ COMMA	NONE
 for	NONE
 the	NONE
 third	NONE
-quarter	NONE
+quarter	PRED
 in	NONE
-1988	NONE
+1988	ARG1
 .	NONE
 
 In	NONE
 the	NONE
 third	NONE
-quarter	NONE
+quarter	PRED
 of	NONE
-1988	NONE
+1988	ARG1
 COMMA	NONE
 Merck	NONE
 earned	NONE
@@ -12001,12 +12001,12 @@ share	NONE
 
 In	NONE
 last	NONE
-year	NONE
+year	ARG1
 's	NONE
 third	NONE
-quarter	NONE
+quarter	PRED
 COMMA	NONE
-Lilly	ARG1
+Lilly	NONE
 earned	NONE
 $	NONE
 171.4	NONE
@@ -12030,7 +12030,7 @@ to	NONE
 be	NONE
 about	NONE
 18	NONE
-%	PRED
+%	NONE
 above	NONE
 the	NONE
 $	NONE
@@ -12048,9 +12048,9 @@ earned	NONE
 in	NONE
 the	NONE
 third	NONE
-quarter	NONE
+quarter	PRED
 of	NONE
-1988	NONE
+1988	ARG1
 COMMA	NONE
 was	NONE
 the	NONE
@@ -12076,16 +12076,16 @@ disease	NONE
 
 Amid	NONE
 a	NONE
-crowd	PRED
+crowd	NONE
 of	NONE
-crashing	ARG1
+crashing	NONE
 stocks	NONE
 COMMA	NONE
 Relational	NONE
 Technology	NONE
 Inc.	NONE
 's	NONE
-stock	PRED
+stock	NONE
 fell	NONE
 particularly	NONE
 hard	NONE
@@ -12093,7 +12093,7 @@ Friday	NONE
 COMMA	NONE
 dropping	NONE
 23	NONE
-%	PRED
+%	NONE
 because	NONE
 its	NONE
 problems	NONE
@@ -12107,7 +12107,7 @@ unexpected	NONE
 loss	NONE
 for	NONE
 its	NONE
-fiscal	NONE
+fiscal	ARG1
 first	NONE
 quarter	PRED
 .	NONE
@@ -12127,9 +12127,9 @@ net	NONE
 loss	NONE
 for	NONE
 the	NONE
-fiscal	NONE
+fiscal	ARG1
 first	NONE
-quarter	NONE
+quarter	PRED
 ended	NONE
 Sept.	NONE
 30	NONE
@@ -12191,7 +12191,7 @@ Machines	NONE
 Corp.	NONE
 for	NONE
 a	NONE
-piece	PRED
+piece	NONE
 of	NONE
 the	NONE
 mainframe	NONE
@@ -12208,9 +12208,9 @@ and	NONE
 earnings	NONE
 for	NONE
 its	NONE
-fiscal	NONE
+fiscal	ARG1
 fourth	NONE
-quarter	NONE
+quarter	PRED
 ended	NONE
 Sept.	NONE
 30	NONE
@@ -12219,9 +12219,9 @@ Sept.	NONE
 In	NONE
 the	NONE
 third	NONE
-quarter	NONE
+quarter	PRED
 of	NONE
-1987	NONE
+1987	ARG1
 COMMA	NONE
 the	NONE
 economy	NONE
@@ -12253,9 +12253,9 @@ sluggish	NONE
 in	NONE
 the	NONE
 third	NONE
-quarter	NONE
+quarter	PRED
 of	NONE
-1989	NONE
+1989	ARG1
 COMMA	NONE
 which	NONE
 ended	NONE
@@ -12266,7 +12266,7 @@ ago	NONE
 
 In	NONE
 the	NONE
-1988	NONE
+1988	ARG1
 third	NONE
 quarter	PRED
 COMMA	NONE
@@ -12315,14 +12315,14 @@ strong	NONE
 performances	NONE
 in	NONE
 the	NONE
-1988	NONE
+1988	ARG1
 third	NONE
 quarter	PRED
 .	NONE
 
 In	NONE
 the	NONE
-1988	NONE
+1988	ARG1
 third	NONE
 quarter	PRED
 COMMA	NONE
@@ -12352,8 +12352,8 @@ COMMA	NONE
 which	NONE
 is	NONE
 finalizing	NONE
-its	NONE
-steel-import	NONE
+its	ARG0
+steel-import	ARG1
 quotas	PRED
 COMMA	NONE
 is	NONE
@@ -12370,7 +12370,7 @@ developing	NONE
 and	NONE
 newly	NONE
 industrialized	NONE
-countries	ARG1
+countries	NONE
 which	NONE
 have	NONE
 relatively	NONE
@@ -12399,11 +12399,11 @@ U.S.	NONE
 COMMA	NONE
 virtually	NONE
 doubled	NONE
-its	NONE
+its	ARG0
 quota	PRED
 to	NONE
 0.95	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 U.S.	NONE
@@ -12439,10 +12439,10 @@ COMMA	NONE
 virtually	NONE
 doubled	NONE
 its	NONE
-quota	PRED
+quota	NONE
 to	NONE
 0.95	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 U.S.	NONE
@@ -12453,8 +12453,8 @@ from	NONE
 %	NONE
 under	NONE
 the	NONE
-previous	NONE
-quotas	NONE
+previous	ARGM
+quotas	PRED
 .	NONE
 
 Meanwhile	NONE
@@ -12467,10 +12467,10 @@ a	NONE
 significant	NONE
 cut	NONE
 in	NONE
-Japan	NONE
+Japan	ARG0
 's	NONE
-steel	NONE
-quota	NONE
+steel	ARG1
+quota	PRED
 COMMA	NONE
 and	NONE
 made	NONE
@@ -12531,19 +12531,19 @@ been	NONE
 supplying	NONE
 about	NONE
 5	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 U.S.	NONE
 market	NONE
 compared	NONE
 with	NONE
-recent	NONE
-quotas	NONE
+recent	ARGM
+quotas	PRED
 of	NONE
 about	NONE
 6.7	NONE
-%	PRED
+%	ARG2
 .	NONE
 
 Japan	NONE
@@ -12555,7 +12555,7 @@ to	NONE
 total	NONE
 about	NONE
 4.5	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 U.S.	NONE
@@ -12566,7 +12566,7 @@ a	NONE
 quota	PRED
 of	NONE
 5.9	NONE
-%	NONE
+%	ARG2
 .	NONE
 
 In	NONE
@@ -12578,7 +12578,7 @@ the	NONE
 EC	NONE
 had	NONE
 its	ARG0
-quota	NONE
+quota	PRED
 increased	NONE
 about	NONE
 300COMMA000	NONE
@@ -12586,7 +12586,7 @@ tons	NONE
 COMMA	NONE
 to	NONE
 7	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 U.S.	NONE
@@ -12607,7 +12607,7 @@ as	NONE
 high	NONE
 as	NONE
 6.9	NONE
-%	PRED
+%	NONE
 in	NONE
 1984	NONE
 .	NONE
@@ -12620,12 +12620,12 @@ has	NONE
 agreed	NONE
 to	NONE
 cut	NONE
-its	NONE
+its	ARG0
 quota	PRED
 to	NONE
 about	NONE
 5	NONE
-%	PRED
+%	NONE
 from	NONE
 5.9	NONE
 %	NONE
@@ -12654,13 +12654,13 @@ the	NONE
 U.S.	NONE
 market	NONE
 than	NONE
-it	NONE
+it	ARG0
 had	NONE
 under	NONE
 the	NONE
-previous	NONE
-five-year	NONE
-steel	NONE
+previous	ARGM
+five-year	ARGM
+steel	ARG1
 quotas	PRED
 COMMA	NONE
 which	NONE
@@ -12679,7 +12679,7 @@ said	NONE
 it	NONE
 would	NONE
 extend	NONE
-steel	NONE
+steel	ARG1
 quotas	PRED
 COMMA	NONE
 known	NONE
@@ -12720,12 +12720,12 @@ COMMA	NONE
 ''	NONE
 threatening	NONE
 to	NONE
-impose	NONE
-quotas	NONE
+impose	SUPPORT
+quotas	PRED
 against	NONE
 such	NONE
 pop	NONE
-invaders	NONE
+invaders	ARG0
 as	NONE
 ``	NONE
 Dallas	NONE
@@ -12743,11 +12743,11 @@ Law	NONE
 ''	NONE
 
 A	NONE
-raft	NONE
+raft	PRED
 of	NONE
 new	NONE
 computer	NONE
-companies	NONE
+companies	ARG1
 also	NONE
 has	NONE
 targeted	NONE
@@ -12788,7 +12788,7 @@ the	NONE
 strength	NONE
 of	NONE
 new	NONE
-orders	ARG1
+orders	NONE
 .	NONE
 
 The	NONE
@@ -12804,7 +12804,7 @@ the	NONE
 rest	PRED
 of	NONE
 the	NONE
-year	NONE
+year	ARG1
 .	NONE
 
 After	NONE
@@ -12814,9 +12814,9 @@ crunch	NONE
 caused	NONE
 prices	NONE
 to	NONE
-rise	SUPPORT
+rise	NONE
 14	NONE
-%	PRED
+%	NONE
 since	NONE
 1986	NONE
 to	NONE
@@ -12843,7 +12843,7 @@ the	NONE
 rest	PRED
 of	NONE
 this	NONE
-year	NONE
+year	ARG1
 .	NONE
 
 The	NONE
@@ -12884,7 +12884,7 @@ the	NONE
 rest	PRED
 of	NONE
 the	NONE
-country	NONE
+country	ARG1
 .	NONE
 
 The	NONE
@@ -12897,14 +12897,14 @@ the	NONE
 rest	PRED
 of	NONE
 the	NONE
-nation	NONE
+nation	ARG1
 .	NONE
 
 In	NONE
 a	NONE
 Madrid	NONE
-hotel	NONE
-room	NONE
+hotel	ARG1
+room	PRED
 recently	NONE
 COMMA	NONE
 a	NONE
@@ -12920,7 +12920,7 @@ series	NONE
 about	NONE
 a	NONE
 fishing	NONE
-boat	ARG1
+boat	NONE
 on	NONE
 Australia	NONE
 's	NONE
@@ -12977,7 +12977,7 @@ despite	NONE
 the	NONE
 rush	PRED
 of	NONE
-selling	NONE
+selling	ARG1
 COMMA	NONE
 he	NONE
 never	NONE
@@ -12990,7 +12990,7 @@ emergency	NONE
 .	NONE
 ''	NONE
 
-Stocks	PRED
+Stocks	NONE
 of	NONE
 utilities	NONE
 held	NONE
@@ -13009,7 +13009,7 @@ sell-off	NONE
 At	NONE
 the	NONE
 investment	NONE
-firm	PRED
+firm	NONE
 of	NONE
 Smith	NONE
 Barney	NONE
@@ -13020,14 +13020,14 @@ Upham	NONE
 Co.	NONE
 COMMA	NONE
 the	NONE
-commodity-chemical	NONE
+commodity-chemical	ARG1
 segment	PRED
 is	NONE
 seen	NONE
 pulling	NONE
 down	NONE
 overall	NONE
-profit	ARG1
+profit	NONE
 for	NONE
 20	NONE
 companies	NONE
@@ -13071,7 +13071,7 @@ many	NONE
 as	NONE
 five	NONE
 North	NONE
-American	ARG2
+American	NONE
 assembly	NONE
 plants	NONE
 may	NONE
@@ -13095,7 +13095,7 @@ Compaq	NONE
 's	NONE
 series	PRED
 of	NONE
-notebooks	NONE
+notebooks	ARG1
 extends	NONE
 a	NONE
 trend	NONE
@@ -13108,7 +13108,7 @@ computer	NONE
 market	NONE
 .	NONE
 
-Boeing	NONE
+Boeing	ARG1
 's	NONE
 shares	PRED
 fell	NONE
@@ -13137,12 +13137,12 @@ U.S.	NONE
 polyethylene	NONE
 market	NONE
 COMMA	NONE
-Quantum	NONE
+Quantum	ARG0
 has	NONE
-claimed	NONE
+claimed	SUPPORT
 the	NONE
-largest	NONE
-share	NONE
+largest	ARG2
+share	PRED
 COMMA	NONE
 about	NONE
 20	NONE
@@ -13160,7 +13160,7 @@ of	NONE
 the	NONE
 meeting	NONE
 COMMA	NONE
-Quantum	NONE
+Quantum	ARG1
 's	NONE
 shares	PRED
 slid	NONE
@@ -13190,8 +13190,8 @@ polyethylene	NONE
 business	NONE
 COMMA	NONE
 where	NONE
-market	NONE
-share	NONE
+market	ARG1
+share	PRED
 is	NONE
 often	NONE
 taken	NONE
@@ -13208,23 +13208,23 @@ is	NONE
 finalizing	NONE
 its	NONE
 steel-import	NONE
-quotas	PRED
+quotas	NONE
 COMMA	NONE
 is	NONE
 allocating	NONE
 a	NONE
-larger	NONE
-share	NONE
+larger	ARG2
+share	PRED
 of	NONE
 its	NONE
 steel	NONE
-market	NONE
+market	ARG1
 to	NONE
 developing	NONE
 and	NONE
 newly	NONE
 industrialized	NONE
-countries	ARG1
+countries	NONE
 which	NONE
 have	NONE
 relatively	NONE
@@ -13245,11 +13245,11 @@ allowance	NONE
 from	NONE
 the	NONE
 1.43	NONE
-%	NONE
-share	NONE
-it	NONE
+%	ARG2
+share	PRED
+it	ARG0
 has	NONE
-had	NONE
+had	SUPPORT
 in	NONE
 recent	NONE
 years	NONE
@@ -13270,12 +13270,12 @@ to	NONE
 negotiate	NONE
 a	NONE
 somewhat	NONE
-bigger	NONE
-share	NONE
+bigger	ARG2
+share	PRED
 of	NONE
 the	NONE
 U.S.	NONE
-market	NONE
+market	ARG1
 than	NONE
 it	NONE
 had	NONE
@@ -13284,7 +13284,7 @@ the	NONE
 previous	NONE
 five-year	NONE
 steel	NONE
-quotas	PRED
+quotas	NONE
 COMMA	NONE
 which	NONE
 expired	NONE
@@ -13308,7 +13308,7 @@ which	NONE
 rights	NONE
 to	NONE
 purchase	NONE
-shares	NONE
+shares	PRED
 of	NONE
 common	NONE
 stock	ARG1
@@ -13336,18 +13336,18 @@ shelves	NONE
 in	NONE
 1987	NONE
 COMMA	NONE
-P&G	NONE
+P&G	ARG0
 's	NONE
 share	PRED
 of	NONE
 the	NONE
 Japanese	NONE
-market	NONE
+market	ARG1
 fell	NONE
 to	NONE
 about	NONE
 8	NONE
-%	PRED
+%	NONE
 from	NONE
 more	NONE
 than	NONE
@@ -13362,9 +13362,9 @@ of	NONE
 Lemon	NONE
 Cheer	NONE
 COMMA	NONE
-P&G	NONE
+P&G	ARG1
 's	NONE
-share	NONE
+share	PRED
 is	NONE
 now	NONE
 estimated	NONE
@@ -13375,15 +13375,15 @@ be	NONE
 .	NONE
 
 The	NONE
-U.S.	NONE
+U.S.	ARG0
 share	PRED
 of	NONE
 the	NONE
 Japanese	NONE
-market	NONE
+market	ARG1
 has	NONE
 been	NONE
-stuck	SUPPORT
+stuck	NONE
 around	NONE
 10	NONE
 %	NONE
@@ -13399,13 +13399,13 @@ a	NONE
 1986	NONE
 agreement	NONE
 as	NONE
-assuring	NONE
+assuring	SUPPORT
 U.S.	NONE
-companies	NONE
+companies	ARG0
 a	NONE
 20	NONE
-%	NONE
-share	SUPPORT
+%	ARG2
+share	PRED
 by	NONE
 1991	NONE
 COMMA	NONE
@@ -13427,7 +13427,7 @@ Ltd.	NONE
 COMMA	NONE
 a	NONE
 British	NONE
-subsidiary	PRED
+subsidiary	NONE
 of	NONE
 Salomon	NONE
 Inc.	NONE
@@ -13438,11 +13438,11 @@ will	NONE
 issue	NONE
 warrants	NONE
 on	NONE
-shares	NONE
+shares	PRED
 of	NONE
 Hong	NONE
 Kong	NONE
-Telecommunications	NONE
+Telecommunications	ARG1
 Ltd	NONE
 .	NONE
 
@@ -13458,12 +13458,12 @@ Salomon	NONE
 of	NONE
 warrants	NONE
 for	NONE
-shares	NONE
+shares	PRED
 of	NONE
 Hongkong	NONE
 &	NONE
 Shanghai	NONE
-Banking	NONE
+Banking	ARG1
 Corp	NONE
 .	NONE
 
@@ -13478,9 +13478,9 @@ past	NONE
 issued	NONE
 warrants	NONE
 on	NONE
-their	NONE
+their	ARG1
 own	NONE
-shares	NONE
+shares	PRED
 COMMA	NONE
 Salomon	NONE
 's	NONE
@@ -13507,7 +13507,7 @@ the	NONE
 warrants	NONE
 by	NONE
 buying	NONE
-sufficient	NONE
+sufficient	ARG2
 shares	PRED
 COMMA	NONE
 or	NONE
@@ -13518,7 +13518,7 @@ shares	NONE
 COMMA	NONE
 to	NONE
 cover	NONE
-its	ARG0
+its	NONE
 entire	NONE
 position	NONE
 .	NONE
@@ -13538,10 +13538,10 @@ as	NONE
 the	NONE
 giant	NONE
 auto	NONE
-maker	NONE
+maker	ARG0
 's	NONE
-U.S.	NONE
-market	ARG1
+U.S.	ARG1
+market	NONE
 share	PRED
 skidded	NONE
 during	NONE
@@ -13582,7 +13582,7 @@ offer	NONE
 about	NONE
 10	NONE
 million	NONE
-common	ARG3
+common	ARG1
 shares	PRED
 .	NONE
 
@@ -13595,7 +13595,7 @@ to	NONE
 offer	NONE
 an	NONE
 undetermined	NONE
-number	PRED
+number	NONE
 of	NONE
 common	ARG1
 shares	PRED
@@ -13604,11 +13604,11 @@ exchange	NONE
 for	NONE
 the	NONE
 585COMMA000	NONE
-shares	PRED
+shares	NONE
 of	NONE
-its	ARG1
+its	NONE
 preferred	NONE
-stock	PRED
+stock	NONE
 outstanding	NONE
 .	NONE
 
@@ -13621,10 +13621,10 @@ to	NONE
 offer	NONE
 an	NONE
 undetermined	NONE
-number	PRED
+number	NONE
 of	NONE
-common	ARG1
-shares	PRED
+common	NONE
+shares	NONE
 in	NONE
 exchange	NONE
 for	NONE
@@ -13632,9 +13632,9 @@ the	NONE
 585COMMA000	NONE
 shares	PRED
 of	NONE
-its	ARG1
+its	NONE
 preferred	NONE
-stock	PRED
+stock	ARG1
 outstanding	NONE
 .	NONE
 
@@ -13671,13 +13671,13 @@ in	NONE
 November	NONE
 .	NONE
 
-Weatherford	NONE
+Weatherford	ARG1
 currently	NONE
-has	NONE
+has	SUPPORT
 approximately	NONE
 11.1	NONE
 million	NONE
-common	NONE
+common	ARG3
 shares	PRED
 outstanding	NONE
 .	NONE
@@ -13705,10 +13705,10 @@ Young	NONE
 COMMA	NONE
 chairman	NONE
 of	NONE
-Hewlett-Packard	NONE
+Hewlett-Packard	ARG1
 Co.	NONE
 COMMA	NONE
-whose	NONE
+whose	ARG1
 shares	PRED
 dropped	NONE
 $	NONE
@@ -13758,7 +13758,7 @@ mountains	NONE
 here	NONE
 after	NONE
 his	NONE
-company	NONE
+company	ARG1
 's	NONE
 shares	PRED
 plunged	NONE
@@ -13794,8 +13794,8 @@ depositary	NONE
 shares	NONE
 COMMA	NONE
 representing	NONE
-preferred	NONE
-shares	NONE
+preferred	ARG1
+shares	PRED
 COMMA	NONE
 with	NONE
 the	NONE
@@ -13808,10 +13808,10 @@ American	NONE
 Stock	NONE
 Exchange	NONE
 listed	NONE
-shares	NONE
+shares	PRED
 of	NONE
 two	NONE
-companies	NONE
+companies	ARG1
 .	NONE
 
 The	NONE
@@ -13824,10 +13824,10 @@ Nasdaq	NONE
 over-the-counter	NONE
 market	NONE
 listed	NONE
-shares	NONE
+shares	PRED
 of	NONE
 one	NONE
-company	NONE
+company	ARG1
 .	NONE
 
 American	NONE
@@ -13860,7 +13860,7 @@ offering	NONE
 of	NONE
 five	NONE
 million	NONE
-common	NONE
+common	ARG1
 shares	PRED
 COMMA	NONE
 via	NONE
@@ -13894,7 +13894,7 @@ Systems	NONE
 Inc.	NONE
 COMMA	NONE
 proposed	NONE
-offering	SUPPORT
+offering	NONE
 of	NONE
 1.5	NONE
 million	NONE
@@ -13912,7 +13912,7 @@ by	NONE
 PacifiCare	NONE
 and	NONE
 800COMMA000	NONE
-shares	PRED
+shares	NONE
 by	NONE
 UniHealth	NONE
 America	NONE
@@ -13983,8 +13983,8 @@ composite	NONE
 trading	NONE
 Friday	NONE
 COMMA	NONE
-CenTrust	NONE
-common	NONE
+CenTrust	ARG1
+common	ARG3
 shares	PRED
 closed	NONE
 at	NONE
@@ -13997,9 +13997,9 @@ cents	NONE
 .	NONE
 
 The	NONE
-share	NONE
+share	PRED
 of	NONE
-minorities	NONE
+minorities	ARG1
 in	NONE
 those	NONE
 positions	NONE
@@ -14048,7 +14048,7 @@ of	NONE
 companies	NONE
 issuing	NONE
 voting	NONE
-preferred	NONE
+preferred	ARG1
 shares	PRED
 to	NONE
 management-controlled	NONE
@@ -14056,7 +14056,7 @@ trusts	NONE
 to	NONE
 dilute	NONE
 voting	NONE
-power	SUPPORT
+power	NONE
 of	NONE
 common	NONE
 stockholders	NONE
@@ -14097,7 +14097,7 @@ Inc	NONE
 
 Two	NONE
 million	NONE
-common	NONE
+common	ARG1
 shares	PRED
 COMMA	NONE
 via	NONE
@@ -14108,7 +14108,7 @@ Markets	NONE
 .	NONE
 
 2COMMA850COMMA000	NONE
-common	NONE
+common	ARG1
 shares	PRED
 COMMA	NONE
 via	NONE
@@ -14118,7 +14118,7 @@ Sachs	NONE
 
 2.4	NONE
 million	NONE
-common	NONE
+common	ARG1
 shares	PRED
 COMMA	NONE
 via	NONE
@@ -14132,7 +14132,7 @@ shares	PRED
 of	NONE
 $	NONE
 25	NONE
-preferred	NONE
+preferred	ARG1
 COMMA	NONE
 via	NONE
 competitive	NONE
@@ -14141,7 +14141,7 @@ bidding	NONE
 
 Four	NONE
 million	NONE
-common	ARG3
+common	ARG1
 shares	PRED
 COMMA	NONE
 via	NONE
@@ -14174,9 +14174,9 @@ it	NONE
 is	NONE
 pegged	NONE
 to	NONE
-Zenith	NONE
+Zenith	ARG0
 's	NONE
-share	NONE
+share	PRED
 and	NONE
 sales	NONE
 .	NONE
@@ -14187,7 +14187,7 @@ already	NONE
 taking	NONE
 aim	NONE
 at	NONE
-Zenith	NONE
+Zenith	ARG0
 's	NONE
 market	ARG1
 share	PRED
@@ -14195,7 +14195,7 @@ share	PRED
 
 Shares	PRED
 of	NONE
-Rally	NONE
+Rally	ARG1
 's	NONE
 Inc.	NONE
 COMMA	NONE
@@ -14203,7 +14203,7 @@ an	NONE
 operator	NONE
 of	NONE
 fast-food	NONE
-restaurants	ARG1
+restaurants	NONE
 COMMA	NONE
 closed	NONE
 at	NONE
@@ -14217,7 +14217,7 @@ its	NONE
 $	NONE
 15	NONE
 offering	NONE
-price	SUPPORT
+price	NONE
 and	NONE
 shares	NONE
 of	NONE
@@ -14244,7 +14244,7 @@ offering	NONE
 price	NONE
 .	NONE
 
-Shares	PRED
+Shares	NONE
 of	NONE
 Rally	NONE
 's	NONE
@@ -14254,7 +14254,7 @@ an	NONE
 operator	NONE
 of	NONE
 fast-food	NONE
-restaurants	ARG1
+restaurants	NONE
 COMMA	NONE
 closed	NONE
 at	NONE
@@ -14268,13 +14268,13 @@ its	NONE
 $	NONE
 15	NONE
 offering	NONE
-price	SUPPORT
+price	NONE
 and	NONE
-shares	NONE
+shares	PRED
 of	NONE
 Employee	NONE
 Benefit	NONE
-Plans	NONE
+Plans	ARG1
 Inc.	NONE
 COMMA	NONE
 a	NONE
@@ -14302,13 +14302,13 @@ said	NONE
 it	NONE
 acquired	NONE
 5	NONE
-%	PRED
+%	ARG2
 of	NONE
 the	NONE
-shares	NONE
+shares	PRED
 in	NONE
 Jaguar	NONE
-PLC	NONE
+PLC	ARG1
 .	NONE
 
 The	NONE
@@ -14332,10 +14332,10 @@ the	NONE
 acquisition	NONE
 of	NONE
 as	NONE
-much	NONE
+much	ARG2
 as	NONE
 15	NONE
-%	PRED
+%	NONE
 of	NONE
 Jaguar	ARG1
 shares	PRED
@@ -14367,7 +14367,7 @@ offer	NONE
 outstanding	NONE
 for	NONE
 the	NONE
-Himont	NONE
+Himont	ARG1
 shares	PRED
 it	NONE
 does	NONE
@@ -14412,9 +14412,9 @@ managed	NONE
 to	NONE
 stay	NONE
 this	NONE
-side	NONE
+side	PRED
 of	NONE
-chaos	NONE
+chaos	ARG1
 .	NONE
 
 ``	NONE
@@ -14424,7 +14424,7 @@ a	NONE
 real	NONE
 thrust	NONE
 on	NONE
-our	NONE
+our	ARG1
 utility	NONE
 side	PRED
 COMMA	NONE
@@ -14459,10 +14459,10 @@ computer	NONE
 to	NONE
 wrest	NONE
 a	NONE
-hefty	NONE
-slice	NONE
+hefty	ARG2
+slice	PRED
 of	NONE
-business	NONE
+business	ARG1
 away	NONE
 from	NONE
 IBM	NONE
@@ -14487,10 +14487,10 @@ its	NONE
 response	NONE
 to	NONE
 a	NONE
-recent	NONE
+recent	ARGM
 spate	PRED
 of	NONE
-airline	ARG1
+airline	NONE
 takeovers	ARG1
 .	NONE
 
@@ -14507,13 +14507,13 @@ COMMA	NONE
 ''	NONE
 and	NONE
 Canadian	NONE
-Utilities	NONE
+Utilities	ARG0
 '	NONE
-equity	NONE
+equity	ARG1
 stake	PRED
 would	NONE
 be	NONE
-small	NONE
+small	ARG2
 COMMA	NONE
 he	NONE
 said	NONE
@@ -14548,7 +14548,7 @@ a	NONE
 stake	PRED
 in	NONE
 the	NONE
-thrift	NONE
+thrift	ARG1
 for	NONE
 about	NONE
 $	NONE
@@ -14587,7 +14587,7 @@ the	NONE
 stake	PRED
 in	NONE
 the	NONE
-company	NONE
+company	ARG1
 .	NONE
 
 HOFI	NONE
@@ -14608,20 +14608,20 @@ COMMA	NONE
 previously	NONE
 proposed	NONE
 combining	NONE
-its	NONE
+its	ARG0
 100	NONE
-%	PRED
-stake	SUPPORT
+%	ARG2
+stake	PRED
 in	NONE
 St.	NONE
 Lawrence	NONE
-Cement	NONE
+Cement	ARG1
 Inc.	NONE
 and	NONE
 its	NONE
 60	NONE
-%	ARG2
-stake	PRED
+%	NONE
+stake	NONE
 in	NONE
 Dundee	NONE
 Cement	NONE
@@ -14629,8 +14629,8 @@ Co.	NONE
 with	NONE
 its	NONE
 67	NONE
-%	ARG2
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 Ideal	NONE
 .	NONE
@@ -14655,27 +14655,27 @@ proposed	NONE
 combining	NONE
 its	NONE
 100	NONE
-%	PRED
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 St.	NONE
 Lawrence	NONE
 Cement	NONE
 Inc.	NONE
 and	NONE
-its	NONE
+its	ARG0
 60	NONE
 %	ARG2
 stake	PRED
 in	NONE
 Dundee	NONE
-Cement	NONE
+Cement	ARG1
 Co.	NONE
 with	NONE
 its	NONE
 67	NONE
-%	ARG2
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 Ideal	NONE
 .	NONE
@@ -14700,8 +14700,8 @@ proposed	NONE
 combining	NONE
 its	NONE
 100	NONE
-%	PRED
-stake	SUPPORT
+%	NONE
+stake	NONE
 in	NONE
 St.	NONE
 Lawrence	NONE
@@ -14710,19 +14710,19 @@ Inc.	NONE
 and	NONE
 its	NONE
 60	NONE
-%	ARG2
-stake	PRED
+%	NONE
+stake	NONE
 in	NONE
 Dundee	NONE
 Cement	NONE
 Co.	NONE
 with	NONE
-its	NONE
+its	ARG0
 67	NONE
 %	ARG2
-stake	SUPPORT
+stake	PRED
 in	NONE
-Ideal	NONE
+Ideal	ARG1
 .	NONE
 
 Speaking	NONE
@@ -14734,26 +14734,26 @@ COMMA	NONE
 ASKO	NONE
 also	NONE
 disclosed	NONE
-it	NONE
+it	ARG0
 holds	SUPPORT
 a	NONE
 15	NONE
 %	ARG2
 stake	PRED
 in	NONE
-Ahold	NONE
+Ahold	ARG1
 .	NONE
 
 It	NONE
 was	NONE
 previously	NONE
 thought	NONE
-ASKO	NONE
-held	NONE
+ASKO	ARG0
+held	SUPPORT
 a	NONE
 13.6	NONE
 %	ARG2
-stake	NONE
+stake	PRED
 that	NONE
 was	NONE
 accumulated	NONE
@@ -14772,11 +14772,11 @@ forced	NONE
 Northwest	NONE
 Airlines	NONE
 to	NONE
-reduce	SUPPORT
+reduce	NONE
 a	NONE
-stake	NONE
-held	NONE
-by	NONE
+stake	PRED
+held	SUPPORT
+by	ARG0
 KLM	NONE
 Royal	NONE
 Dutch	NONE
@@ -14803,12 +14803,12 @@ COMMA	NONE
 which	NONE
 includes	NONE
 a	NONE
-big	NONE
-stake	NONE
+big	ARG2
+stake	PRED
 by	NONE
 British	NONE
 Airways	NONE
-PLC	NONE
+PLC	ARG0
 .	NONE
 
 Though	NONE
@@ -14823,14 +14823,14 @@ and	NONE
 pharmaceuticals	NONE
 COMMA	NONE
 the	NONE
-company	NONE
+company	ARG0
 still	NONE
 has	SUPPORT
 a	NONE
-big	NONE
+big	ARG2
 stake	PRED
 in	NONE
-polyethylene	NONE
+polyethylene	ARG1
 COMMA	NONE
 which	NONE
 is	NONE
@@ -14845,8 +14845,8 @@ Population	NONE
 Drain	NONE
 Ends	NONE
 For	NONE
-Midwestern	NONE
-States	NONE
+Midwestern	ARG1
+States	PRED
 
 At	NONE
 the	NONE
@@ -14854,12 +14854,12 @@ same	NONE
 time	NONE
 COMMA	NONE
 several	NONE
-states	NONE
+states	PRED
 in	NONE
 the	NONE
-South	NONE
+South	ARG1
 and	NONE
-West	NONE
+West	ARG1
 have	NONE
 had	NONE
 their	NONE
@@ -14872,8 +14872,8 @@ Six	NONE
 of	NONE
 the	NONE
 12	NONE
-midwestern	NONE
-states	NONE
+midwestern	ARG1
+states	PRED
 have	NONE
 been	NONE
 growing	NONE
@@ -14918,7 +14918,7 @@ takeover	NONE
 would	NONE
 succeed	NONE
 and	NONE
-UAL	NONE
+UAL	ARG1
 stock	PRED
 would	NONE
 rise	NONE
@@ -14928,8 +14928,8 @@ Arbitragers	NONE
 could	NONE
 n't	NONE
 dump	NONE
-their	NONE
-UAL	NONE
+their	ARG0
+UAL	ARG1
 stock	PRED
 --	NONE
 but	NONE
@@ -14956,7 +14956,7 @@ looking	NONE
 to	NONE
 buy	NONE
 drug	ARG1
-stocks	NONE
+stocks	PRED
 like	NONE
 Eli	NONE
 Lilly	NONE
@@ -14978,19 +14978,19 @@ declines	NONE
 .	NONE
 
 Though	NONE
-Boeing	NONE
+Boeing	ARG1
 's	NONE
-stock	NONE
-price	NONE
+stock	PRED
+price	SUPPORT
 was	NONE
 battered	NONE
 along	NONE
 with	NONE
 the	NONE
-rest	PRED
+rest	NONE
 of	NONE
 the	NONE
-market	ARG1
+market	NONE
 Friday	NONE
 COMMA	NONE
 it	NONE
@@ -15007,12 +15007,12 @@ the	NONE
 strength	NONE
 of	NONE
 new	NONE
-orders	ARG1
+orders	NONE
 .	NONE
 
 Diamond	NONE
 Shamrock	NONE
-Offshore	NONE
+Offshore	ARG1
 's	NONE
 stock	PRED
 rose	NONE
@@ -15050,8 +15050,8 @@ and	NONE
 a	NONE
 bear	NONE
 on	NONE
-plastics	NONE
-stocks	NONE
+plastics	ARG1
+stocks	PRED
 .	NONE
 
 Quantum	NONE
@@ -15075,15 +15075,15 @@ its	NONE
 holders	NONE
 COMMA	NONE
 because	NONE
-its	NONE
-stock	NONE
-price	NONE
+its	ARG1
+stock	PRED
+price	SUPPORT
 was	NONE
 n't	NONE
 reflecting	NONE
 the	NONE
 huge	NONE
-profit	ARG1
+profit	NONE
 increases	NONE
 .	NONE
 
@@ -15107,7 +15107,7 @@ acquires	NONE
 more	NONE
 than	NONE
 15	NONE
-%	PRED
+%	ARG2
 of	NONE
 the	NONE
 company	ARG1
@@ -15127,8 +15127,8 @@ allow	NONE
 shareholders	NONE
 to	NONE
 purchase	NONE
-Quest	NONE
-stock	NONE
+Quest	ARG1
+stock	PRED
 at	NONE
 a	NONE
 discount	NONE
@@ -15141,13 +15141,13 @@ acquires	NONE
 more	NONE
 than	NONE
 15	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
-company	ARG1
+company	NONE
 's	NONE
 common	NONE
-stock	PRED
+stock	NONE
 or	NONE
 announces	NONE
 a	NONE
@@ -15164,16 +15164,16 @@ to	NONE
 offer	NONE
 an	NONE
 undetermined	NONE
-number	PRED
+number	NONE
 of	NONE
-common	ARG1
-shares	PRED
+common	NONE
+shares	NONE
 in	NONE
 exchange	NONE
 for	NONE
 the	NONE
 585COMMA000	NONE
-shares	PRED
+shares	NONE
 of	NONE
 its	ARG1
 preferred	NONE
@@ -15183,13 +15183,13 @@ outstanding	NONE
 
 Amid	NONE
 a	NONE
-crowd	PRED
+crowd	NONE
 of	NONE
-crashing	ARG1
+crashing	NONE
 stocks	NONE
 COMMA	NONE
 Relational	NONE
-Technology	NONE
+Technology	ARG1
 Inc.	NONE
 's	NONE
 stock	PRED
@@ -15200,7 +15200,7 @@ Friday	NONE
 COMMA	NONE
 dropping	NONE
 23	NONE
-%	PRED
+%	NONE
 because	NONE
 its	NONE
 problems	NONE
@@ -15216,7 +15216,7 @@ for	NONE
 its	NONE
 fiscal	NONE
 first	NONE
-quarter	PRED
+quarter	NONE
 .	NONE
 
 ``	NONE
@@ -15249,10 +15249,10 @@ Araskog	NONE
 COMMA	NONE
 chairman	NONE
 of	NONE
-ITT	NONE
+ITT	ARG1
 Corp.	NONE
 COMMA	NONE
-whose	NONE
+whose	ARG1
 stock	PRED
 dropped	NONE
 $	NONE
@@ -15273,12 +15273,12 @@ suspend	NONE
 dividend	NONE
 payments	NONE
 on	NONE
-its	NONE
+its	ARG1
 two	NONE
-classes	NONE
-of	NONE
+classes	SUPPORT
+of	SUPPORT
 preferred	NONE
-stock	NONE
+stock	PRED
 COMMA	NONE
 indicating	NONE
 that	NONE
@@ -15293,7 +15293,7 @@ have	NONE
 heightened	NONE
 .	NONE
 
-Investors	ARG0
+Investors	NONE
 --	NONE
 taking	NONE
 this	NONE
@@ -15314,7 +15314,7 @@ reacted	NONE
 by	NONE
 selling	NONE
 the	NONE
-company	NONE
+company	ARG1
 's	NONE
 stock	PRED
 COMMA	NONE
@@ -15339,9 +15339,9 @@ The	NONE
 announcement	NONE
 caused	NONE
 the	NONE
-company	NONE
+company	ARG1
 's	NONE
-stock	NONE
+stock	PRED
 to	NONE
 surge	NONE
 $	NONE
@@ -15363,7 +15363,7 @@ regarding	NONE
 employee	ARG0
 stock	PRED
 ownership	SUPPORT
-plans	NONE
+plans	SUPPORT
 COMMA	NONE
 effective	NONE
 June	NONE
@@ -15408,15 +15408,15 @@ ESOP	NONE
 COMMA	NONE
 if	NONE
 the	NONE
-ESOP	NONE
-owns	NONE
+ESOP	ARG0
+owns	SUPPORT
 less	NONE
 than	NONE
 30	NONE
-%	PRED
-of	NONE
+%	SUPPORT
+of	SUPPORT
 the	NONE
-employer	NONE
+employer	ARG1
 's	NONE
 stock	PRED
 .	NONE
@@ -15439,9 +15439,9 @@ $	NONE
 1	NONE
 billion	NONE
 to	NONE
-its	NONE
-stock	NONE
-portfolio	NONE
+its	ARG0
+stock	PRED
+portfolio	SUPPORT
 two	NONE
 years	NONE
 ago	NONE
@@ -15466,25 +15466,25 @@ the	NONE
 crash	NONE
 COMMA	NONE
 although	NONE
-she	NONE
+she	ARG0
 still	NONE
-owns	NONE
+owns	SUPPORT
 some	NONE
 Texaco	ARG1
-stock	NONE
+stock	PRED
 .	NONE
 
 Stocks	PRED
 of	NONE
-utilities	NONE
+utilities	ARG1
 held	NONE
 up	NONE
 relatively	NONE
 better	NONE
 than	NONE
 other	NONE
-market	ARG1
-sectors	PRED
+market	NONE
+sectors	NONE
 during	NONE
 the	NONE
 sell-off	NONE
@@ -15502,12 +15502,12 @@ since	NONE
 the	NONE
 crash	NONE
 COMMA	NONE
-companies	NONE
+companies	ARG0
 have	NONE
-kept	NONE
+kept	SUPPORT
 smaller	NONE
-share	NONE
-stockpiles	NONE
+share	ARG1
+stockpiles	PRED
 on	NONE
 hand	NONE
 .	NONE
@@ -15517,7 +15517,7 @@ Lynn	NONE
 Spruill	NONE
 and	NONE
 two	NONE
-members	PRED
+members	NONE
 of	NONE
 the	NONE
 council	NONE
@@ -15533,12 +15533,12 @@ that	NONE
 would	NONE
 permit	NONE
 pool	NONE
-halls	PRED
+halls	NONE
 along	NONE
-Addison	NONE
+Addison	ARG1
 's	NONE
 main	NONE
-street	NONE
+street	PRED
 .	NONE
 
 Meanwhile	NONE
@@ -15552,7 +15552,7 @@ string	PRED
 of	NONE
 lackluster	NONE
 quarterly	NONE
-performances	NONE
+performances	ARG1
 continued	NONE
 COMMA	NONE
 as	NONE
@@ -15578,17 +15578,17 @@ a	NONE
 string	PRED
 of	NONE
 cross-border	NONE
-mergers	NONE
+mergers	ARG1
 and	NONE
 joint	NONE
-ventures	NONE
+ventures	ARG1
 have	NONE
 reshaped	NONE
 the	NONE
 once-balkanized	NONE
 world	NONE
 of	NONE
-European	ARG1
+European	NONE
 arms	NONE
 manufacture	NONE
 .	NONE
@@ -15661,8 +15661,8 @@ Broad	NONE
 Home	NONE
 Corp.	NONE
 said	NONE
-it	NONE
-formed	NONE
+it	ARG1
+formed	SUPPORT
 a	NONE
 $	NONE
 53.4	NONE
@@ -15687,7 +15687,7 @@ completed	NONE
 the	NONE
 sale	NONE
 of	NONE
-its	NONE
+its	ARG1
 A.	NONE
 Sulka	NONE
 &	NONE
@@ -15711,10 +15711,10 @@ International	NONE
 Ltd.	NONE
 COMMA	NONE
 a	NONE
-British	NONE
+British	ARGM
 subsidiary	PRED
 of	NONE
-Salomon	NONE
+Salomon	ARG1
 Inc.	NONE
 COMMA	NONE
 announced	NONE
@@ -15745,7 +15745,7 @@ by	NONE
 federal	NONE
 regulators	NONE
 as	NONE
-part	PRED
+part	NONE
 of	NONE
 the	NONE
 current	NONE
@@ -15757,7 +15757,7 @@ Federal	NONE
 Savings	NONE
 Bank	NONE
 COMMA	NONE
-CityFed	NONE
+CityFed	ARG1
 's	NONE
 primary	NONE
 subsidiary	PRED
@@ -15783,7 +15783,7 @@ Electronics	NONE
 Corp.	NONE
 COMMA	NONE
 a	NONE
-division	PRED
+division	NONE
 of	NONE
 North	NONE
 American	NONE
@@ -15796,7 +15796,7 @@ subsidiary	PRED
 of	NONE
 N.V	NONE
 .	NONE
-Philips	NONE
+Philips	ARG1
 of	NONE
 the	NONE
 Netherlands	NONE
@@ -15828,17 +15828,17 @@ citing	NONE
 the	NONE
 troubles	NONE
 at	NONE
-its	NONE
+its	ARG1
 L.F.	NONE
 Rothschild	NONE
-subsidiary	NONE
+subsidiary	PRED
 and	NONE
 the	NONE
 possible	NONE
 sale	NONE
 of	NONE
 other	NONE
-subsidiaries	ARG1
+subsidiaries	NONE
 .	NONE
 
 Compaq	NONE
@@ -15877,10 +15877,10 @@ COMMA	NONE
 and	NONE
 on	NONE
 a	NONE
-swarm	NONE
+swarm	PRED
 of	NONE
 promising	NONE
-start-ups	NONE
+start-ups	ARG1
 .	NONE
 
 And	NONE
@@ -15898,7 +15898,7 @@ stories	NONE
 with	NONE
 a	NONE
 large	NONE
-investigative-reporting	NONE
+investigative-reporting	ARG1
 team	PRED
 .	NONE
 
@@ -15906,14 +15906,14 @@ Mr.	NONE
 Amos	NONE
 says	NONE
 the	NONE
-Shaw-Crier	NONE
-team	NONE
+Shaw-Crier	ARG1
+team	PRED
 will	NONE
 probably	NONE
 do	NONE
 two	NONE
 live	NONE
-interviews	ARG1
+interviews	NONE
 a	NONE
 day	NONE
 COMMA	NONE
@@ -15979,11 +15979,11 @@ for	NONE
 the	NONE
 Dallas	NONE
 Cowboys	NONE
-football	NONE
+football	ARG1
 team	PRED
-.	SUPPORT
+.	NONE
 
-Two-thirds	NONE
+Two-thirds	PRED
 of	NONE
 respondents	ARG1
 said	NONE
@@ -16014,8 +16014,8 @@ spend	NONE
 more	NONE
 time	NONE
 with	NONE
-their	ARG2
-families	PRED
+their	NONE
+families	NONE
 .	NONE
 
 Although	NONE
@@ -16023,10 +16023,10 @@ they	NONE
 represent	NONE
 only	NONE
 2	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
-population	ARG1
+population	NONE
 COMMA	NONE
 they	NONE
 control	NONE
@@ -16090,7 +16090,7 @@ country	NONE
 
 Thousands	PRED
 of	NONE
-residents	NONE
+residents	ARG1
 of	NONE
 low-lying	NONE
 areas	NONE
@@ -16121,7 +16121,7 @@ reported	NONE
 that	NONE
 thousands	PRED
 of	NONE
-tons	NONE
+tons	ARG1
 of	NONE
 goods	NONE
 needed	NONE
@@ -16143,7 +16143,7 @@ depots	NONE
 COMMA	NONE
 and	NONE
 food	NONE
-shipments	ARG1
+shipments	NONE
 were	NONE
 rotting	NONE
 because	NONE
@@ -16165,9 +16165,9 @@ There	NONE
 was	NONE
 n't	NONE
 a	NONE
-lot	PRED
+lot	NONE
 of	NONE
-volume	ARG1
+volume	NONE
 because	NONE
 it	NONE
 was	NONE
@@ -16205,7 +16205,7 @@ in	NONE
 thousands	PRED
 of	NONE
 OTC	NONE
-issues	NONE
+issues	ARG1
 .	NONE
 
 In	NONE
@@ -16216,16 +16216,16 @@ COMMA	NONE
 the	NONE
 EC	NONE
 had	NONE
-its	ARG0
-quota	NONE
-increased	NONE
+its	NONE
+quota	ARG1
+increased	SUPPORT
 about	NONE
 300COMMA000	NONE
-tons	NONE
+tons	PRED
 COMMA	NONE
 to	NONE
 7	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 U.S.	NONE
@@ -16247,12 +16247,12 @@ have	NONE
 supplied	NONE
 about	NONE
 80	NONE
-%	PRED
+%	NONE
 of	NONE
 the	NONE
 100	NONE
 million	NONE
-tons	NONE
+tons	PRED
 of	NONE
 steel	ARG1
 used	NONE
@@ -16267,11 +16267,11 @@ Soviet	NONE
 Union	NONE
 reported	NONE
 that	NONE
-thousands	PRED
+thousands	NONE
 of	NONE
-tons	NONE
+tons	PRED
 of	NONE
-goods	NONE
+goods	ARG1
 needed	NONE
 to	NONE
 ease	NONE
@@ -16291,7 +16291,7 @@ depots	NONE
 COMMA	NONE
 and	NONE
 food	NONE
-shipments	ARG1
+shipments	NONE
 were	NONE
 rotting	NONE
 because	NONE
@@ -16322,11 +16322,11 @@ by	NONE
 prolonged	NONE
 labor	NONE
 talks	NONE
-reduced	NONE
-shipments	NONE
+reduced	SUPPORT
+shipments	ARG1
 by	NONE
 200COMMA000	NONE
-tons	NONE
+tons	PRED
 in	NONE
 the	NONE
 latest	NONE
@@ -16343,7 +16343,7 @@ So	NONE
 CNN	NONE
 COMMA	NONE
 a	NONE
-unit	PRED
+unit	NONE
 of	NONE
 Atlanta-based	NONE
 Turner	NONE
@@ -16371,10 +16371,10 @@ industry	NONE
 call	NONE
 a	NONE
 ``	NONE
-top	NONE
+top	PRED
 of	NONE
-mind	NONE
-''	ARG1
+mind	ARG1
+''	NONE
 network	NONE
 .	NONE
 
@@ -16384,9 +16384,9 @@ the	NONE
 strike	NONE
 by	NONE
 55COMMA000	NONE
-Machinists	ARG1
+Machinists	ARG3
 union	PRED
-members	ARG2
+members	ARG1
 against	NONE
 Boeing	NONE
 Co.	NONE
@@ -16427,13 +16427,13 @@ Corp.	NONE
 COMMA	NONE
 in	NONE
 a	NONE
-series	PRED
+series	NONE
 of	NONE
-moves	ARG1
+moves	NONE
 that	NONE
 angered	NONE
-union	NONE
-officials	NONE
+union	PRED
+officials	ARG2
 in	NONE
 the	NONE
 U.S.	NONE
@@ -16448,7 +16448,7 @@ many	NONE
 as	NONE
 five	NONE
 North	NONE
-American	ARG2
+American	NONE
 assembly	NONE
 plants	NONE
 may	NONE
@@ -16502,7 +16502,7 @@ flagrant	NONE
 insensitivity	NONE
 ''	NONE
 toward	NONE
-union	NONE
+union	PRED
 members	ARG2
 .	NONE
 
@@ -16528,8 +16528,8 @@ Quebec	NONE
 COMMA	NONE
 company	NONE
 and	NONE
-union	NONE
-officials	NONE
+union	PRED
+officials	ARG2
 said	NONE
 .	NONE
 
@@ -16537,7 +16537,7 @@ That	NONE
 announcement	NONE
 left	NONE
 union	PRED
-officials	NONE
+officials	ARG2
 in	NONE
 Van	NONE
 Nuys	NONE
@@ -16550,8 +16550,8 @@ their	NONE
 futures	NONE
 .	NONE
 
-Union	NONE
-officials	NONE
+Union	PRED
+officials	ARG2
 have	NONE
 taken	NONE
 a	NONE
@@ -16574,7 +16574,7 @@ represents	NONE
 3COMMA000	NONE
 workers	NONE
 at	NONE
-Boeing	NONE
+Boeing	ARG1
 's	NONE
 helicopter	NONE
 unit	PRED
@@ -16617,7 +16617,7 @@ a	NONE
 unit	PRED
 of	NONE
 United	NONE
-Technologies	NONE
+Technologies	ARG1
 Inc	NONE
 .	NONE
 
@@ -16633,7 +16633,7 @@ COMMA	NONE
 finance	NONE
 COMMA	NONE
 said	NONE
-its	NONE
+its	ARG1
 50.1%-owned	NONE
 Canadian	NONE
 Utilities	NONE
@@ -16642,10 +16642,10 @@ unit	PRED
 is	NONE
 reviewing	NONE
 cogeneration	NONE
-projects	ARG1
+projects	NONE
 in	NONE
 eastern	NONE
-Canada	ARGM
+Canada	NONE
 COMMA	NONE
 and	NONE
 conventional	NONE
@@ -16714,7 +16714,7 @@ a	NONE
 unit	PRED
 of	NONE
 Heitman	NONE
-Financial	NONE
+Financial	ARG1
 Corp.	NONE
 COMMA	NONE
 a	NONE
@@ -16722,7 +16722,7 @@ real	NONE
 estate	NONE
 advisory	NONE
 COMMA	NONE
-management	ARG1
+management	NONE
 and	NONE
 development	NONE
 company	NONE
@@ -16774,7 +16774,7 @@ provided	NONE
 by	NONE
 the	NONE
 Morris	NONE
-units	PRED
+units	NONE
 to	NONE
 Information	NONE
 International	NONE
@@ -16796,10 +16796,10 @@ the	NONE
 lawsuit	NONE
 by	NONE
 two	NONE
-units	PRED
+units	NONE
 of	NONE
 Morris	NONE
-Communications	ARG1
+Communications	NONE
 Corp.	NONE
 seeks	NONE
 restitution	NONE
@@ -16822,7 +16822,7 @@ license	NONE
 provided	NONE
 by	NONE
 the	NONE
-Morris	NONE
+Morris	ARG1
 units	PRED
 to	NONE
 Information	NONE
@@ -16894,7 +16894,7 @@ Corp.	NONE
 unit	PRED
 of	NONE
 Bristol-Myers	NONE
-Squibb	NONE
+Squibb	ARG1
 Co.	NONE
 all	NONE
 benefited	NONE
@@ -16932,7 +16932,7 @@ unit	PRED
 of	NONE
 a	NONE
 Bermuda	NONE
-concern	NONE
+concern	ARG1
 COMMA	NONE
 potentially	NONE
 exempting	NONE
@@ -16956,7 +16956,7 @@ of	NONE
 Atlanta-based	NONE
 Turner	NONE
 Broadcasting	NONE
-System	NONE
+System	ARG1
 Inc.	NONE
 COMMA	NONE
 is	NONE
@@ -16982,7 +16982,7 @@ a	NONE
 top	NONE
 of	NONE
 mind	NONE
-''	ARG1
+''	NONE
 network	NONE
 .	NONE
 
@@ -17020,10 +17020,10 @@ an	NONE
 informal	NONE
 notice	NONE
 that	NONE
-Imperial	NONE
+Imperial	ARG1
 's	NONE
 thrift	NONE
-unit	NONE
+unit	PRED
 failed	NONE
 to	NONE
 meet	NONE
@@ -17053,7 +17053,7 @@ sell	NONE
 of	NONE
 its	NONE
 71	NONE
-branches	PRED
+branches	NONE
 to	NONE
 Great	NONE
 Western	NONE
@@ -17064,7 +17064,7 @@ unit	PRED
 of	NONE
 Great	NONE
 Western	NONE
-Financial	NONE
+Financial	ARG1
 Corp.	NONE
 based	NONE
 in	NONE
@@ -17097,7 +17097,7 @@ fictitious	NONE
 contracts	NONE
 at	NONE
 a	NONE
-U.S.	NONE
+U.S.	ARGM
 unit	PRED
 COMMA	NONE
 International	NONE
@@ -17144,7 +17144,7 @@ accounting	NONE
 fraud	NONE
 at	NONE
 a	NONE
-U.S.	NONE
+U.S.	ARGM
 unit	PRED
 .	NONE
 
@@ -17161,13 +17161,13 @@ start-up	NONE
 costs	NONE
 associated	NONE
 with	NONE
-its	NONE
+its	ARG1
 Joseph	NONE
 T.	NONE
 Ryerson	NONE
 &	NONE
 Son	NONE
-unit	NONE
+unit	PRED
 .	NONE
 
 BULL	NONE
@@ -17179,12 +17179,12 @@ is	NONE
 a	NONE
 U.S.	NONE
 majority-owned	NONE
-unit	NONE
+unit	PRED
 of	NONE
 Cie.	NONE
 des	NONE
 Machines	NONE
-Bull	NONE
+Bull	ARG1
 .	NONE
 
 ``	NONE
@@ -17217,7 +17217,7 @@ Corp.	NONE
 's	NONE
 American	NONE
 Airlines	NONE
-unit	NONE
+unit	PRED
 and	NONE
 several	NONE
 mutual	NONE
@@ -17266,12 +17266,12 @@ n't	NONE
 renew	NONE
 contracts	NONE
 with	NONE
-NWA	NONE
+NWA	ARG1
 Inc.	NONE
 's	NONE
 Northwest	NONE
 Airlines	NONE
-unit	NONE
+unit	PRED
 COMMA	NONE
 Pan	NONE
 Am	NONE
@@ -17316,14 +17316,14 @@ Airlines	NONE
 unit	NONE
 COMMA	NONE
 Pan	NONE
-Am	NONE
+Am	ARG1
 Corp.	NONE
 's	NONE
 Pan	NONE
 American	NONE
 World	NONE
 Airways	NONE
-unit	NONE
+unit	PRED
 and	NONE
 Midway	NONE
 Airlines	NONE
@@ -17347,7 +17347,7 @@ Corp.	NONE
 's	NONE
 American	NONE
 Airlines	NONE
-unit	NONE
+unit	PRED
 and	NONE
 Delta	NONE
 Air	NONE
@@ -17372,7 +17372,7 @@ including	NONE
 Delta	NONE
 and	NONE
 USAir	NONE
-Group	NONE
+Group	ARG1
 Inc.	NONE
 's	NONE
 USAir	NONE
@@ -17425,10 +17425,10 @@ on	NONE
 ABC-TV	NONE
 COMMA	NONE
 a	NONE
-unit	PRED
+unit	NONE
 of	NONE
 Capital	NONE
-Cities/ABC	ARG1
+Cities/ABC	NONE
 Inc	NONE
 .	NONE
 
@@ -17464,10 +17464,10 @@ on	NONE
 NBC	NONE
 COMMA	NONE
 a	NONE
-unit	PRED
+unit	NONE
 of	NONE
 General	NONE
-Electric	ARG1
+Electric	NONE
 Co.	NONE
 COMMA	NONE
 and	NONE
@@ -17541,11 +17541,11 @@ drop	NONE
 a	NONE
 variety	PRED
 of	NONE
-spending	ARG1
+spending	NONE
 measures	ARG1
 and	NONE
 tax	NONE
-breaks	NONE
+breaks	ARG1
 that	NONE
 would	NONE
 have	NONE
@@ -17569,7 +17569,7 @@ to	NONE
 a	NONE
 variety	PRED
 of	NONE
-compromises	NONE
+compromises	ARG1
 .	NONE
 
 Nevertheless	NONE
@@ -17604,13 +17604,13 @@ Selling	NONE
 snowballed	NONE
 because	NONE
 of	NONE
-waves	NONE
+waves	PRED
 of	NONE
 automatic	NONE
 ``	NONE
 stop-loss	NONE
 ''	NONE
-orders	NONE
+orders	ARG1
 COMMA	NONE
 which	NONE
 are	NONE
@@ -17639,7 +17639,7 @@ Chicago	NONE
 COMMA	NONE
 waves	PRED
 of	NONE
-selling	NONE
+selling	ARG1
 continued	NONE
 to	NONE
 hit	NONE
@@ -17686,7 +17686,7 @@ against	NONE
 any	NONE
 wave	PRED
 of	NONE
-withdrawals	NONE
+withdrawals	ARG1
 :	NONE
 cash	NONE
 .	NONE
@@ -17697,7 +17697,7 @@ was	NONE
 notable	NONE
 for	NONE
 a	NONE
-heat	NONE
+heat	ARG1
 wave	PRED
 and	NONE
 drought	NONE
@@ -17727,8 +17727,8 @@ the	NONE
 deposits	NONE
 of	NONE
 four	NONE
-savings-and-loan	ARG1
-institutions	PRED
+savings-and-loan	NONE
+institutions	NONE
 COMMA	NONE
 in	NONE
 its	NONE
@@ -17740,7 +17740,7 @@ of	NONE
 big	NONE
 COMMA	NONE
 sick	NONE
-thrifts	ARG1
+thrifts	NONE
 COMMA	NONE
 but	NONE
 low	NONE
@@ -17766,7 +17766,7 @@ soften	NONE
 the	NONE
 blow	NONE
 of	NONE
-declining	ARG1
+declining	NONE
 stock	NONE
 prices	NONE
 and	NONE
@@ -17780,20 +17780,20 @@ waves	PRED
 of	NONE
 S&P	NONE
 futures	NONE
-contracts	NONE
+contracts	ARG1
 .	NONE
 
 Its	NONE
-watchers	NONE
+watchers	ARG1
 are	NONE
 COMMA	NONE
 on	NONE
 the	NONE
-whole	NONE
+whole	PRED
 COMMA	NONE
 a	NONE
 disloyal	NONE
-group	PRED
+group	NONE
 of	NONE
 channel-zapping	NONE
 ``	NONE
@@ -17845,9 +17845,9 @@ pile	NONE
 up	NONE
 $	NONE
 150	NONE
-worth	NONE
+worth	PRED
 of	NONE
-quarters	NONE
+quarters	ARG1
 on	NONE
 a	NONE
 slanted	NONE
