@@ -48,7 +48,7 @@ class Feature:
             POS = line[1]
             BIO = line[2]
             stem = stemmer.stem(token)
-            ends = token[-1]
+            # ends = token[-1]
             
             ARG = "NONE"
             if len(line) > 5:
@@ -91,20 +91,23 @@ class Feature:
                     next_word2 = next_line2[0]
                     next_POS2 = next_line2[1]
                     
-            l = "{}\tPOS={}\tstem={}\tBIO={}\tends={}".format(token, POS, stem, BIO, ends)
+            l = "{}\tPOS={}\tstem={}\tBIO={}".format(token, POS, stem, BIO)
+            # l = f'{token}\t{POS}\t{stem}\t{BIO}\t{ends}'
 
             if prev_POS != "BEGIN":
                 l += "\tprevious_POS={}\tprevious_word={}\t".format(prev_POS, prev_word)
+                # l += f'\t{prev_POS}\t{prev_word}'
 
             if next_POS != "NEXT":
                 l += "\tnext_POS={}\tnext_word={}".format(next_POS, next_word)
+                # l += f'\t{next_POS}\t{next_word}'
 
             if prev_POS2 != "BEGIN2":
                 l += "\tprevious_POS2={}\tprevious_word2={}".format(prev_POS2, prev_word2)
-
+                # l += f'\t{prev_POS2}\t{prev_word2}'
             if next_POS2 != "NEXT2":
                 l += "\tnext_POS2={}\tnext_word2={}".format(next_POS2, next_word2)
-
+                # l += f'\t{next_POS2}\t{next_word2}'
             # add ARG to the training file
             if file_type == "train":
                 l += "\t{}\n".format(ARG)
