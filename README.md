@@ -24,6 +24,6 @@ Precision contains only ARG1 values
 
 ## Statistics
 1. Fundamental feature selection with Java MaxEnt
-  - Precision: 49.27
-  - Recall: 25.23
-  - F measure: 3.34
+  - Precision: 0.49
+  - Recall: 0.25
+  - F measure: 0.33
