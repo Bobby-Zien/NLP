@@ -1,9 +1,11 @@
+import os
 import sys
 from sklearn.linear_model import LinearRegression
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.naive_bayes import CategoricalNB
+from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import SGDClassifier
 from sklearn.pipeline import Pipeline
 import numpy as np
@@ -26,8 +28,11 @@ label_count = 1
 label_reverse_map = dict()
 # the longest sentence length in the training file
 max_sentence_len = 0
-# model
+
+# models
 nb = MultinomialNB()
+logreg = LogisticRegression()
+sgd = SGDClassifier()
 
 # nb = Pipeline([('vect', CountVectorizer()),
 #                ('tfidf', TfidfTransformer()),
@@ -87,10 +92,13 @@ def constructMap(train_file_name, test_file_name):
                         BIO_map[bio] = BIO_count
                         BIO_count += 1
 
+
 def encodeFile(file_type):
     if file_type == "training":
         global training_features
         global training_labels
+        training_features = []
+        training_labels = []
         for line in training_lines:
             if line:
                 curr_line = []
@@ -115,6 +123,8 @@ def encodeFile(file_type):
         print(f'the length of training labels is {len(training_labels)}')
 
     elif file_type == "testing":
+        global testing_features
+        testing_features = []
         for line in testing_lines:
             if line:
                 curr_line = []
@@ -138,7 +148,7 @@ def encodeFile(file_type):
 
 # read the training lines and split it to features and labels
 # fit the model using features and labels
-def fitModel():
+def fitModel(model_type):
     global max_sentence_len
     encodeFile("training")
     max_sentence_len = max(map(len, training_features))
@@ -148,23 +158,39 @@ def fitModel():
     labels = np.array(training_labels, dtype=object)
     print(f'the shape of training labels is {labels.shape}')
     labels = labels.astype('int')
-    nb.fit(features, labels)
+    if model_type == "naive_bayes":
+        nb.fit(features, labels)
+    elif model_type == "logistic_regression":
+        logreg.fit(features, labels)
+    elif model_type == "SVM":
+        sgd.fit(features, labels)
 
-    # nb.fit(features, labels)
 
-
-def predict():
+def predict(model_type):
     encodeFile("testing")
     features = np.array(
         [np.pad(sentence, (0, max_sentence_len - len(sentence)), 'constant') for sentence in testing_features])
+
     print(f'the shape of testing feature is {features.shape}')
-    label_pred = nb.predict(features)
+    if model_type == "naive_bayes":
+        label_pred = nb.predict(features)
+    elif model_type == "logistic_regression":
+        label_pred = logreg.predict(features)
+    elif model_type == "SVM":
+        label_pred = sgd.predict(features)
+
     print(f'the length of prediction output is {len(label_pred)}')
-    write_output(testing_lines, label_pred)
+    write_output(model_type, testing_lines, label_pred)
 
 
-def write_output(testing_lines, label_pred):
-    out = open('nb_output.txt', 'w+')
+def write_output(model_type, testing_lines, label_pred):
+    if model_type == "naive_bayes":
+        out = open("outputs/nb_output.txt", 'w')
+    elif model_type == "logistic_regression":
+        out = open("outputs/reg_output.txt", 'w')
+    elif model_type == "SVM":
+        out = open("outputs/svm_output.txt", 'w')
+
     for i in range(len(testing_lines)):
         if not testing_lines[i]:
             out.write('\n')
@@ -178,8 +204,12 @@ def main(args):
     training_file = args[1]
     testing_file = args[2]
     constructMap(training_file, testing_file)
-    fitModel()
-    predict()
+    fitModel("naive_bayes")
+    predict("naive_bayes")
+    fitModel("logistic_regression")
+    predict("logistic_regression")
+    fitModel("SVM")
+    predict("SVM")
 
 
 if __name__ == '__main__': sys.exit(main(sys.argv))
