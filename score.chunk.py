@@ -64,14 +64,14 @@ def score (keyFileName, responseFileName):
 			responseGroupCount+=1
 
 	print(correct, "out of", str(correct + incorrect) + " tags correct")
-	accuracy = 100.0 * correct / (correct + incorrect)
+	accuracy = correct / (correct + incorrect)
 	print("  accuracy: %5.2f" % accuracy)
 	print(keyGroupCount, "groups in key")
 	print(responseGroupCount, "groups in response")
 	print(correctGroupCount, "correct groups")
-	precision = 100.0 * correctGroupCount / responseGroupCount
-	recall = 100.0 * correctGroupCount / keyGroupCount
-	F = (2 * precision * recall / (precision + recall)) * .10
+	precision = correctGroupCount / responseGroupCount
+	recall = correctGroupCount / keyGroupCount
+	F = (2 * precision * recall / (precision + recall))
 	print("  precision: %5.2f" % precision)
 	print("  recall:    %5.2f" % recall)
 	print("  F1:        %5.2f" % F)
@@ -87,9 +87,9 @@ def test(systemout,ans):
 		if sysv in ans:
 			count+=1
 
-	precision=100.0 * count/sysn
-	recall=100.0 * count/ansn
-	F = (2 * precision * recall / (precision + recall)) * .10
+	precision=count/sysn
+	recall=count/ansn
+	F = (2 * precision * recall / (precision + recall))
 	print(precision,recall,F)
 
 def generateAns(ansfileName):
