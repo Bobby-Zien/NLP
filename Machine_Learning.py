@@ -26,6 +26,8 @@ pos_count = 1
 label_map = dict()
 label_count = 1
 label_reverse_map = dict()
+stem_map = dict()
+stem_count = 1
 # the longest sentence length in the training file
 max_sentence_len = 0
 
@@ -54,6 +56,7 @@ def constructMap(train_file_name, test_file_name):
     global word_count
     global BIO_count
     global pos_count
+    global stem_count
     training_lines = extractFile(train_file_name)
     testing_lines = extractFile(test_file_name)
     print(f'the length of the training lines is {len(training_lines)}')
@@ -83,9 +86,9 @@ def constructMap(train_file_name, test_file_name):
                         pos_count += 1
                 if "stem=" in element:
                     stem = element.split("=")[1]
-                    if stem not in word_map:
-                        word_map[stem] = word_count
-                        word_count += 1
+                    if stem not in stem_map:
+                        stem_map[stem] = stem_count
+                        stem_count += 1
                 if "BIO=" in element:
                     bio = element.split("=")[1]
                     if bio not in BIO_map:
@@ -105,18 +108,22 @@ def encodeFile(file_type):
                 for i in range(len(line)):
                     if i == 0:
                         curr_line.append(word_map[line[i]])
-                    elif i == len(line) - 1:
+                    if i == len(line) - 1:
                         training_labels.append(label_map[line[i]])
                     else:
                         if "POS=" in line[i]:
                             pos = line[i].split("=")[1]
                             curr_line.append(pos_map[pos])
-                        elif "stem=" in line[i] or "word=" in line[i]:
-                            word = line[i].split("=")[1]
-                            curr_line.append(word_map[word])
+                        elif "stem=" in line[i]:
+                            stem = line[i].split("=")[1]
+                            curr_line.append(stem_map[stem])
                         elif "BIO=" in line[i]:
                             bio = line[i].split("=")[1]
                             curr_line.append(BIO_map[bio])
+                        elif "word=" in line[i]:
+                            word = line[i].split("=")[1]
+                            curr_line.append(word_map[word])
+
                 training_features.append(curr_line)
 
         print(f'the length of training features is {len(training_features)}')
@@ -131,15 +138,18 @@ def encodeFile(file_type):
                 for i in range(len(line)):
                     if i == 0:
                         curr_line.append(word_map[line[i]])
-                    elif "POS=" in line[i]:
+                    if "POS=" in line[i]:
                         pos = line[i].split("=")[1]
                         curr_line.append(pos_map[pos])
-                    elif "stem=" in line[i] or "word=" in line[i]:
-                        word = line[i].split("=")[1]
-                        curr_line.append(word_map[word])
+                    elif "stem=" in line[i]:
+                        stem = line[i].split("=")[1]
+                        curr_line.append(stem_map[stem])
                     elif "BIO=" in line[i]:
                         bio = line[i].split("=")[1]
                         curr_line.append(BIO_map[bio])
+                    elif "word=" in line[i]:
+                        word = line[i].split("=")[1]
+                        curr_line.append(word_map[word])
             testing_features.append(curr_line)
         print(f'the length of testing features is {len(testing_features)}')
     else:
@@ -206,10 +216,10 @@ def main(args):
     constructMap(training_file, testing_file)
     fitModel("naive_bayes")
     predict("naive_bayes")
-    fitModel("logistic_regression")
-    predict("logistic_regression")
-    fitModel("SVM")
-    predict("SVM")
+    # fitModel("logistic_regression")
+    # predict("logistic_regression")
+    # fitModel("SVM")
+    # predict("SVM")
 
 
 if __name__ == '__main__': sys.exit(main(sys.argv))
