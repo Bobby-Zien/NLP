@@ -7,6 +7,7 @@ Zeyu Chen, zc2078, N10456612
 """
 
 import sys
+import pickle
 from nltk.stem import *
 import numpy as np
 from numpy import array, average
@@ -33,16 +34,22 @@ class Feature:
             r = open(self.training_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
+            with open('vecDict.pkl', 'rb') as vd:
+                vecDict = pickle.load(vd)
         elif file_type == "dev":
             w = open(self.dev_file, "w")
             r = open(self.development_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
+            with open('vecDict_dev.pkl', 'rb') as vd:
+                vecDict = pickle.load(vd)
         elif file_type == "test":
             w = open(self.test_file, "w")
             r = open(self.test_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
+            with open('vecDict_test.pkl', 'rb') as vd:
+                vecDict = pickle.load(vd)
 
         data = np.load(self.training_vec_npzfile)
         vec_avg=data['vec_avg']
@@ -55,10 +62,18 @@ class Feature:
 
         n = len(lines)
         count = 0
+        ls = []
+        token_top=[]
+        token_top_before=[]
+        token_top2_before = []
+        token_top_next = []
+        token_top_next2 = []
+
         for i, line in enumerate(lines):
 
             count += 1
             if count == int(n / 4):
+                print(file_type+":")
                 print("25% complete")
             elif count == int(n / 2):
                 print("50% complete")
@@ -67,17 +82,27 @@ class Feature:
 
 
             if line == "":
-                w.write("\n")
+                ls.append("\n")
+                if token_top:
+                    sorted(token_top,reverse=True)[:5]
                 continue
 
             line = line.split()
             token = line[0]
-            token_vec=nlp(token).vector
+            token_vec=vecDict[token]
             try:
                 token_sim=cosine_similarity(vec_avg,token_vec)
             except:
                 token_sim =1
 
+
+            POS = line[1]
+            BIO = line[2]
+            tokenId=line[3]
+            stem = stemmer.stem(token)
+            ends = token[-1]
+
+            token_top=[]
 
             ARG = "NONE"
             if len(line) > 5:
@@ -97,7 +122,7 @@ class Feature:
 
                 if prev_line:
                     prev_word = prev_line[0]
-                    prev_word_vec=nlp(prev_word).vector
+                    prev_word_vec=vecDict[prev_word]
                     try:
                         prev_word_sim=cosine_similarity(prev_words_avg,prev_word_vec)
                     except:
@@ -105,7 +130,7 @@ class Feature:
 
                 if next_line:
                     next_word = next_line[0]
-                    next_word_vec = nlp(next_word).vector
+                    next_word_vec = vecDict[next_word]
                     try:
                         next_word_sim = cosine_similarity(next_words_avg, next_word_vec)
                     except:
@@ -118,7 +143,7 @@ class Feature:
 
                 if prev_line2:
                     prev_word2 = prev_line2[0]
-                    prev_word2_vec=nlp(prev_word2).vector
+                    prev_word2_vec=vecDict[prev_word2]
                     try:
                         prev_word2_sim= cosine_similarity(prev_word2s_avg, prev_word2_vec)
                     except:
@@ -126,14 +151,14 @@ class Feature:
 
                 if next_line2:
                     next_word2 = next_line2[0]
-                    next_word2_vec = nlp(next_word2).vector
+                    next_word2_vec = vecDict[next_word2]
                     try:
                         next_word2_sim= cosine_similarity(next_word2s_avg, next_word2_vec)
                     except:
                         next_word2_sim=1
 
-
-            l = "{}\ttoken_sim={}".format(token,token_sim)
+            # l = "{}\tPOS={}\tstem={}\tBIO={}\tends={}\ttoken_sim={}".format(token, POS, stem, BIO, ends,token_sim)
+            l = "{}\tPOS={}\tstem={}\tBIO={}\ttoken_sim={}".format(token, POS, stem, BIO, token_sim)
 
             if prev_word != "BEGIN":
                 l += "\tprevious_word_sim={}\t".format(prev_word_sim)
@@ -155,10 +180,56 @@ class Feature:
             else:
                 l += "\n"
 
-            w.write(l)
+            ls.append(l)
             prev_word = token
 
+        for lw in ls:
+            w.write(lw)
+
         w.close()
+        print(file_type + " completed")
+
+    def generateVecDict(self,file_type):
+
+        if file_type == "train":
+            r = open(self.training_corpus, 'r', encoding='utf8')
+            lines = r.read().splitlines()
+            r.close()
+        elif file_type == "dev":
+            r = open(self.development_corpus, 'r', encoding='utf8')
+            lines = r.read().splitlines()
+            r.close()
+        elif file_type == "test":
+            r = open(self.test_corpus, 'r', encoding='utf8')
+            lines = r.read().splitlines()
+            r.close()
+
+        n = len(lines)
+        count = 0
+        vecDict={}
+        for i, line in enumerate(lines):
+            count += 1
+            if count == int(n / 4):
+                print("25% complete")
+            elif count == int(n / 2):
+                print("50% complete")
+            elif count == int(n / 4 * 3):
+                print("75% complete")
+
+            if line == "":
+                continue
+
+            line = line.split()
+            token = line[0]
+            if token not in vecDict:
+                token_vec=nlp(token).vector
+                vecDict[token]=token_vec
+
+        outputName='vecDict_'+file_type+'.pkl'
+        with open(outputName, 'wb') as f:
+            pickle.dump(vecDict, f)
+
+
 
     def trainvector(self):
         r = open(self.training_corpus, 'r', encoding='utf8')
@@ -175,6 +246,7 @@ class Feature:
         for i, line in enumerate(lines):
             count+=1
             if count==int(n/4):
+                print("Training average vector:")
                 print("25% complete")
             elif count==int(n/2):
                 print("50% complete")
@@ -254,10 +326,12 @@ def main():
         test_file = sys.argv[3]
 
     feat = Feature(input_file, dev_file, test_file)
-    feat.trainvector()
+    # feat.trainvector()
+    # feat.generateVecDict(file_type="train")
     feat.generate_file(file_type="train")
     # feat.generate_file(file_type="dev")
-    # feat.generate_file(file_type="test")
+    # feat.generateVecDict(file_type="test")
+    feat.generate_file(file_type="test")
 
 
 if __name__ == "__main__":
