@@ -15,9 +15,9 @@ class Feature:
         self.development_corpus = development_corpus
         self.test_corpus = test_corpus
 
-        self.training_file = "training.feature"
-        self.dev_file = "dev.feature"
-        self.test_file = "test.feature"
+        self.training_file = "./feature_files/training.feature"
+        self.dev_file = "./feature_files/dev.feature"
+        self.test_file = "./feature_files/test.feature"
 
     def generate_file(self, file_type : str):
         stemmer = PorterStemmer()
@@ -38,8 +38,11 @@ class Feature:
             lines = r.read().splitlines()
             r.close()
 
+        path = []   # BIO tags from Pred to ARG1
         for i, line in enumerate(lines):
+            # new line
             if line == "":
+                path = []
                 w.write("\n")
                 continue
 
@@ -48,11 +51,16 @@ class Feature:
             POS = line[1]
             BIO = line[2]
             stem = stemmer.stem(token)
-            # ends = token[-1]
             
             ARG = "NONE"
             if len(line) > 5:
                 ARG = line[5]
+
+            # store the BIO to the path if the word follows a PRED or it is a PRED
+            if ARG == "PRED":
+                path.append("PRED")
+            elif (len(path) > 0 and BIO[0] == 'B'):
+                path.append(BIO[2:])    # ignore first two chars "B-"
             
             # initialize prev and next variables
             prev_word = "BEGIN"
@@ -94,8 +102,14 @@ class Feature:
             l = "{}\tPOS={}\tstem={}\tBIO={}".format(token, POS, stem, BIO)
             # l = f'{token}\t{POS}\t{stem}\t{BIO}\t{ends}'
 
+            # path feature
+            if (len(path)) > 0:
+                l += "\tpath={}".format('_'.join(path))
+            else:
+                l += "\tpath=_"
+
             if prev_POS != "BEGIN":
-                l += "\tprevious_POS={}\tprevious_word={}\t".format(prev_POS, prev_word)
+                l += "\tprevious_POS={}\tprevious_word={}".format(prev_POS, prev_word)
                 # l += f'\t{prev_POS}\t{prev_word}'
 
             if next_POS != "NEXT":

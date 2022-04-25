@@ -116,9 +116,6 @@ def generateAns(ansfileName):
 	anskeyfile.close()
 
 
-
-
-
 def main(args):
 	key_file = args[1]
 	response_file = args[2]

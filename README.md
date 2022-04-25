@@ -5,6 +5,12 @@ Zien Yang, zy2236, N17995064
 Jingwei Ye, jy3555, N10236604  
 Zeyu Chen, zc2078, N10456612  
 
+## How to run our program?
+1. make
+2. make <gen_path or gen_stem or gen_vector> -- choose one of the three
+3. make run
+4. make score
+
 ## feature.py
 contains all the feature selection methods
 
