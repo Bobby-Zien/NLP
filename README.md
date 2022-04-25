@@ -8,8 +8,11 @@ Zeyu Chen, zc2078, N10456612
 ## feature.py
 contains all the feature selection methods
 
-## machine_learning.py
+## Machine_Learning.py
 contains all the machine learning algorithms
+run "python Machine_Learning.py [training_file_name] [test_file_name]"
+For example, "python Machine_Learning.py training.feature test.feature"
+Outputs predicted by models will be saved as files in /outputs folder
 
 ## score.py
 run "python score.chunk.py [answerkeysfile] [responsefile]"
