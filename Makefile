@@ -1,10 +1,22 @@
 def:
 	javac -cp ./maxent/maxent-3.0.0.jar:./maxent/trove.jar ./maxent/*.java
 
-run:
+run_stem:
 	cd maxent && \
-	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtrain ../feature_files/training.feature model.chunk && \
-	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtag ../feature_files/test.feature model.chunk ../outputs/output.txt && \
+	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtrain ../feature_files/training_stem.feature model.chunk && \
+	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtag ../feature_files/test_stem.feature model.chunk ../outputs/output.txt && \
+	cd ../
+
+run_path:
+	cd maxent && \
+	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtrain ../feature_files/training_path.feature model.chunk && \
+	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtag ../feature_files/test_path.feature model.chunk ../outputs/output.txt && \
+	cd ../
+
+run_vec:
+	cd maxent && \
+	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtrain ../feature_files/training_vec.feature model.chunk && \
+	java -Xmx16g -cp .:maxent-3.0.0.jar:trove.jar MEtag ../feature_files/test_vec.feature model.chunk ../outputs/output.txt && \
 	cd ../
 
 score:
