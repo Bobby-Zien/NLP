@@ -15,7 +15,7 @@ class Feature:
         self.test_corpus = test_corpus
 
         self.training_file = "../feature_files/training_vec.feature"
-        self.training_vec_npzfile="../pkg/training_vec.npz"
+        self.training_vec_npzfile="../pkg/training_vec_v1.npz"
         self.dev_file = "../feature_files/dev_vec.feature"
         self.test_file = "../feature_files/test_vec.feature"
 
@@ -353,7 +353,7 @@ class Feature:
         next_words_avg = average(array(next_words),axis=0)
         next_word2s_avg = average(array(next_word2s),axis=0)
 
-        np.savez('training_vec_v1.npz',vec_avg=vec_avg,prev_words_avg=prev_words_avg,prev_word2s_avg=prev_word2s_avg,next_words_avg=next_words_avg,next_word2s_avg=next_word2s_avg)
+        np.savez('../pkg/training_vec_v1.npz',vec_avg=vec_avg,prev_words_avg=prev_words_avg,prev_word2s_avg=prev_word2s_avg,next_words_avg=next_words_avg,next_word2s_avg=next_word2s_avg)
         print("vector training completed!")
 
 def main():
