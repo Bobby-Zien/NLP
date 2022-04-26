@@ -64,10 +64,14 @@ class Feature:
         count = 0
         ls = []
         token_top=[]
+        token_tops=[]
         token_top_before=[]
+        token_tops_before = []
         token_top2_before = []
         token_top_next = []
+        token_tops_next=[]
         token_top_next2 = []
+        target=[]
 
         for i, line in enumerate(lines):
 
@@ -83,26 +87,83 @@ class Feature:
 
             if line == "":
                 ls.append("\n")
+                target.append('\n')
                 if token_top:
-                    sorted(token_top,reverse=True)[:5]
+                    sorted_token_5=sorted(token_top,reverse=True)[:5]
+                    sorted_token_3=sorted_token_5[:3]
+                    sorted_token_1=sorted_token_3[0]
+                    for t in token_top:
+                        if t in sorted_token_5:
+                            if t in sorted_token_3:
+                                if t==sorted_token_1:
+                                    token_tops += ['\ttop5=1\ttop3=1\ttop1=1\t']
+                                else:
+                                    token_tops += ['\ttop5=1\ttop3=1\ttop1=0\t']
+                            else:
+                                token_tops += ['\ttop5=1\ttop3=0\ttop1=0\t']
+                        else:
+                            token_tops+=['\ttop5=0\ttop3=0\ttop1=0\t']
+                    token_tops.append('\n')
+                    token_top=[]
+
+
+                # if token_top_next:
+                #     sorted_token_next_5 = sorted(token_top_next, reverse=True)[:5]
+                #     sorted_token_next_3 = sorted_token_next_5[:3]
+                #     sorted_token_next_1 = sorted_token_next_3[0]
+                #     for t in token_top_next:
+                #         if t in sorted_token_next_5:
+                #             if t in sorted_token_next_3:
+                #                 if t == sorted_token_next_1:
+                #                     token_tops_next += ['\ttop5_next=1\ttop3_next=1\ttop1_next=1\t']
+                #                 else:
+                #                     token_tops_next += ['\ttop5_next=1\ttop3_next=1\ttop1_next=0\t']
+                #             else:
+                #                 token_tops_next += ['\ttop5_next=1\ttop3_next=0\ttop1_next=0\t']
+                #         else:
+                #             token_tops_next += ['\ttop5_next=0\ttop3_next=0\ttop1_next=0\t']
+                #     token_tops_next.append('\n')
+                #     token_top_next = []
+                #
+                # if token_top_before:
+                #     sorted_token_before_5 = sorted(token_top_before, reverse=True)[:5]
+                #     sorted_token_before_3 = sorted_token_before_5[:3]
+                #     sorted_token_before_1 = sorted_token_before_3[0]
+                #     for t in token_top_before:
+                #         if t in sorted_token_before_5:
+                #             if t in sorted_token_before_3:
+                #                 if t == sorted_token_before_1:
+                #                     token_tops_before += ['\ttop5_before=1\ttop3_before=1\ttop1_before=1\t']
+                #                 else:
+                #                     token_tops_before += ['\ttop5_before=1\ttop3_before=1\ttop1_before=0\t']
+                #             else:
+                #                 token_tops_before += ['\ttop5_before=1\ttop3_before=0\ttop1_before=0\t']
+                #         else:
+                #             token_tops_before += ['\ttop5_before=0\ttop3_before=0\ttop1_before=0\t']
+                #     token_tops_before.append('\n')
+                #     token_top_before = []
+
                 continue
 
             line = line.split()
             token = line[0]
-            token_vec=vecDict[token]
-            try:
-                token_sim=cosine_similarity(vec_avg,token_vec)
-            except:
-                token_sim =1
-
-
             POS = line[1]
             BIO = line[2]
-            tokenId=line[3]
+            tokenId = line[3]
             stem = stemmer.stem(token)
-            ends = token[-1]
 
-            token_top=[]
+
+            if BIO[-2:]=='NP':
+                token_vec=vecDict[token]
+                try:
+                    token_sim=cosine_similarity(vec_avg,token_vec)
+                except:
+                    token_sim =1
+            else:
+                token_sim=0
+
+
+            token_top.append([token_sim,tokenId])
 
             ARG = "NONE"
             if len(line) > 5:
@@ -114,6 +175,10 @@ class Feature:
 
             next_word = "NEXT"
             next_word2 = "NEXT2"  # next 2 word forward
+
+            # initialize prev and next variables with 0
+            # prev_word_sim=0
+            # next_word_sim=0
 
             # check if prev_word and next_word exists
             if i > 0 and i < len(lines) - 1:
@@ -128,6 +193,7 @@ class Feature:
                     except:
                         prev_word_sim=1
 
+
                 if next_line:
                     next_word = next_line[0]
                     next_word_vec = vecDict[next_word]
@@ -135,6 +201,7 @@ class Feature:
                         next_word_sim = cosine_similarity(next_words_avg, next_word_vec)
                     except:
                         next_word_sim=1
+
 
             # check if prev_word2 and next_word2 exists
             if i > 1 and i < len(lines) - 2:
@@ -160,6 +227,16 @@ class Feature:
             # l = "{}\tPOS={}\tstem={}\tBIO={}\tends={}\ttoken_sim={}".format(token, POS, stem, BIO, ends,token_sim)
             l = "{}\tPOS={}\tstem={}\tBIO={}\ttoken_sim={}".format(token, POS, stem, BIO, token_sim)
 
+            # if BIO[-2:] != 'NP':
+            #     prev_word_sim=0
+            #     next_word_sim=0
+
+            # token_top_before.append(prev_word_sim)
+            # token_top_next.append(next_word_sim)
+
+            # if BIO[-2:]!='NP':
+            #     prev_word_sim,next_word_sim,prev_word2_sim,next_word2_sim=0,0,0,0
+
             if prev_word != "BEGIN":
                 l += "\tprevious_word_sim={}\t".format(prev_word_sim)
 
@@ -174,17 +251,20 @@ class Feature:
 
             # add ARG to the training file
             if file_type == "train":
-                l += "\t{}\n".format(ARG)
+                target.append("\t{}".format(ARG))
 
-            # do not add ARG to the dev and test
-            else:
-                l += "\n"
 
             ls.append(l)
             prev_word = token
 
-        for lw in ls:
-            w.write(lw)
+        for i in range(len(ls)):
+            if ls[i]!='\n':
+                if file_type == "train":
+                    w.write(ls[i]+token_tops[i]+target[i]+'\n')
+                else:
+                    w.write(ls[i] + token_tops[i] + '\n')
+            else:
+                w.write(ls[i])
 
         w.close()
         print(file_type + " completed")
