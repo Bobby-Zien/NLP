@@ -1,8 +1,6 @@
-
 .DS_Store
 *.xml
 *.iml
 *.class
 *.class
 *.chunk
-*.feature
