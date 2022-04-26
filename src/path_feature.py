@@ -15,9 +15,9 @@ class Feature:
         self.development_corpus = development_corpus
         self.test_corpus = test_corpus
 
-        self.training_file = "./feature_files/training.feature"
-        self.dev_file = "./feature_files/dev.feature"
-        self.test_file = "./feature_files/test.feature"
+        self.training_file = "./feature_files/training_path.feature"
+        self.dev_file = "./feature_files/dev_path.feature"
+        self.test_file = "./feature_files/test_path.feature"
 
     def generate_file(self, file_type : str):
         stemmer = PorterStemmer()
