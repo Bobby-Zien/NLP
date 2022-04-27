@@ -1,13 +1,9 @@
-import os
 import sys
 import numpy as np
-from sklearn.linear_model import LinearRegression
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.naive_bayes import CategoricalNB
-from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import SGDClassifier
+from sklearn import tree
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 
@@ -38,8 +34,9 @@ max_sentence_len = 0
 
 # models
 nb = MultinomialNB()
-logreg = LogisticRegression()
 sgd = SGDClassifier()
+decision_tree = tree.DecisionTreeClassifier()
+forest = RandomForestClassifier()
 
 # nb = Pipeline([('vect', CountVectorizer()),
 #                ('tfidf', TfidfTransformer()),
@@ -208,10 +205,12 @@ def fitModel(model_type):
 
     if model_type == "naive_bayes":
         nb.fit(features, labels)
-    elif model_type == "logistic_regression":
-        logreg.fit(features, labels)
     elif model_type == "SVM":
         sgd.fit(features, labels)
+    elif model_type == "decision_tree":
+        decision_tree.fit(features, labels)
+    elif model_type == "forest":
+        forest.fit(features, labels)
 
 
 def predict(model_type):
@@ -224,10 +223,12 @@ def predict(model_type):
     # features = scale(features)
     if model_type == "naive_bayes":
         label_pred = nb.predict(features)
-    elif model_type == "logistic_regression":
-        label_pred = logreg.predict(features)
     elif model_type == "SVM":
         label_pred = sgd.predict(features)
+    elif model_type == "decision_tree":
+        label_pred = decision_tree.predict(features)
+    elif model_type == "forest":
+        label_pred = forest.predict(features)
 
     print(f'the length of prediction output is {len(label_pred)}')
     write_output(model_type, testing_lines, label_pred)
@@ -237,26 +238,30 @@ def write_output(model_type, testing_lines, label_pred):
     if feature_selection == "stem":
         if model_type == "naive_bayes":
             out = open("../outputs/nb_stem.txt", 'w')
-        elif model_type == "logistic_regression":
-            out = open("../outputs/reg_stem.txt", 'w')
         elif model_type == "SVM":
             out = open("../outputs/svm_stem.txt", 'w')
+        elif model_type == "decision_tree":
+            out = open("../outputs/tree_stem.txt", 'w')
+        elif model_type == "forest":
+            out = open("../outputs/forest_stem.txt", 'w')
     elif feature_selection == "path":
         if model_type == "naive_bayes":
             out = open("../outputs/nb_path.txt", 'w')
-        elif model_type == "logistic_regression":
-            out = open("../outputs/reg_path.txt", 'w')
         elif model_type == "SVM":
             out = open("../outputs/svm_path.txt", 'w')
+        elif model_type == "decision_tree":
+            out = open("../outputs/tree_path.txt", 'w')
+        elif model_type == "forest":
+            out = open("../outputs/forest_path.txt", 'w')
     elif feature_selection == "vector":
         if model_type == "naive_bayes":
             out = open("../outputs/nb_vector.txt", 'w')
-        elif model_type == "logistic_regression":
-            out = open("../outputs/reg_vector.txt", 'w')
         elif model_type == "SVM":
             out = open("../outputs/svm_vector.txt", 'w')
-
-
+        elif model_type == "decision_tree":
+            out = open("../outputs/tree_vec.txt", 'w')
+        elif model_type == "forest":
+            out = open("../outputs/forest_vec.txt", 'w')
 
     for i in range(len(testing_lines)):
         if not testing_lines[i]:
@@ -283,10 +288,13 @@ def main(args):
     constructMap(training_file, testing_file)
     # fitModel("naive_bayes")
     # predict("naive_bayes")
-    fitModel("SVM")
-    predict("SVM")
-    # fitModel("logistic_regression")
-    # predict("logistic_regression")
+    # fitModel("SVM")
+    # predict("SVM")
+    # fitModel("decision_tree")
+    # predict("decision_tree")
+    fitModel("forest")
+    predict("forest")
+
 
 
 if __name__ == '__main__': sys.exit(main(sys.argv))
