@@ -7,8 +7,8 @@ Zeyu Chen, zc2078, N10456612
 
 ## How to run our program?
 1. make
-2. make <gen_path or gen_stem or gen_vector> -- choose one of the three
-3. make run
+2. make <gen_path, gen_stem, gen_vec> -- choose one of the three
+3. make <run_path, run_stem, run_vec> -- choose one of the three
 4. make score
 
 ## feature.py

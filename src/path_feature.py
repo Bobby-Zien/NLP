@@ -38,18 +38,34 @@ class Feature:
             lines = r.read().splitlines()
             r.close()
 
-        path = []   # BIO tags from Pred to ARG1
+        path = []       # BIO tags from Pred to ARG1
+        pred_idx = -1   # the index of the predicate of the current sentence
+
         for i, line in enumerate(lines):
             # new line
             if line == "":
                 path = []
+                pred_idx = -1
                 w.write("\n")
                 continue
+            
+            # find the predicate's index of the sentence
+            if pred_idx == -1:
+                j = i
+                while j < len(lines):
+                    if lines[j] == "":
+                        break
+                    next_line = lines[j].split()
+                    if len(next_line) > 5 and next_line[5] == "PRED":
+                        pred_idx = int(lines[j].split()[3])
+                        break
+                    j += 1
 
             line = line.split()
             token = line[0]
             POS = line[1]
             BIO = line[2]
+            sentence_idx = int(line[3])
             stem = stemmer.stem(token)
             
             ARG = "NONE"
@@ -107,6 +123,9 @@ class Feature:
                 l += "\tpath={}".format('_'.join(path))
             else:
                 l += "\tpath=_"
+
+            # distance from predicate
+            l += "\tdistance={}".format(str(sentence_idx - pred_idx))
 
             if prev_POS != "BEGIN":
                 l += "\tprevious_POS={}\tprevious_word={}".format(prev_POS, prev_word)

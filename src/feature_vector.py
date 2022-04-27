@@ -21,10 +21,10 @@ class Feature:
         self.development_corpus = development_corpus
         self.test_corpus = test_corpus
 
-        self.training_file = "training_vec.feature"
+        self.training_file = "../feature_files/training_vec.feature"
         self.training_vec_npzfile="training_vec.npz"
-        self.dev_file = "dev_vec.feature"
-        self.test_file = "test_vec.feature"
+        self.dev_file = "../feature_files/dev_vec.feature"
+        self.test_file = "../feature_files/test_vec.feature"
 
     def generate_file(self, file_type):
         stemmer = PorterStemmer()
@@ -34,21 +34,21 @@ class Feature:
             r = open(self.training_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
-            with open('vecDict.pkl', 'rb') as vd:
+            with open('../pkg/vecDict.pkl', 'rb') as vd:
                 vecDict = pickle.load(vd)
         elif file_type == "dev":
             w = open(self.dev_file, "w")
             r = open(self.development_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
-            with open('vecDict_dev.pkl', 'rb') as vd:
+            with open('../pkg/vecDict_dev.pkl', 'rb') as vd:
                 vecDict = pickle.load(vd)
         elif file_type == "test":
             w = open(self.test_file, "w")
             r = open(self.test_corpus, 'r', encoding='utf8')
             lines = r.read().splitlines()
             r.close()
-            with open('vecDict_test.pkl', 'rb') as vd:
+            with open('../pkg/vecDict_test.pkl', 'rb') as vd:
                 vecDict = pickle.load(vd)
 
         data = np.load(self.training_vec_npzfile)
@@ -305,7 +305,7 @@ class Feature:
                 token_vec=nlp(token).vector
                 vecDict[token]=token_vec
 
-        outputName='vecDict_'+file_type+'.pkl'
+        outputName='../pkg/vecDict_'+file_type+'.pkl'
         with open(outputName, 'wb') as f:
             pickle.dump(vecDict, f)
 
@@ -391,7 +391,7 @@ class Feature:
         next_words_avg = average(array(next_words),axis=0)
         next_word2s_avg = average(array(next_word2s),axis=0)
 
-        np.savez('training_vec.npz',vec_avg=vec_avg,prev_words_avg=prev_words_avg,prev_word2s_avg=prev_word2s_avg,next_words_avg=next_words_avg,next_word2s_avg=next_word2s_avg)
+        np.savez('../pkg/training_vec.npz',vec_avg=vec_avg,prev_words_avg=prev_words_avg,prev_word2s_avg=prev_word2s_avg,next_words_avg=next_words_avg,next_word2s_avg=next_word2s_avg)
         print("vector training completed!")
 
 
