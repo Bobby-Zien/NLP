@@ -72,12 +72,9 @@ def score (keyFileName, responseFileName):
 	precision = correctGroupCount / responseGroupCount
 	recall = correctGroupCount / keyGroupCount
 	F = (2 * precision * recall / (precision + recall))
-	print("  precision: %5.2f" % precision)
-	print("  recall:    %5.2f" % recall)
+	print("  precision: %5.2f " % (100 * precision))
+	print("  recall:    %5.2f " % (100 * recall))
 	print("  F1:        %5.2f" % F)
-	rndf = int(round(F, 0))
-	print("  rounded to: " + str(rndf))
-
 
 def test(systemout,ans):
 	sysn=len(systemout)
