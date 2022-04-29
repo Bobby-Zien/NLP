@@ -30,6 +30,8 @@ class Feature:
             r.close()
             with open('../pkg/vecDict.pkl', 'rb') as vd:
                 vecDict = pickle.load(vd)
+            with open('../pkg/vecDict_wordset_train.pkl', 'rb') as vwd:
+                vecDict_wordset = pickle.load(vwd)
         elif file_type == "dev":
             w = open(self.dev_file, "w")
             r = open(self.development_corpus, 'r', encoding='utf8')
@@ -44,6 +46,8 @@ class Feature:
             r.close()
             with open('../pkg/vecDict_test.pkl', 'rb') as vd:
                 vecDict = pickle.load(vd)
+            with open('../pkg/vecDict_wordset_test.pkl', 'rb') as vwd:
+                vecDict_wordset = pickle.load(vwd)
 
         data = np.load(self.training_vec_npzfile)
         vec_avg=data['vec_avg']
@@ -51,6 +55,7 @@ class Feature:
         prev_word2s_avg = data['prev_word2s_avg']
         next_words_avg = data['next_words_avg']
         next_word2s_avg = data['next_word2s_avg']
+        ngrams_avg=data['ngrams_avg']
 
         cosine_similarity = lambda x, y: 1 - spatial.distance.cosine(x, y)
 
@@ -61,11 +66,17 @@ class Feature:
         token_tops=[]
         token_top_before=[]
         token_tops_before = []
-        token_top2_before = []
+        token_top_before2 = []
+        token_tops_before2 = []
         token_top_next = []
         token_tops_next=[]
         token_top_next2 = []
+        token_tops_next2 = []
         target=[]
+        ngrams=[]
+        ngram=[]
+        ngram_top=[]
+
 
         for i, line in enumerate(lines):
 
@@ -82,6 +93,7 @@ class Feature:
             if line == "":
                 ls.append("\n")
                 target.append('\n')
+                sentlen=len(token_top)
                 if token_top:
                     sorted_token_5=sorted(token_top,reverse=True)[:5]
                     sorted_token_3=sorted_token_5[:3]
@@ -137,6 +149,62 @@ class Feature:
                     token_tops_before.append('\n')
                     token_top_before = []
 
+
+
+                if token_top_next2:
+                    sorted_token_next2_5 = sorted(token_top_next2, reverse=True)[:5]
+                    sorted_token_next2_3 = sorted_token_next2_5[:3]
+                    sorted_token_next2_1 = sorted_token_next2_3[0]
+                    for t in token_top_next2:
+                        if t in sorted_token_next2_5:
+                            if t in sorted_token_next2_3:
+                                if t == sorted_token_next2_1:
+                                    token_tops_next2 += ['\ttop5_next2=1\ttop3_next2=1\ttop1_next2=1\t']
+                                else:
+                                    token_tops_next2 += ['\ttop5_next2=1\ttop3_next2=1\ttop1_next2=0\t']
+                            else:
+                                token_tops_next2 += ['\ttop5_next2=1\ttop3_next2=0\ttop1_next2=0\t']
+                        else:
+                            token_tops_next2 += ['\ttop5_next2=0\ttop3_next2=0\ttop1_next2=0\t']
+                    token_tops_next2.append('\n')
+                    token_top_next2 = []
+
+                if token_top_before2:
+                    sorted_token_before2_5 = sorted(token_top_before2, reverse=True)[:5]
+                    sorted_token_before2_3 = sorted_token_before2_5[:3]
+                    sorted_token_before2_1 = sorted_token_before2_3[0]
+                    for t in token_top_before2:
+                        if t in sorted_token_before2_5:
+                            if t in sorted_token_before2_3:
+                                if t == sorted_token_before2_1:
+                                    token_tops_before2 += ['\ttop5_before2=1\ttop3_before2=1\ttop1_before2=1\t']
+                                else:
+                                    token_tops_before2 += ['\ttop5_before2=1\ttop3_before2=1\ttop1_before2=0\t']
+                            else:
+                                token_tops_before2 += ['\ttop5_before2=1\ttop3_before2=0\ttop1_before2=0\t']
+                        else:
+                            token_tops_before2 += ['\ttop5_before2=0\ttop3_before2=0\ttop1_before2=0\t']
+                    token_tops_before2.append('\n')
+                    token_top_before2 = []
+
+
+                if ngrams:
+                    temp=['\ttopng=-1']*sentlen
+                    sorted_ngrams = sorted(ngrams, reverse=True)
+                    for i,ngs in enumerate(sorted_ngrams):
+                        temp[int(ngs[2])] = '\ttopng=' + str(1)
+                        for tid in range(int(ngs[1]),int(ngs[2])):
+                            temp[tid]='\ttopng='+str(0)
+
+                        if i>3:
+                            break
+
+                    ngram_top+=temp
+                    ngram_top.append('\n')
+                    ngrams = []
+
+
+
                 continue
 
             line = line.split()
@@ -146,21 +214,23 @@ class Feature:
             tokenId = line[3]
             stem = stemmer.stem(token)
 
-            # token_vec = vecDict[token]
-            # try:
-            #     token_sim = cosine_similarity(vec_avg, token_vec)
-            # except:
-            #     token_sim = 1
-
 
             if BIO[-2:]=='NP':
                 token_vec=vecDict[token]
+                ngram.append([vecDict[token],tokenId])
                 try:
                     token_sim=cosine_similarity(vec_avg,token_vec)
                 except:
                     token_sim =1
             else:
                 token_sim=0
+                if ngram:
+                    ngram_val=[nval[0] for nval in ngram]
+                    ngram_average=average(array(ngram_val),axis=0)
+                    ngrams.append([cosine_similarity(ngram_average,ngrams_avg),ngram[0][1],ngram[-1][1]])
+
+                ngram=[]
+
 
 
             token_top.append([token_sim,tokenId])
@@ -188,7 +258,12 @@ class Feature:
 
                     if prev_line:
                         prev_word = prev_line[0]
-                        prev_word_vec=nlp(prev_word+' '+token).vector
+                        dkey=prev_word+' '+token
+                        if dkey not in vecDict_wordset:
+                            prev_word_vec = nlp(prev_word + ' ' + token).vector
+                            vecDict_wordset[dkey]=prev_word_vec
+                        else:
+                            prev_word_vec=vecDict_wordset[dkey]
                         try:
                             prev_word_sim=cosine_similarity(prev_words_avg,prev_word_vec)
                         except:
@@ -197,7 +272,12 @@ class Feature:
 
                     if next_line:
                         next_word = next_line[0]
-                        next_word_vec = nlp(token+' '+next_word).vector
+                        dkey = token+' '+next_word
+                        if dkey not in vecDict_wordset:
+                            next_word_vec = nlp(token+' '+next_word).vector
+                            vecDict_wordset[dkey] = next_word_vec
+                        else:
+                            next_word_vec = vecDict_wordset[dkey]
                         try:
                             next_word_sim = cosine_similarity(next_words_avg, next_word_vec)
                         except:
@@ -211,7 +291,13 @@ class Feature:
 
                     if prev_line2:
                         prev_word2 = prev_line2[0]
-                        prev_word2_vec=nlp(prev_word2+' '+prev_word+' '+token).vector
+                        dkey = prev_word2+' '+prev_word+' '+token
+                        if dkey not in vecDict_wordset:
+                            prev_word2_vec = nlp(dkey).vector
+                            vecDict_wordset[dkey] = prev_word2_vec
+                        else:
+                            prev_word2_vec = vecDict_wordset[dkey]
+
                         try:
                             prev_word2_sim= cosine_similarity(prev_word2s_avg, prev_word2_vec)
                         except:
@@ -219,7 +305,13 @@ class Feature:
 
                     if next_line2:
                         next_word2 = next_line2[0]
-                        next_word2_vec = nlp(token+' '+next_word+' '+next_word2).vector
+                        dkey = token + ' ' + next_word + ' ' + next_word2
+                        if dkey not in vecDict_wordset:
+                            next_word2_vec = nlp(dkey).vector
+                            vecDict_wordset[dkey] = next_word2_vec
+                        else:
+                            next_word2_vec = vecDict_wordset[dkey]
+
                         try:
                             next_word2_sim= cosine_similarity(next_word2s_avg, next_word2_vec)
                         except:
@@ -237,21 +329,22 @@ class Feature:
 
             token_top_before.append(prev_word_sim)
             token_top_next.append(next_word_sim)
-
-            # if BIO[-2:]!='NP':
-            #     prev_word_sim,next_word_sim,prev_word2_sim,next_word2_sim=0,0,0,0
+            token_top_before2.append(prev_word2_sim)
+            token_top_next2.append(next_word2_sim)
 
             if prev_word != "BEGIN":
-                l += "\tprevious_word_sim={}\t".format(prev_word_sim)
+                l += "\tprevious_word_sim={}\tprevious_word={}".format(prev_word_sim,prev_word)
+
 
             if next_word != "NEXT":
-                l += "\tnext_word_sim={}".format( next_word_sim)
+                l += "\tnext_word_sim={}\tnext_word={}".format( next_word_sim,next_word)
+
 
             if prev_word2 != "BEGIN2":
-                l += "\tprevious_word2_sim={}".format(prev_word2_sim)
+                l += "\tprevious_word2_sim={}\tprevious_word2={}".format(prev_word2_sim,prev_word2)
 
             if next_word2 != "NEXT2":
-                l += "\tnext_word2_sim={}".format( next_word2_sim)
+                l += "\tnext_word2_sim={}\tnext_word2={}".format( next_word2_sim,next_word2)
 
             # add ARG to the training file
             if file_type == "train":
@@ -264,14 +357,120 @@ class Feature:
         for i in range(len(ls)):
             if ls[i]!='\n':
                 if file_type == "train":
-                    w.write(ls[i]+token_tops[i]+token_tops_next[i]+token_tops_before[i]+target[i]+'\n')
+                    w.write(ls[i]+token_tops[i]+token_tops_next[i]+token_tops_before[i]+token_tops_next2[i]+token_tops_before2[i]+ngram_top[i]+target[i]+'\n')
                 else:
-                    w.write(ls[i] + token_tops[i]+token_tops_next[i]+token_tops_before[i] + '\n')
+                    w.write(ls[i] + token_tops[i]+token_tops_next[i]+token_tops_before[i] +token_tops_next2[i]+token_tops_before2[i]+ngram_top[i] + '\n')
             else:
                 w.write(ls[i])
 
         w.close()
         print(file_type + " completed")
+
+        # outputName = '../pkg/vecDict_wordset_' + file_type + '.pkl'
+        # with open(outputName, 'wb') as f:
+        #     pickle.dump(vecDict_wordset, f)
+
+    def generateVecDict(self, file_type):
+
+        if file_type == "train":
+            r = open(self.training_corpus, 'r', encoding='utf8')
+            lines = r.read().splitlines()
+            r.close()
+        elif file_type == "dev":
+            r = open(self.development_corpus, 'r', encoding='utf8')
+            lines = r.read().splitlines()
+            r.close()
+        elif file_type == "test":
+            r = open(self.test_corpus, 'r', encoding='utf8')
+            lines = r.read().splitlines()
+            r.close()
+
+        n = len(lines)
+        count = 0
+        vecDict = {}
+        for i, line in enumerate(lines):
+            count += 1
+            if count == int(n / 4):
+                print("25% complete")
+            elif count == int(n / 2):
+                print("50% complete")
+            elif count == int(n / 4 * 3):
+                print("75% complete")
+
+            if line == "":
+                continue
+
+            line = line.split()
+            token = line[0]
+            if token not in vecDict:
+                token_vec = nlp(token).vector
+                vecDict[token] = token_vec
+
+        outputName = '../pkg/vecDict_' + file_type + '.pkl'
+        with open(outputName, 'wb') as f:
+            pickle.dump(vecDict, f)
+
+    def trainNvector(self):
+        r = open(self.training_corpus, 'r', encoding='utf8')
+        lines = r.read().splitlines()
+        r.close()
+
+        with open('../pkg/vecDict.pkl', 'rb') as vd:
+            vecDict = pickle.load(vd)
+
+
+        n = len(lines)
+        count = 0
+        ngrams = []
+        ngram = []
+        arg1flag=0
+        for i, line in enumerate(lines):
+            count += 1
+            if count == int(n / 4):
+                print("Training average vector:")
+                print("25% complete")
+            elif count == int(n / 2):
+                print("50% complete")
+            elif count == int(n / 4 * 3):
+                print("75% complete")
+
+            if line == "":
+                continue
+
+            line = line.split()
+            token = line[0]
+            POS = line[1]
+            BIO = line[2]
+
+            ARG = "NONE"
+            if len(line) > 5:
+                ARG = line[5]
+
+            if BIO[-2:] == "NP":
+                ngram.append(vecDict[token])
+
+            else:
+                if ngram and arg1flag==1:
+                    ngram_average=average(array(ngram),axis=0)
+                    ngrams.append(ngram_average)
+                ngram=[]
+                arg1flag=0
+
+            if ARG == "ARG1":
+               arg1flag=1
+
+        data = np.load(self.training_vec_npzfile)
+        vec_avg = data['vec_avg']
+        prev_words_avg = data['prev_words_avg']
+        prev_word2s_avg = data['prev_word2s_avg']
+        next_words_avg = data['next_words_avg']
+        next_word2s_avg = data['next_word2s_avg']
+
+        ngrams_avg = average(array(ngrams), axis=0)
+
+        np.savez('../pkg/training_vec_v1.npz', vec_avg=vec_avg, prev_words_avg=prev_words_avg,
+                 prev_word2s_avg=prev_word2s_avg, next_words_avg=next_words_avg, next_word2s_avg=next_word2s_avg,ngrams_avg=ngrams_avg)
+        print("vector training completed!")
 
     def trainvector(self):
         r = open(self.training_corpus, 'r', encoding='utf8')
@@ -305,6 +504,7 @@ class Feature:
             ARG = "NONE"
             if len(line) > 5:
                 ARG = line[5]
+
 
 
             if ARG=="ARG1":
@@ -368,6 +568,7 @@ def main():
 
     feat = Feature(input_file, dev_file, test_file)
     # feat.trainvector()
+    # feat.trainNvector()
     # feat.generateVecDict(file_type="train")
     feat.generate_file(file_type="train")
     # feat.generate_file(file_type="dev")
