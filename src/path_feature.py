@@ -15,9 +15,9 @@ class Feature:
         self.development_corpus = development_corpus
         self.test_corpus = test_corpus
 
-        self.training_file = "./feature_files/training_path.feature"
-        self.dev_file = "./feature_files/dev_path.feature"
-        self.test_file = "./feature_files/test_path.feature"
+        self.training_file = "../feature_files/training_path.feature"
+        self.dev_file = "../feature_files/dev_path.feature"
+        self.test_file = "../feature_files/test_path.feature"
 
     def generate_file(self, file_type : str):
         stemmer = PorterStemmer()
@@ -156,9 +156,9 @@ class Feature:
         w.close()
 
 def main():
-    input_file = "input_files/part-training"
-    dev_file = "input_files/part-dev"
-    test_file = "input_files/part-test"
+    input_file = "../input_files/part-training"
+    dev_file = "../input_files/part-dev"
+    test_file = "../input_files/part-test"
 
     if len(sys.argv) > 3:
         input_file = sys.argv[1]

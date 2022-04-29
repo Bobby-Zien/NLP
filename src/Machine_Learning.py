@@ -288,12 +288,12 @@ def main(args):
     constructMap(training_file, testing_file)
     # fitModel("naive_bayes")
     # predict("naive_bayes")
-    # fitModel("SVM")
-    # predict("SVM")
+    fitModel("SVM")
+    predict("SVM")
     # fitModel("decision_tree")
     # predict("decision_tree")
-    fitModel("forest")
-    predict("forest")
+    # fitModel("forest")
+    # predict("forest")
 
 
 
