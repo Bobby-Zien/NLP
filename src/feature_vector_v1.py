@@ -77,6 +77,8 @@ class Feature:
         ngram=[]
         ngram_top=[]
 
+        path = []  # BIO tags from Pred to ARG1
+        pred_idx = -1  # the index of the predicate of the current sentence
 
         for i, line in enumerate(lines):
 
@@ -94,6 +96,8 @@ class Feature:
                 ls.append("\n")
                 target.append('\n')
                 sentlen=len(token_top)
+                path = []
+                pred_idx = -1
                 if token_top:
                     sorted_token_5=sorted(token_top,reverse=True)[:5]
                     sorted_token_3=sorted_token_5[:3]
@@ -207,11 +211,24 @@ class Feature:
 
                 continue
 
+
+            if pred_idx == -1:
+                j = i
+                while j < len(lines):
+                    if lines[j] == "":
+                        break
+                    next_line = lines[j].split()
+                    if len(next_line) > 5 and next_line[5] == "PRED":
+                        pred_idx = int(lines[j].split()[3])
+                        break
+                    j += 1
+
             line = line.split()
             token = line[0]
             POS = line[1]
             BIO = line[2]
             tokenId = line[3]
+            sentence_idx = int(line[3])
             stem = stemmer.stem(token)
 
 
@@ -239,6 +256,12 @@ class Feature:
             if len(line) > 5:
                 ARG = line[5]
 
+            # store the BIO to the path if the word follows a PRED or it is a PRED
+            if ARG == "PRED":
+                path.append("PRED")
+            elif (len(path) > 0 and BIO[0] == 'B'):
+                path.append(BIO[2:])  # ignore first two chars "B-"
+
             # initialize prev and next variables
             prev_word = "BEGIN"
             prev_word2 = "BEGIN2"  # prev 2 word back
@@ -250,14 +273,15 @@ class Feature:
             # prev_word_sim=0
             # next_word_sim=0
 
-            if BIO[-2:] == 'NP':
-                # check if prev_word and next_word exists
-                if i > 0 and i < len(lines) - 1:
-                    prev_line = lines[i - 1].split()
-                    next_line = lines[i + 1].split()
+            # check if prev_word and next_word exists
+            if i > 0 and i < len(lines) - 1:
+                prev_line = lines[i - 1].split()
+                next_line = lines[i + 1].split()
 
-                    if prev_line:
-                        prev_word = prev_line[0]
+                if prev_line:
+                    prev_word = prev_line[0]
+                    prev_POS = prev_line[1]
+                    if BIO[-2:] == 'NP':
                         dkey=prev_word+' '+token
                         if dkey not in vecDict_wordset:
                             prev_word_vec = nlp(prev_word + ' ' + token).vector
@@ -270,8 +294,10 @@ class Feature:
                             prev_word_sim=1
 
 
-                    if next_line:
-                        next_word = next_line[0]
+                if next_line:
+                    next_word = next_line[0]
+                    next_POS = next_line[1]
+                    if BIO[-2:] == 'NP':
                         dkey = token+' '+next_word
                         if dkey not in vecDict_wordset:
                             next_word_vec = nlp(token+' '+next_word).vector
@@ -291,31 +317,35 @@ class Feature:
 
                     if prev_line2:
                         prev_word2 = prev_line2[0]
-                        dkey = prev_word2+' '+prev_word+' '+token
-                        if dkey not in vecDict_wordset:
-                            prev_word2_vec = nlp(dkey).vector
-                            vecDict_wordset[dkey] = prev_word2_vec
-                        else:
-                            prev_word2_vec = vecDict_wordset[dkey]
+                        prev_POS2 = prev_line2[1]
+                        if BIO[-2:] == 'NP':
+                            dkey = prev_word2+' '+prev_word+' '+token
+                            if dkey not in vecDict_wordset:
+                                prev_word2_vec = nlp(dkey).vector
+                                vecDict_wordset[dkey] = prev_word2_vec
+                            else:
+                                prev_word2_vec = vecDict_wordset[dkey]
 
-                        try:
-                            prev_word2_sim= cosine_similarity(prev_word2s_avg, prev_word2_vec)
-                        except:
-                            prev_word2_sim=1
+                            try:
+                                prev_word2_sim= cosine_similarity(prev_word2s_avg, prev_word2_vec)
+                            except:
+                                prev_word2_sim=1
 
                     if next_line2:
                         next_word2 = next_line2[0]
-                        dkey = token + ' ' + next_word + ' ' + next_word2
-                        if dkey not in vecDict_wordset:
-                            next_word2_vec = nlp(dkey).vector
-                            vecDict_wordset[dkey] = next_word2_vec
-                        else:
-                            next_word2_vec = vecDict_wordset[dkey]
+                        next_POS2 = next_line2[1]
+                        if BIO[-2:] == 'NP':
+                            dkey = token + ' ' + next_word + ' ' + next_word2
+                            if dkey not in vecDict_wordset:
+                                next_word2_vec = nlp(dkey).vector
+                                vecDict_wordset[dkey] = next_word2_vec
+                            else:
+                                next_word2_vec = vecDict_wordset[dkey]
 
-                        try:
-                            next_word2_sim= cosine_similarity(next_word2s_avg, next_word2_vec)
-                        except:
-                            next_word2_sim=1
+                            try:
+                                next_word2_sim= cosine_similarity(next_word2s_avg, next_word2_vec)
+                            except:
+                                next_word2_sim=1
 
             else:
                 prev_word_sim=0
@@ -326,6 +356,16 @@ class Feature:
             # l = "{}\tPOS={}\tstem={}\tBIO={}\tends={}\ttoken_sim={}".format(token, POS, stem, BIO, ends,token_sim)
             l = "{}\tPOS={}\tstem={}\tBIO={}\ttoken_sim={}".format(token, POS, stem, BIO, token_sim)
 
+            # path feature
+            if (len(path)) > 0:
+                l += "\tpath={}".format('_'.join(path))
+            else:
+                l += "\tpath=_"
+
+            # distance from predicate
+            l += "\tdistance={}".format(str(sentence_idx - pred_idx))
+
+
 
             token_top_before.append(prev_word_sim)
             token_top_next.append(next_word_sim)
@@ -333,18 +373,18 @@ class Feature:
             token_top_next2.append(next_word2_sim)
 
             if prev_word != "BEGIN":
-                l += "\tprevious_word_sim={}\tprevious_word={}".format(prev_word_sim,prev_word)
+                l += "\tprevious_word_sim={}\tprevious_word={}\tprevious_pos={}".format(prev_word_sim,prev_word,prev_POS)
 
 
             if next_word != "NEXT":
-                l += "\tnext_word_sim={}\tnext_word={}".format( next_word_sim,next_word)
+                l += "\tnext_word_sim={}\tnext_word={}\tnext_pos={}".format( next_word_sim,next_word,next_POS)
 
 
             if prev_word2 != "BEGIN2":
-                l += "\tprevious_word2_sim={}\tprevious_word2={}".format(prev_word2_sim,prev_word2)
+                l += "\tprevious_word2_sim={}\tprevious_word2={}\tprevious_pos2={}".format(prev_word2_sim,prev_word2,prev_POS2)
 
             if next_word2 != "NEXT2":
-                l += "\tnext_word2_sim={}\tnext_word2={}".format( next_word2_sim,next_word2)
+                l += "\tnext_word2_sim={}\tnext_word2={}\tnext_pos2={}".format( next_word2_sim,next_word2,next_POS2)
 
             # add ARG to the training file
             if file_type == "train":
