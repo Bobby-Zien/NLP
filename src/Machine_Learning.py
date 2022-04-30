@@ -259,9 +259,9 @@ def write_output(model_type, testing_lines, label_pred):
         elif model_type == "SVM":
             out = open("../outputs/svm_vector.txt", 'w')
         elif model_type == "decision_tree":
-            out = open("../outputs/tree_vec.txt", 'w')
+            out = open("../outputs/tree_vector.txt", 'w')
         elif model_type == "forest":
-            out = open("../outputs/forest_vec.txt", 'w')
+            out = open("../outputs/forest_vector.txt", 'w')
 
     for i in range(len(testing_lines)):
         if not testing_lines[i]:
@@ -286,12 +286,12 @@ def main(args):
         sys.exit("invalid arguments provided, double checked please")
 
     constructMap(training_file, testing_file)
-    # fitModel("naive_bayes")
-    # predict("naive_bayes")
-    # fitModel("SVM")
-    # predict("SVM")
-    # fitModel("decision_tree")
-    # predict("decision_tree")
+    fitModel("naive_bayes")
+    predict("naive_bayes")
+    fitModel("SVM")
+    predict("SVM")
+    fitModel("decision_tree")
+    predict("decision_tree")
     fitModel("forest")
     predict("forest")
 
