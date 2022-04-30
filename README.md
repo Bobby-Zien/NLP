@@ -52,12 +52,17 @@ Path from pred + Distance: <br />
    Decision Tree: 55% Precision, 60% Recall, 0.57 F-measure  <br />
    Random Forest: 90% Precision, 54% Recall, 0.68 F-measure  <br />
   
-Vector based: <br />
+Vector based Unigram: <br />
    MaxEnt: 49% Precision, 28% Recall, 0.35 F-measure  <br />
    Naive Bayes: 7% Precision, 8% Recall, 0.08 F-measure  <br />
    Decision Tree: 33% Precision, 31% Recall, 0.32 F-measure  <br />
    Random Forest: 67% Precision, 25% Recall, 0.36 F-measure  <br />
- 
+  
+ Vector based multiple-gram + Distance to pred: <br />
+    MaxEnt: 81% Precision, 40% Recall, 0.53 F-measure <br />
+    Naive Bayes: 7% Precision, 12% Recall, 0.08 F-measue <br />
+    Decision Tree: 51% Precision, 56% Recall, 0.53 F-measure <br />
+    Random Forest: 91% Precision, 40% Recall, 0.56 F-measure <br />
  
 
   
