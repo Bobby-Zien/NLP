@@ -60,9 +60,9 @@ Vector based Unigram: <br />
   
  Vector based multiple-gram + Distance to pred: <br />
     MaxEnt: 81% Precision, 40% Recall, 0.53 F-measure <br />
-    Naive Bayes: 7% Precision, 12% Recall, 0.08 F-measue <br />
-    Decision Tree: 51% Precision, 56% Recall, 0.53 F-measure <br />
-    Random Forest: 91% Precision, 40% Recall, 0.56 F-measure <br />
+    Naive Bayes: 9% Precision, 10% Recall, 0.09 F-measue <br />
+    Decision Tree: 59% Precision, 63% Recall, 0.61 F-measure <br />
+    Random Forest: 85% Precision, 59% Recall, 0.70 F-measure <br />
  
 
   
