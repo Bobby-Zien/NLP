@@ -130,7 +130,11 @@ def encodeFile(file_type):
                             bio = line[i].split("=")[1]
                             curr_line.append(BIO_map[bio])
                         elif "sim=" in line[i]:
-                            sim = (float(line[i].split("=")[1]) + 1) * 10000
+                            sim = (float(line[i].split("=")[1]) + 1)
+                            if sim < 0:
+                                sim = abs(sim)
+                            else:
+                                sim = sim * 10000
                             curr_line.append(str(sim))
                         elif "top5" in line[i] or "top3" in line[i] or "top1" in line[i]:
                             curr_line.append(line[i].split("=")[1])
@@ -140,6 +144,9 @@ def encodeFile(file_type):
                         elif "path=" in line[i]:
                             path = line[i].split("=")[1]
                             curr_line.append(path_map[path])
+                        elif "distance=" in line[i]:
+                            distance = int(line[i].split("=")[1]) + 200
+                            curr_line.append(distance)
 
                 training_features.append(curr_line)
 
@@ -167,7 +174,11 @@ def encodeFile(file_type):
                         bio = line[i].split("=")[1]
                         curr_line.append(BIO_map[bio])
                     elif "sim=" in line[i]:
-                        sim = (float(line[i].split("=")[1]) + 1) * 10000
+                        sim = (float(line[i].split("=")[1]) + 1)
+                        if sim < 0:
+                            sim = abs(sim)
+                        else:
+                            sim = sim * 10000
                         curr_line.append(str(sim))
                     elif "top5" in line[i] or "top3" in line[i] or "top1" in line[i]:
                         curr_line.append(line[i].split("=")[1])
@@ -177,6 +188,9 @@ def encodeFile(file_type):
                     elif "path=" in line[i]:
                         path = line[i].split("=")[1]
                         curr_line.append(path_map[path])
+                    elif "distance=" in line[i]:
+                        distance = int(line[i].split("=")[1]) + 200
+                        curr_line.append(distance)
             testing_features.append(curr_line)
 
         print(f'the length of testing features is {len(testing_features)}')
@@ -288,8 +302,8 @@ def main(args):
     constructMap(training_file, testing_file)
     fitModel("naive_bayes")
     predict("naive_bayes")
-    fitModel("SVM")
-    predict("SVM")
+    # fitModel("SVM")
+    # predict("SVM")
     fitModel("decision_tree")
     predict("decision_tree")
     fitModel("forest")
